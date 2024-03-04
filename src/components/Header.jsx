@@ -1,0 +1,101 @@
+'use client'
+
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+
+export default function Header() {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const slides = [
+        'ÉTABLISSEMENT DÉDIÉ AUX LOISIRS',
+        'Slide 2',
+        'Slide 3',
+        'Slide 4',
+        'Slide 5',
+        'Slide 6',
+        'Slide 7',
+        'Slide 8',
+        'Slide 9',
+    ];
+
+    const slideImages = [
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+        "images/Accueil/bg.png",
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((currentSlide + 1) % slides.length)
+        }, 5000)
+    
+        return () => clearInterval(interval)
+     }, [currentSlide, slides.length])
+
+     return (
+        <div className="flex items-center justify-center h-full w-full bg-gray-200">
+          <div className="relative w-full h-full">
+            <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-full h-full">
+                    <img src={slideImages[currentSlide]} alt="" className='w-full h-full object-cover' />
+                    <div className="absolute inset-0 bg-black opacity-50"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-[90%] h-full flex items-center justify-start">
+                            <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
+                                <h1 className="text-6xl font-bold">{slides[currentSlide]}</h1>
+                                <Link  href="/" className='bg-white text-[#DF0624] rounded-full py-2 px-6'>En savoir plus</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="absolute right-[50px] -bottom-[90px] flex items-center justify-center w-auto h-auto">
+              <button
+                className="bg-white rounded-full p-2 mx-2"
+                onClick={() => setCurrentSlide((currentSlide - 1 + slides.length) % slides.length)}
+              >
+                <svg
+                  className="w-6 h-6 text-[#DF0624]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                className="bg-white rounded-full p-2 mx-2"
+                onClick={() => setCurrentSlide((currentSlide + 1) % slides.length)}
+              >
+                <svg
+                  className="w-6 h-6 text-[#DF0624]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+     );
+}

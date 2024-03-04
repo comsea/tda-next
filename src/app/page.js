@@ -1,113 +1,203 @@
-import Image from "next/image";
+import Header from "@/components/Header";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <div className="w-[90%] flex flex-col justify-start items-start">
+            <div className="w-full h-screen flex flex-col justify-start items-start">
+                <div className="w-full h-[85%] flex justify-center items-center relative">
+                    <Header />
+                </div>
+                <div className="w-full h-[15%] bg-[#242424] flex flex-row justify-between items-center px-6">
+                    <p className="underline decoration-[#DF0624] underline-offset-8 decoration-4">TECHNIQUES DESIGN ARCHITECTURES | ARDENNES & MARNE</p>
+                </div>
+            </div>
+            <div className="w-full flex flex-row items-center py-12">
+                <div className="w-[50%] flex flex-col justify-center items-center text-start">
+                    <div className="w-[80%]">
+                        <div className="text-6xl font-bold mb-10">
+                            <h1 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">L'AGENCE TDA</h1>
+                            <div className="h-[2px] bg-[#DF0624] w-[415px] z-10"></div>
+                        </div>
+                        <p>Chez TDA, nous ne nous contentons pas de concevoir des bâtiments, mais nous donnons vie à des rêves et des aspirations. Spécialisés dans une multitude de domaines, nous façonnons des environnements où les gens peuvent vivre, apprendre, se divertir et guérir.</p><br/>
+                        <p>Notre trésor le plus précieux réside dans notre équipe dévouée de professionnels du bâtiment. C'est cette équipe qui fait de chaque projet une histoire de succès, veillant à ce que chaque étape, de la conception à la réalisation, soit imprégnée de passion et de dévouement.</p><br/>
+                        <p>Si vous cherchez une agence qui comprend la dimension humaine derrière chaque structure, une équipe engagée qui transforme des idées en expériences émotionnelles, TDA est là pour vous accompagner. Confiez-nous vos rêves architecturaux, et ensemble, nous créerons des espaces où les émotions s'épanouissent et où chaque détail compte.</p>
+                    </div>
+                </div>
+                <div className="w-[50%] flex justify-center items-center">
+                    <img src="images/Accueil/france.png" alt="Carte France" className="w-[60%]" />
+                </div>
+            </div>
+            <div className="w-full flex flex-row py-6 px-6 justify-around items-center text-4xl">
+                <div className="flex flex-row space-x-4 items-center">
+                    <p className="text-6xl">25</p>
+                    <p>ANNÉES D'EXPÉRIENCE</p>
+                </div>
+                <div className="flex flex-row space-x-4 items-center">
+                    <p className="text-6xl">3</p>
+                    <p>AGENCES</p>
+                </div>
+                <div className="flex flex-row space-x-4 items-center">
+                    <p className="text-6xl">17</p>
+                    <div>
+                        <p>COLLABORATEURS</p>
+                        <p className="text-xl">À VOTRE ÉCOUTE</p>
+                    </div>
+                </div>
+            </div>
+            <div className="w-full flex flex-row justify-center items-center py-12 relative mb-12">
+                <div className="w-[90%] flex flex-col justify-start items-start text-start">
+                    <div className="text-6xl font-bold mb-10">
+                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">INNOVER AVEC TDA</h2>
+                        <div className="h-[2px] bg-[#DF0624] w-[500] z-10"></div>
+                    </div>
+                    <div className="w-[60%]">
+                        <p>Comment pouvons-nous collaborer afin de concrétiser votre projet ensemble ?</p><br/>
+                        <p className="text-4xl font-light"><span className="font-bold">Vous</span> avez <span className="font-bold">l'<span className="text-[#DF0624]">envie</span></span>, <span className="font-bold">nous</span> avons la <span className="font-bold text-[#DF0624]">technique</span></p><br/>
+                        <p>Chez nous, la créativité et l'innovation ne sont pas simplement des compétences, mais une façon de donner vie à vos aspirations. Que votre vision soit déjà clairement définie ou que vous souhaitiez explorer de nouvelles perspectives, nous sommes là pour donner forme à vos idées avec une précision sans pareille. Au-delà de l'aspect architectural et technique, nous comprenons l'importance de matérialiser votre projet de manière authentique.</p><br/>
+                        <p>Ce nouveau concept nous permet de nous imprégner de votre histoire et de vos rêves. Nous croyons fermement en l'harmonie entre l'esthétique et la fonctionnalité, travaillant sans relâche pour concevoir des édifices qui captivent visuellement tout en demeurant économiquement viables. Votre projet est plus qu'une simple construction ; c'est une expression de votre identité, et nous nous engageons à le façonner avec le même soin et la même passion que si c'était le nôtre.</p>
+                    </div>
+                </div>
+                <img src="images/Accueil/structure.png" alt="Structures" className="absolute right-0 top-10 w-[45%]" />
+            </div>
+            <div className="w-full flex flex-row items-center justify-center py-12">
+                <div className="w-[90%] flex flex-col justify-center items-end">
+                    <div className="text-6xl font-bold mb-10">
+                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS PRESTATIONS</h2>
+                        <div className="h-[2px] bg-[#DF0624] w-[530px] z-10"></div>
+                    </div>
+                    <div className="flex flex-row w-full items-start justify-center space-x-20 text-start">
+                        <div className="text-3xl flex flex-col space-y-4 w-[40%]">
+                            <div className="font-semibold flex flex-row items-center space-x-4">
+                                <img src="images/Accueil/regle.png" alt="Check" className="w-[20px] h-[20px]" />
+                                <p>CONCEPTION ARCHITECTURALE</p>
+                            </div>
+                            <div className="font-semibold flex flex-row items-center space-x-4">
+                                <img src="images/Accueil/regle.png" alt="Check" className="w-[20px] h-[20px]" />
+                                <p>MAÎTRISE D'OEUVRE D'EXÉCUTION</p>
+                            </div>
+                            <div className="font-semibold flex flex-row items-center space-x-4">
+                                <img src="images/Accueil/regle.png" alt="Check" className="w-[20px] h-[20px]" />
+                                <p>MISSION PERMIS DE CONSTRUIRE</p>
+                            </div>
+                            <div className="font-semibold flex flex-row items-center space-x-4">
+                                <img src="images/Accueil/regle.png" alt="Check" className="w-[20px] h-[20px]" />
+                                <p>EXPERTISE</p>
+                            </div>
+                        </div>
+                        <div className="text-3xl flex flex-col space-y-4 w-[40%]">
+                            <div className="font-semibold flex flex-row items-center space-x-4">
+                                <img src="images/Accueil/regle.png" alt="Check" className="w-[20px] h-[20px]" />
+                                <p>ETUDE DE FAISABILITÉ</p>
+                            </div>
+                            <div className="font-semibold flex flex-row items-center space-x-4">
+                                <img src="images/Accueil/regle.png" alt="Check" className="w-[20px] h-[20px]" />
+                                <p>ORDONNANCEMENT PILOTAGE ET COORDINATION</p>
+                            </div>
+                            <div className="font-semibold flex flex-row items-center space-x-4">
+                                <img src="images/Accueil/regle.png" alt="Check" className="w-[20px] h-[20px]" />
+                                <p>DIAGNOSTICS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="w-full flex flex-col items-center justify-center py-12">
+                <div className="w-[90%] flex flex-col justify-center items-center">
+                    <div className="text-6xl font-bold mb-10">
+                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS RÉALISATIONS</h2>
+                        <div className="h-[2px] bg-[#DF0624] w-[555px] z-10"></div>
+                    </div>
+                    <p>Découvrez en images nos réalisations, allant de la construction à la réhabilitation, en passant par l'extension ou l'aménagement de bâtiments résidentiels, industriels, médicaux, commerciaux, institutionnels, voire publics.</p>
+                </div>
+            </div>
+            <div className="w-full flex flex-col items-center justify-center py-12">
+                <div className="w-[90%] flex flex-row justify-between items-start text-start">
+                    <div className="w-[48%] flex flex-col justify-start items-start space-y-6">
+                        <div className="text-6xl font-bold mb-4">
+                            <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">LES ACTUALITÉS</h2>
+                            <div className="h-[2px] bg-[#DF0624] w-[480px] z-10"></div>
+                        </div>
+                        <div className="w-full p-12 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                            <img src="images/Accueil/article.png" alt="Article" className="w-full h-[250px] object-cover" />
+                            <p className="text-base text-[#BBBBBB]">date de publication</p>
+                            <h4 className="text-3xl font-semibold">TITRE DE L'ARTICLE</h4>
+                            <p className="line-clamp-3 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div className="absolute flex flex-row bottom-0 left-0 text-black text-xs w-1/2">
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-br-3xl"></div>
+                                </div>
+                                <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
+                                    <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
+                                        <Link href="/">Voir l'article</Link>
+                                    </div>
+                                </div>
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-bl-3xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="w-full p-12 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                            <div className="absolute flex flex-row top-0 right-0 text-black text-xs w-1/2">
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-tr-3xl"></div>
+                                </div>
+                                <div className="w-1/2 h-[30px] bg-black text-white rounded-b-xl flex flex-row justify-center items-center">
+                                    <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
+                                        <Link href="/">Voir l'article</Link>
+                                    </div>
+                                </div>
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-tl-3xl"></div>
+                                </div>
+                            </div>
+                            <img src="images/Accueil/article.png" alt="Article" className="w-full h-[250px] object-cover" />
+                            <p className="text-base text-[#BBBBBB]">date de publication</p>
+                            <h4 className="text-3xl font-semibold">TITRE DE L'ARTICLE</h4>
+                        </div>
+                    </div>
+                    <div className="w-[48%] flex flex-col justify-start items-start space-y-6 mt-3">
+                        <div className="w-full p-12 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                            <div className="absolute flex flex-row top-0 left-0 text-black text-xs w-1/2">
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-tr-3xl"></div>
+                                </div>
+                                <div className="w-1/2 h-[30px] bg-black text-white rounded-b-xl flex flex-row justify-center items-center">
+                                    <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
+                                        <Link href="/">Voir l'article</Link>
+                                    </div>
+                                </div>
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-tl-3xl"></div>
+                                </div>
+                            </div>
+                            <img src="images/Accueil/article.png" alt="Article" className="w-full h-[250px] object-cover" />
+                            <p className="text-base text-[#BBBBBB]">date de publication</p>
+                            <h4 className="text-3xl font-semibold">TITRE DE L'ARTICLE</h4>
+                            <p className="line-clamp-2 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                        <div className="w-full p-12 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                            <img src="images/Accueil/article.png" alt="Article" className="w-full h-[250px] object-cover" />
+                            <p className="text-base text-[#BBBBBB]">date de publication</p>
+                            <h4 className="text-3xl font-semibold">TITRE DE L'ARTICLE</h4>
+                            <p className="line-clamp-4 text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div className="absolute flex flex-row bottom-0 right-0 text-black text-xs w-1/2">
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-br-3xl"></div>
+                                </div>
+                                <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
+                                    <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
+                                        <Link href="/">Voir l'article</Link>
+                                    </div>
+                                </div>
+                                <div className="w-1/4 h-[30px] bg-black">
+                                    <div className="w-full h-full bg-[#242424] rounded-bl-3xl"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
   );
 }

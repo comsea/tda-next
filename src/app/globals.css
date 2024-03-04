@@ -17,17 +17,39 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: white;
+  background-color: black;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.swiper-button-next{
+  color: #DF0624!important;
+}
+
+.swiper-button-prev{
+  color: #DF0624!important;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: #FFFFFF;
+  color: #DF0624;
+}
+
+.swiper-pagination-bullet{
+  margin-right: 3px;
+  margin-left: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
