@@ -25,8 +25,8 @@ export default function Footer(languetteProps) {
                             <Link href="/presentation" className="hover:underline">Présentation</Link>
                             <Link href="/actualites" className="hover:underline">Actualités</Link>
                             <Link href="/contact" className="hover:underline">Contact</Link>
-                            <Link href="/" className="hover:underline">Mentions légales</Link>
-                            <Link href="/" className="hover:underline">Politique de confidentialité</Link>
+                            <Link href="/mentions-legales" className="hover:underline">Mentions légales</Link>
+                            <Link href="/politique-de-confidentialite" className="hover:underline">Politique de confidentialité</Link>
                         </div>
                     </div>
                     <div className="flex flex-col space-y-1">
