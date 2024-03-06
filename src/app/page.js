@@ -1,3 +1,4 @@
+import Accordion from "@/components/Accordion";
 import Header from "@/components/Header";
 import Link from "next/link";
 
@@ -17,7 +18,7 @@ export default function Home() {
                     <div className="w-[80%]">
                         <div className="text-6xl font-bold mb-10">
                             <h1 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">L'AGENCE TDA</h1>
-                            <div className="h-[2px] bg-[#DF0624] w-[415px] z-10"></div>
+                            <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                         </div>
                         <p>Chez TDA, nous ne nous contentons pas de concevoir des bâtiments, mais nous donnons vie à des rêves et des aspirations. Spécialisés dans une multitude de domaines, nous façonnons des environnements où les gens peuvent vivre, apprendre, se divertir et guérir.</p><br/>
                         <p>Notre trésor le plus précieux réside dans notre équipe dévouée de professionnels du bâtiment. C'est cette équipe qui fait de chaque projet une histoire de succès, veillant à ce que chaque étape, de la conception à la réalisation, soit imprégnée de passion et de dévouement.</p><br/>
@@ -49,7 +50,7 @@ export default function Home() {
                 <div className="w-[90%] flex flex-col justify-start items-start text-start">
                     <div className="text-6xl font-bold mb-10">
                         <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">INNOVER AVEC TDA</h2>
-                        <div className="h-[2px] bg-[#DF0624] w-[500] z-10"></div>
+                        <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
                     <div className="w-[60%]">
                         <p>Comment pouvons-nous collaborer afin de concrétiser votre projet ensemble ?</p><br/>
@@ -64,7 +65,7 @@ export default function Home() {
                 <div className="w-[90%] flex flex-col justify-center items-end">
                     <div className="text-6xl font-bold mb-10">
                         <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS PRESTATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] w-[530px] z-10"></div>
+                        <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
                     <div className="flex flex-row w-full items-start justify-center space-x-20 text-start">
                         <div className="text-3xl flex flex-col space-y-4 w-[40%]">
@@ -106,17 +107,18 @@ export default function Home() {
                 <div className="w-[90%] flex flex-col justify-center items-center">
                     <div className="text-6xl font-bold mb-10">
                         <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS RÉALISATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] w-[555px] z-10"></div>
+                        <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
                     <p>Découvrez en images nos réalisations, allant de la construction à la réhabilitation, en passant par l'extension ou l'aménagement de bâtiments résidentiels, industriels, médicaux, commerciaux, institutionnels, voire publics.</p>
                 </div>
+                <Accordion />
             </div>
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex flex-row justify-between items-start text-start">
                     <div className="w-[48%] flex flex-col justify-start items-start space-y-6">
                         <div className="text-6xl font-bold mb-4">
                             <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">LES ACTUALITÉS</h2>
-                            <div className="h-[2px] bg-[#DF0624] w-[480px] z-10"></div>
+                            <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                         </div>
                         <div className="w-full p-12 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                             <img src="images/Accueil/article.png" alt="Article" className="w-full h-[250px] object-cover" />
@@ -129,7 +131,7 @@ export default function Home() {
                                 </div>
                                 <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
                                     <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                        <Link href="/">Voir l'article</Link>
+                                        <Link href="/actualites/1">Voir l'article</Link>
                                     </div>
                                 </div>
                                 <div className="w-1/4 h-[30px] bg-black">
@@ -144,7 +146,7 @@ export default function Home() {
                                 </div>
                                 <div className="w-1/2 h-[30px] bg-black text-white rounded-b-xl flex flex-row justify-center items-center">
                                     <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                        <Link href="/">Voir l'article</Link>
+                                        <Link href="/actualites/1">Voir l'article</Link>
                                     </div>
                                 </div>
                                 <div className="w-1/4 h-[30px] bg-black">
@@ -164,7 +166,7 @@ export default function Home() {
                                 </div>
                                 <div className="w-1/2 h-[30px] bg-black text-white rounded-b-xl flex flex-row justify-center items-center">
                                     <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                        <Link href="/">Voir l'article</Link>
+                                        <Link href="/actualites/1">Voir l'article</Link>
                                     </div>
                                 </div>
                                 <div className="w-1/4 h-[30px] bg-black">
@@ -187,7 +189,7 @@ export default function Home() {
                                 </div>
                                 <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
                                     <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                        <Link href="/">Voir l'article</Link>
+                                        <Link href="/actualites/1">Voir l'article</Link>
                                     </div>
                                 </div>
                                 <div className="w-1/4 h-[30px] bg-black">

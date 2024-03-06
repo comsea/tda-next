@@ -7,7 +7,7 @@ export default function Contact() {
                 <div className="w-[90%] flex flex-col justify-start items-start text-start">
                     <div className="text-6xl font-bold mb-10 w-full">
                         <h1 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">CONTACTEZ-NOUS</h1>
-                        <div className="h-[2px] bg-[#DF0624] w-[545px] z-10"></div>
+                        <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
                     <p>Découvrez avec nous l'art de concevoir des espaces uniques et fonctionnels. </p>
                     <p>Contactez-nous aujourd'hui pour transformer vos concepts en réalité.</p>

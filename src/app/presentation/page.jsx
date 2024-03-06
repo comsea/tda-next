@@ -19,7 +19,7 @@ export default function Presentation() {
                 <div className="w-[90%] flex flex-col justify-center items-center text-start">
                     <div className="text-6xl font-bold mb-10 w-full">
                         <h1 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">L'AGENCE TDA</h1>
-                        <div className="h-[2px] bg-[#DF0624] w-[415px] z-10"></div>
+                        <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
                     <p>Implantée dans les villes de Charleville-Mézières, Reims et Épernay, TDA n'est pas simplement une agence de maîtrise d'œuvre.  C'est avant tout une histoire façonnée avec passion par Frédéric Bonnet en 2004.</p><br/>
                     <p>Depuis son lancement à Charleville en 2004, l'Agence TDA n'a cessé de croître et d'évoluer. Elle a étendu son influence avec l'inauguration de nouveaux locaux à Reims en 2016, puis à Épernay en 2021. Notre expansion témoigne de notre engagement constant envers l'excellence et notre volonté de répondre aux besoins croissants de nos clients dans toute la région.</p>
@@ -50,11 +50,11 @@ export default function Presentation() {
             <div className="w-[95%] py-8">
                 <Slider />
             </div>
-            <div className="w-full py-8 bg-[#242424] flex flex-col justify-center items-center">
+            <div className="w-full py-8 bg-[#242424] flex flex-col justify-center items-center text-center">
                 <div className="w-[75%] flex flex-col justify-center items-center space-y-6">
                     <div className="text-6xl font-bold mb-10">
                         <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS PRESTATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] w-[530px] z-10"></div>
+                        <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
                     <p>Notre agence d'architectes propose une gamme complète de services pour répondre à  l’ensemble de vos besoins. Nous sommes également spécialisés dans les :</p>
                     <div className="flex flex-col justify-center items-center w-full space-y-4 py-6">
@@ -102,7 +102,7 @@ export default function Presentation() {
                 <div className="w-[90%] flex flex-col justify-start items-start text-start space-y-8">
                     <div className="text-6xl font-bold mb-10 w-full">
                         <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS CERTIFICATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] w-[615px] z-10"></div>
+                        <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
                     <p>Car nous cherchons à travailler avec l’excellence, découvrez toutes nos certifications.</p>
                     <div className="w-full flex flex-row justify-between items-center">

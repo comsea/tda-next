@@ -33,7 +33,7 @@ export default function ActusSlide() {
                         </div>
                         <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
                             <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                <Link href="/">Voir l'article</Link>
+                                <Link href="/actualites/1">Voir l'article</Link>
                             </div>
                         </div>
                         <div className="w-1/4 h-[30px] bg-black">
@@ -54,7 +54,7 @@ export default function ActusSlide() {
                         </div>
                         <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
                             <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                <Link href="/">Voir l'article</Link>
+                                <Link href="/actualites/2">Voir l'article</Link>
                             </div>
                         </div>
                         <div className="w-1/4 h-[30px] bg-black">
@@ -75,7 +75,7 @@ export default function ActusSlide() {
                         </div>
                         <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
                             <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                <Link href="/">Voir l'article</Link>
+                                <Link href="/actualites/3">Voir l'article</Link>
                             </div>
                         </div>
                         <div className="w-1/4 h-[30px] bg-black">
@@ -96,7 +96,7 @@ export default function ActusSlide() {
                         </div>
                         <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
                             <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                <Link href="/">Voir l'article</Link>
+                                <Link href="/actualites/4">Voir l'article</Link>
                             </div>
                         </div>
                         <div className="w-1/4 h-[30px] bg-black">
