@@ -56,46 +56,51 @@ export default function Presentation() {
                         <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS PRESTATIONS</h2>
                         <div className="h-[2px] bg-[#DF0624] w-[300px] z-10"></div>
                     </div>
-                    <p>Notre agence d'architectes propose une gamme complète de services pour répondre à  l’ensemble de vos besoins. Nous sommes également spécialisés dans les :</p>
                     <div className="flex flex-col justify-center items-center w-full space-y-4 py-6">
                         <div className="flex flex-row justify-center items-center w-full space-x-4">
-                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered1 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)}>
+                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[300px] flex flex-col justify-center items-center space-y-2 ${isHovered1 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)}>
                                 {!isHovered1 && <img src="images/Presentation/conception.png" alt="Conception" />}
                                 <p className="font-bold">Conception architecturale</p>
-                                {isHovered1 && <p className="text-base transition ease-in-out duration-500">Notre entreprise d'architecture excelle dans la réalisation de diagnostics précis, offrant une expertise pointue pour éclairer et optimiser chaque projet.</p>}
+                                {isHovered1 && <p className="text-base transition ease-in-out duration-500">Nous élaborons les plans en tenant compte des besoins du client, des contraintes techniques et réglementaires, ainsi que des considérations esthétiques et fonctionnelles.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[250px] flex flex-col justify-center items-center space-y-4 ${isHovered2 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)}>
+                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[300px] flex flex-col justify-center items-center space-y-4 ${isHovered2 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)}>
                                 {!isHovered2 && <img src="images/Presentation/étude.png" alt="Étude" />}
                                 <p>Études de faisabilité</p>
+                                {isHovered2 && <p className="text-base transition ease-in-out duration-500">Nous évaluons la viabilité des projets sur les plans technique, financier et organisationnel, ce qui nous permet de prendre des décisions éclairées quant à leur faisabilité.</p>}
                             </div>
                         </div>
                         <div className="flex flex-rox justify-center items-center w-full space-x-4">
-                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered3 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)}>
+                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[300px] flex flex-col justify-center items-center space-y-2 ${isHovered3 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)}>
                                 {!isHovered3 && <img src="images/Presentation/casque.png" alt="Casque" />}
                                 <p>Mission Permis de construire</p>
+                                {isHovered3 && <p className="text-base transition ease-in-out duration-500">Nous préparons et soumettons les documents nécessaires aux autorités compétentes afin d'obtenir l'autorisation légale de construire un bâtiment ou d'effectuer des modifications sur une structure existante, conformément aux règlements d'urbanisme et de construction.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered4 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)}>
+                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[300px] flex flex-col justify-center items-center space-y-2 ${isHovered4 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)}>
                                 {!isHovered4 && <img src="images/Presentation/maitre-doeuvre.png" alt="Maitre d'Oeuvre" />}
                                 <p>Maîtrise d'oeuvre d'exécution</p>
+                                {isHovered4 && <p className="text-base transition ease-in-out duration-500">Nous supervisons la réalisation concrète d'un projet de construction, en veillant à la conformité des travaux par rapport aux plans, à la qualité des matériaux utilisés et au respect du budget alloué.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered5 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)}>
+                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[300px] flex flex-col justify-center items-center space-y-2 ${isHovered5 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)}>
                                 {!isHovered5 && <img src="images/Presentation/ordonnancement.png" alt="Ordonnancement" />}
                                 <p>Ordonnancement Pilotage Coordination</p>
+                                {isHovered5 && <p className="text-base transition ease-in-out duration-500">Sous assurons une gestion efficace du chantier en planifiant les tâches, en supervisant les intervenants et en assurant la coordination afin de garantir un projet de construction fluide tout en respectant les délais et les contraintes budgétaires.</p>}
                             </div>
                         </div>
                         <div className="flex flex-rox justify-center items-center w-full space-x-4">
-                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered6 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)}>
+                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[300px] flex flex-col justify-center items-center space-y-2 ${isHovered6 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)}>
                                 {!isHovered6 && <img src="images/Presentation/expertise.png" alt="Expertise" />}
                                 <p>Expertise</p>
+                                {isHovered6 && <p className="text-base transition ease-in-out duration-500">Nous recherchons les pathologies sur un bâtiment afin d'évaluer les réparations et d'aider nos clients dans le cadre d'une expertise judiciaire, d'une contre expertise d'assuré ou d'une expertise amiable.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered7 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)}>
+                            <div className={`bg-[#383838] p-4 rounded-xl w-[28%] h-[300px] flex flex-col justify-center items-center space-y-2 ${isHovered7 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)}>
                                 {!isHovered7 && <img src="images/Presentation/diagnostics.png" alt="Diagnostics" />}
                                 <p>Diagnostics</p>
+                                {isHovered7 && <p className="text-base transition ease-in-out duration-500">Nous évaluons l'état global d'un bâtiment afin de permettre aux maîtres d'ouvrages de prendre des décisions éclairées concernant les rénovations nécessaires, tout en assurant la valeur et la sécurité de leur investissement.</p>}
                             </div>
                         </div>
                     </div>
-                    <p className="text-center">Vous envisagez de construire un nouvel édifice ? de rénover un bâtiment existant ? ou de développer un projet complexe ? <Link href="/contact" className="underline cursor-pointer">Cliquez dès maintenant ici !</Link></p>
-                    <p className="text-center">Avec une approche centrée sur la polyvalence et la qualité, TDA vous accompagne à chaque étape, vous offrant une solution complète et sur mesure pour concrétiser vos idées architecturales.</p>
+                    <p className="text-center">Vous envisagez de construire un nouvel édifice ? de rénover un bâtiment existant ? ou de développer un projet complexe ? <Link href="/contact" className="underline cursor-pointer">Cliquez ici dès maintenant !</Link></p>
+                    <p className="text-center">Avec une approche centrée sur la polyvalence et la qualité, TDA vous accompagne à chaque étape, vous offrant une solution complète et sur mesure pour concrétiser vos projets.</p>
                 </div>
             </div>
             <div className="w-full flex flex-row items-center justify-center py-12">

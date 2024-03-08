@@ -49,7 +49,7 @@ export default function Header() {
                         <div className="w-[90%] h-full flex items-center justify-start">
                             <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
                                 <h1 className="text-6xl font-bold">{slides[currentSlide]}</h1>
-                                <Link  href="/" className='bg-white text-[#DF0624] rounded-full py-2 px-6'>En savoir plus</Link>
+                                <Link  href="/realisations/enseignement" className='bg-white text-[#DF0624] rounded-full py-2 px-6'>En savoir plus</Link>
                             </div>
                         </div>
                     </div>
