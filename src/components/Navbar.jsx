@@ -1,10 +1,25 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [isLoading, setIsLoading] = useState(true)
+    const [realisations, setRealisations] = useState([])
+
+    useEffect(() => {
+        fetch(`https://localhost:8000/api/categoriess`)
+        .then((response) => response.json())
+        .then((result) => {
+            const fetchedRealisations = result['hydra:member'];
+            setRealisations(fetchedRealisations);
+            setIsLoading(false);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }, []);
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen)
@@ -33,13 +48,10 @@ export default function Navbar() {
                         <Link href="/presentation" onClick={toggleSidebar}>L'agence TDA</Link>
                         <div className="w-full flex flex-col justify-start items-start space-y-1">
                             <Link href="/realisations" onClick={toggleSidebar}>Nos réalisations</Link>
-                            <div className="w-full flex flex-col ml-6 justify-start items-start text-lg font-normal text-[#BBBBBB] space-y-1">
-                                <Link href="/realisations" onClick={toggleSidebar}>Enseignement</Link>
-                                <Link href="/realisations" onClick={toggleSidebar}>Loisir</Link>
-                                <Link href="/realisations" onClick={toggleSidebar}>Logement</Link>
-                                <Link href="/realisations" onClick={toggleSidebar}>Tertiaire</Link>
-                                <Link href="/realisations" onClick={toggleSidebar}>Santé</Link>
-                                <Link href="/realisations" onClick={toggleSidebar}>Public</Link>
+                            <div className="w-full flex flex-col ml-6 justify-start items-start text-sm font-normal text-[#BBBBBB] space-y-2 pr-4">
+                                {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
+                                    <Link href={`/realisations/${realisation.name.toLowerCase().replace(/\s+/g, '-')}`} onClick={toggleSidebar}>{realisation.name}</Link>
+                                ))}
                             </div>
                         </div>
                         <Link href="/actualites" onClick={toggleSidebar}>Nos actualités</Link>

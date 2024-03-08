@@ -8,8 +8,7 @@ export default function Actus() {
     const {id} = useParams()
     let [isLoading, setIsLoading] = useState(false)
     let [postState, setPostState] = useState([])
-
-    console.log(id)
+    let [images, setImages] = useState([])
 
     useEffect(() => {
         setIsLoading(true); // Start loading
@@ -25,7 +24,28 @@ export default function Actus() {
         });
     }, [id]);
 
-    const image = postState.photo ? [`https://localhost:8000/build/images/${postState.photo}`, `/images/Accueil/bg.png`] : [];
+    useEffect(() => {
+        fetch(`https://localhost:8000/api/galeries`)
+        .then((response) => response.json())
+        .then((result) => {
+            const fetchedRealisations = result['hydra:member'];
+            setImages(fetchedRealisations);
+            setIsLoading(false);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }, []);
+
+    const image = postState.photo ? [
+        `https://localhost:8000/build/images/${postState.photo}`,
+        ...images.map(image => {
+            // Trouver la galerie correspondante pour l'image actuelle
+            const galerie = postState.gallery.find(galerie => galerie == '/api/galeries/' + image.id);
+            // Si une galerie correspondante est trouvée, retourner l'URL de l'image
+            return galerie ? `https://localhost:8000/build/images/${image.link}` : null;
+        }).filter(url => url !== null) // Filtrer pour éliminer les valeurs null
+    ] : [];
 
     return(
         <div className="w-[90%] flex flex-col justify-center items-center">

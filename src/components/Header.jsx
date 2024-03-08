@@ -2,54 +2,52 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Realisation from '@/app/realisations/[id]/page';
 
 export default function Header() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isLoading, setIsLoading] = useState(true)
+    const [realisations, setRealisations] = useState([])
 
-    const slides = [
-        'ÉTABLISSEMENT DÉDIÉ AUX LOISIRS',
-        'Slide 2',
-        'Slide 3',
-        'Slide 4',
-        'Slide 5',
-        'Slide 6',
-        'Slide 7',
-        'Slide 8',
-        'Slide 9',
-    ];
+    useEffect(() => {
+      fetch(`https://localhost:8000/api/categoriess`)
+      .then((response) => response.json())
+      .then((result) => {
+          const fetchedRealisations = result['hydra:member'];
+          setRealisations(fetchedRealisations);
+          setIsLoading(false);
+      })
+      .catch((error) => {
+          console.error(error);
+      });
+  }, []);
 
-    const slideImages = [
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-        "images/Accueil/bg.png",
-    ];
+    const slides = realisations.map(realisation => realisation.name);
+
+    const slideImages = realisations.map(realisation => realisation.photo);
+
+    const slideUrl = realisations.map(realisation => realisation.name.toLowerCase().replace(/\s+/g, '-'))
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentSlide((currentSlide + 1) % slides.length)
+            setCurrentSlide((currentSlide + 1) % realisations.length)
         }, 5000)
     
         return () => clearInterval(interval)
-     }, [currentSlide, slides.length])
+     }, [currentSlide, realisations.length])
 
      return (
         <div className="flex items-center justify-center h-full w-full bg-gray-200">
           <div className="relative w-full h-full">
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full">
-                    <img src={slideImages[currentSlide]} alt="" className='w-full h-full object-cover' />
+                    <img src={`https://localhost:8000/build/images/${slideImages[currentSlide]}`} alt="" className='w-full h-full object-cover' />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-[90%] h-full flex items-center justify-start">
                             <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
                                 <h1 className="text-6xl font-bold">{slides[currentSlide]}</h1>
-                                <Link  href="/realisations/enseignement" className='bg-white text-[#DF0624] rounded-full py-2 px-6'>En savoir plus</Link>
+                                <Link  href={`/realisations/${slideUrl[currentSlide]}`} className='bg-white text-[#DF0624] rounded-full py-2 px-6'>En savoir plus</Link>
                             </div>
                         </div>
                     </div>
@@ -58,7 +56,7 @@ export default function Header() {
             <div className="absolute right-[50px] -bottom-[90px] flex items-center justify-center w-auto h-auto">
               <button
                 className="bg-white rounded-full p-2 mx-2"
-                onClick={() => setCurrentSlide((currentSlide - 1 + slides.length) % slides.length)}
+                onClick={() => setCurrentSlide((currentSlide - 1 + realisations.length) % realisations.length)}
               >
                 <svg
                   className="w-6 h-6 text-[#DF0624]"
@@ -77,7 +75,7 @@ export default function Header() {
               </button>
               <button
                 className="bg-white rounded-full p-2 mx-2"
-                onClick={() => setCurrentSlide((currentSlide + 1) % slides.length)}
+                onClick={() => setCurrentSlide((currentSlide + 1) % realisations.length)}
               >
                 <svg
                   className="w-6 h-6 text-[#DF0624]"

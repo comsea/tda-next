@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true)
     const [actualites, setActualites] = useState([])
+    const [realisations, setRealisations] = useState([])
 
     useEffect(() => {
         fetch(`https://localhost:8000/api/actualites`)

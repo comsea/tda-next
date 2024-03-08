@@ -1,6 +1,25 @@
-import Link from "next/link"
+'use client'
 
-export default function Footer(languetteProps) {
+import Link from "next/link"
+import { useState, useEffect } from "react"
+
+export default function Footer() {
+    const [isLoading, setIsLoading] = useState(true)
+    const [realisations, setRealisations] = useState([])
+
+    useEffect(() => {
+        fetch(`https://localhost:8000/api/categoriess`)
+        .then((response) => response.json())
+        .then((result) => {
+            const fetchedRealisations = result['hydra:member'];
+            setRealisations(fetchedRealisations);
+            setIsLoading(false);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }, []);
+
     return(
         <div className="w-full flex flex-col justify-center items-center relative">
             <div className="w-full relative py-10 flex items-center">
@@ -12,15 +31,12 @@ export default function Footer(languetteProps) {
                     </div>
                     <div className="flex flex-col items-start space-y-1 text-lg">
                         <Link href="/realisations" className="hover:underline">Réalisations</Link>
-                        <Link href="/realisations" className="text-[#BBBBBB] hover:underline">Enseignement</Link>
-                        <Link href="/realisations" className="text-[#BBBBBB] hover:underline">Loisir</Link>
-                        <Link href="/realisations" className="text-[#BBBBBB] hover:underline">Logement</Link>
-                        <Link href="/realisations" className="text-[#BBBBBB] hover:underline">Tertiaire</Link>
-                        <Link href="/realisations" className="text-[#BBBBBB] hover:underline">Santé</Link>
-                        <Link href="/realisations" className="text-[#BBBBBB] hover:underline">Sécurité</Link>
+                        {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
+                            <Link href={`/realisations/${realisation.name.toLowerCase().replace(/\s+/g, '-')}`} className="text-[#BBBBBB] hover:underline text-sm">{realisation.name}</Link>
+                        ))}
                     </div>
                     <div className="flex flex-row space-x-6 text-lg">
-                        <div className="h-[155px] w-[1px] bg-[#DF0624]"></div>
+                        <div className="h-[200px] w-[1px] bg-[#DF0624]"></div>
                         <div className="flex flex-col items-start space-y-1">
                             <Link href="/presentation" className="hover:underline">Présentation</Link>
                             <Link href="/actualites" className="hover:underline">Actualités</Link>
