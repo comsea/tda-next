@@ -24,10 +24,10 @@ export default function RootLayout({ children }) {
         ></link>
       </head>
       <body className={inter.className}>
-        <div className="App 2xl:text-2xl text-xl lg:font-medium font-normal relative h-full w-full flex flex-col items-end">
+        <div className="App 2xl:text-2xl lg:text-xl text-lg lg:font-medium font-normal relative h-full w-full flex flex-col items-end">
           <Navbar />
           {children}
-          <div className="w-[90%] flex flex-col justify-center items-center">
+          <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <Footer />
           </div>
         </div>

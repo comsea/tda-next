@@ -26,7 +26,7 @@ export default function Accordion() {
     }, []);
 
     return(
-        <div className="antialiased w-full flex flex-col font-sans items-stretch justify-center mt-12 sm:flex-row sm:items-center h-[60vh]">
+        <div className="antialiased w-full flex flex-col font-sans items-stretch justify-center mt-12 sm:flex-row sm:items-center lg:h-[60vh]">
             <div className="flex flex-col flex-grow items-stretch w-full sm:flex-row h-full">
                 {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
                     <div key={realisation.id}
@@ -55,7 +55,7 @@ export default function Accordion() {
                                 <div class="flex h-10 icon items-center justify-center mr-3 rounded-full text-[#BBBBBB] w-10"><p>{realisation.id}</p></div>
                             }
                             <div class="content flex flex-col justify-center leading-tight text-white whitespace-pre">
-                                <div class="ease-in-out font-bold duration-700 opacity-0 relative transform transition-all translate-x-8">ENSEIGNEMENT ET LOISIR</div>
+                                <div class="ease-in-out font-bold duration-700 opacity-0 relative transform transition-all translate-x-8 uppercase">{realisation.name}</div>
                             </div>
                         </div>
                         <div class="absolute duration-700 ease-in-out flex label transition-all z-30 sm:mb-3 sm:ml-2">

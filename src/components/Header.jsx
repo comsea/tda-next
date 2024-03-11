@@ -46,20 +46,20 @@ export default function Header() {
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-[90%] h-full flex items-center justify-start">
                             <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
-                                <h1 className="text-6xl font-bold">{slides[currentSlide]}</h1>
-                                <Link  href={`/realisations/${slideUrl[currentSlide]}`} className='bg-white text-[#DF0624] rounded-full py-2 px-6'>En savoir plus</Link>
+                                <h1 className="lg:text-6xl text-4xl font-bold">{slides[currentSlide]}</h1>
+                                <Link  href={`/realisations/${slideUrl[currentSlide]}`} className='bg-white text-[#DF0624] rounded-full lg:py-2 py-1 lg:px-6 px-4'>En savoir plus</Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="absolute right-[50px] -bottom-[90px] flex items-center justify-center w-auto h-auto">
+            <div className="absolute lg:right-[50px] right-[10px] lg:-bottom-[90px] bottom-[10px] flex items-center justify-center w-auto h-auto">
               <button
                 className="bg-white rounded-full p-2 mx-2"
                 onClick={() => setCurrentSlide((currentSlide - 1 + realisations.length) % realisations.length)}
               >
                 <svg
-                  className="w-6 h-6 text-[#DF0624]"
+                  className="lg:w-6 w-3 lg:h-6 h-3 text-[#DF0624]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ export default function Header() {
                 onClick={() => setCurrentSlide((currentSlide + 1) % realisations.length)}
               >
                 <svg
-                  className="w-6 h-6 text-[#DF0624]"
+                  className="lg:w-6 w-3 lg:h-6 h-3 text-[#DF0624]"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
