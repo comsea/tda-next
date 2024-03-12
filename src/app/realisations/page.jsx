@@ -8,7 +8,7 @@ export default function Realisations() {
     const [realisations, setRealisations] = useState([])
 
     useEffect(() => {
-        fetch(`https://localhost:8000/api/categoriess`)
+        fetch(`https://apitda.comsea.fr/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -32,7 +32,7 @@ export default function Realisations() {
                     <div className="w-[90%] grid lg:grid-cols-3 grid-cols-1 gap-10 py-10">
                         {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
                             <div className="flex justify-center items-center lg:py-28 py-20 relative text-center">
-                                <img src={`https://localhost:8000/build/images/${realisation.photo}`} alt="" className="absolute w-full h-full object-cover -z-30" />
+                                <img src={`https://apitda.comsea.fr/build/images/${realisation.photo}`} alt="" className="absolute w-full h-full object-cover -z-30" />
                                 {/*<Link href={`/realisations/${realisation.name.toLowerCase().replace(/\s+/g, '-')}`} className="absolute w-full h-full z-10 bg-black/50 flex justify-center items-center transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 px-6 hover:bg-black/10">
                                     {realisation.name}
                                 </Link>*/}

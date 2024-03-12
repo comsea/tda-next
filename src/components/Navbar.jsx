@@ -9,7 +9,7 @@ export default function Navbar() {
     const [realisations, setRealisations] = useState([])
 
     useEffect(() => {
-        fetch(`https://localhost:8000/api/categoriess`)
+        fetch(`https://apitda.comsea.fr/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];

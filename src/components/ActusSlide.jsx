@@ -19,7 +19,7 @@ export default function ActusSlide() {
       };
 
       useEffect(() => {
-        fetch(`https://localhost:8000/api/actualites`)
+        fetch(`https://apitda.comsea.fr/api/actualites`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedActualites = result['hydra:member'];
@@ -48,7 +48,7 @@ export default function ActusSlide() {
             {isLoading ? 'Chargement en cours' : actualites.map(actualite => (
                 <SwiperSlide className='!flex justify-center items-center w-full'>
                     <div className='lg:w-[90%] w-full bg-[#242424] lg:p-12 px-4 py-8 flex flex-col justify-start items-start space-y-2 relative'>
-                        <img src={`https://localhost:8000/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                        <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                         <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                         <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                         <p className="line-clamp-3 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />

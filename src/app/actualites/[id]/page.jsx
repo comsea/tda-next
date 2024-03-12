@@ -1,5 +1,6 @@
 'use client'
 
+import Facebook from "@/components/Facebook";
 import MiniaSlide from "@/components/MiniaSlide";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -12,7 +13,7 @@ export default function Actus() {
 
     useEffect(() => {
         setIsLoading(true); // Start loading
-        fetch(`https://localhost:8000/api/actualites/${id}`)
+        fetch(`https://apitda.comsea.fr/api/actualites/${id}`)
         .then((response) => response.json())
         .then((result) => {
             setPostState(result);
@@ -25,7 +26,7 @@ export default function Actus() {
     }, [id]);
 
     useEffect(() => {
-        fetch(`https://localhost:8000/api/galeries`)
+        fetch(`https://apitda.comsea.fr/api/galeries`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -38,12 +39,12 @@ export default function Actus() {
     }, []);
 
     const image = postState.photo ? [
-        `https://localhost:8000/build/images/${postState.photo}`,
+        `https://apitda.comsea.fr/build/images/${postState.photo}`,
         ...images.map(image => {
             // Trouver la galerie correspondante pour l'image actuelle
             const galerie = postState.gallery.find(galerie => galerie == '/api/galeries/' + image.id);
             // Si une galerie correspondante est trouvée, retourner l'URL de l'image
-            return galerie ? `https://localhost:8000/build/images/${image.link}` : null;
+            return galerie ? `https://apitda.comsea.fr/build/images/${image.link}` : null;
         }).filter(url => url !== null) // Filtrer pour éliminer les valeurs null
     ] : [];
 

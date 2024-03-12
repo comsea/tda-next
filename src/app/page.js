@@ -10,8 +10,14 @@ export default function Home() {
     const [actualites, setActualites] = useState([])
     const [realisations, setRealisations] = useState([])
 
+    const [expanded, setExpanded] = useState(false);
+
+    const handleChange = (panel) => (event, isExpanded) => {
+        setExpanded(isExpanded ? panel : false);
+      };
+
     useEffect(() => {
-        fetch(`https://localhost:8000/api/actualites`)
+        fetch(`https://apitda.comsea.fr/api/actualites`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedActualites = result['hydra:member'];
@@ -133,7 +139,9 @@ export default function Home() {
                     </div>
                     <p>Découvrez en images nos réalisations, allant de la construction à la réhabilitation, en passant par l'extension ou l'aménagement de bâtiments résidentiels, industriels, médicaux, commerciaux, institutionnels, voire publics.</p>
                 </div>
-                <Accordion />
+                <div className="w-full lg:block hidden">
+                    <Accordion />
+                </div>
             </div>
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex lg:flex-row flex-col justify-between items-start text-start">
@@ -144,7 +152,7 @@ export default function Home() {
                         </div>
                         {isLoading ? 'Chargement en cours' : actualites.slice(1,2).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
-                                <img src={`https://localhost:8000/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                                <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                                 <p className="line-clamp-3 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />
@@ -178,7 +186,7 @@ export default function Home() {
                                     <div className="w-full h-full bg-[#242424] rounded-tl-3xl"></div>
                                 </div>
                             </div>
-                            <img src={`https://localhost:8000/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                            <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                             <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                             <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                         </div>
@@ -200,7 +208,7 @@ export default function Home() {
                                         <div className="w-full h-full bg-[#242424] rounded-tl-3xl"></div>
                                     </div>
                                 </div>
-                                <img src={`https://localhost:8000/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                                <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                                 <p className="line-clamp-2 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />
@@ -208,7 +216,7 @@ export default function Home() {
                         ))}
                         {isLoading ? 'Chargement en cours' : actualites.slice(2,3).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
-                                <img src={`https://localhost:8000/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                                <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                                 <p className="line-clamp-4 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />

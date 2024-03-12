@@ -13,7 +13,7 @@ export default function Accordion() {
     };
 
     useEffect(() => {
-        fetch(`https://localhost:8000/api/categoriess`)
+        fetch(`https://apitda.comsea.fr/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -26,7 +26,7 @@ export default function Accordion() {
     }, []);
 
     return(
-        <div className="antialiased w-full flex flex-col font-sans items-stretch justify-center mt-12 sm:flex-row sm:items-center lg:h-[60vh]">
+        <div className="antialiased w-full flex flex-col font-sans items-stretch justify-center mt-12 sm:flex-row sm:items-center lg:h-[60vh] h-[80vh]">
             <div className="flex flex-col flex-grow items-stretch w-full sm:flex-row h-full">
                 {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
                     <div key={realisation.id}
@@ -41,7 +41,7 @@ export default function Accordion() {
                                 backgroundRepeat: 'no-repeat',
                                 transition: 'all 700ms ease-in-out',
                                 zIndex: 10,
-                                backgroundImage: `url('https://localhost:8000/build/images/${realisation.photo}')`,
+                                backgroundImage: `url('https://apitda.comsea.fr/build/images/${realisation.photo}')`,
                                 width: '100%',
                             }}
                         ></div>

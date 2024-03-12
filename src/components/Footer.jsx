@@ -8,7 +8,7 @@ export default function Footer() {
     const [realisations, setRealisations] = useState([])
 
     useEffect(() => {
-        fetch(`https://localhost:8000/api/categoriess`)
+        fetch(`https://apitda.comsea.fr/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -35,9 +35,9 @@ export default function Footer() {
                             <Link href={`/realisations/${realisation.name.toLowerCase().replace(/\s+/g, '-')}`} className="text-[#BBBBBB] hover:underline lg:text-sm text-xs">{realisation.name}</Link>
                         ))}
                     </div>
-                    <div className="flex lg:flex-row justify-center items-center flex-col lg:space-x-6 lg:text-lg text-base w-full lg:w-auto lg:space-y-0 space-y-8 lg:px-0 px-10">
+                    <div className="flex lg:flex-row items-start justify-start flex-col lg:space-x-6 lg:text-lg text-base w-full lg:w-auto lg:space-y-0 space-y-8 lg:px-0 px-10">
                         <div className="lg:h-[200px] h-[1px] lg:w-[1px] w-[70%] bg-[#DF0624]"></div>
-                        <div className="flex flex-col items-start space-y-1 lg:w-full w-full">
+                        <div className="flex flex-col items-start space-y-1 w-full">
                             <Link href="/presentation" className="hover:underline">Présentation</Link>
                             <Link href="/actualites" className="hover:underline">Actualités</Link>
                             <Link href="/contact" className="hover:underline">Contact</Link>
