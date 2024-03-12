@@ -13,7 +13,7 @@ export default function Rea() {
     let [realisations, setRealisations] = useState([])
 
     useEffect(() => {
-        setIsLoading(true); // Start loading
+        setIsLoading(true); // Start loadinging
         fetch(`https://apitda.comsea.fr/api/realisations/${realisationId}`)
         .then((response) => response.json())
         .then((result) => {
