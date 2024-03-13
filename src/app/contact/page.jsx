@@ -30,6 +30,7 @@ export default function Contact() {
         setIsSubmitting(true);
         try {
             // Corrected 'fecth' to 'fetch'
+            console.log(formData)
             await fetch('https://apitda.comsea.fr/form', {
                 method: 'POST',
                 headers: {
@@ -44,8 +45,6 @@ export default function Contact() {
             setIsSubmitting(false);
         }
     };
-    
-      console.log(formData)
 
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
