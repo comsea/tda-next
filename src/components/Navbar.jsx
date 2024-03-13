@@ -27,7 +27,7 @@ export default function Navbar() {
 
     return(
         <>
-            <div className="bg-[#242424] top-0 left-0 fixed lg:h-screen h-[8vh] lg:w-[10%] w-full flex lg:flex-col flex-row text-xl font-semibold justify-center items-center lg:py-12 py-4 z-50">
+            <div className="bg-[#242424] top-0 left-0 fixed lg:h-screen h-[8vh] lg:w-[10%] w-full flex lg:flex-col flex-row text-xl font-semibold justify-center items-center lg:py-16 py-4 z-50">
                 <div className="w-full flex lg:flex-col flex-row justify-between lg:items-start items-center h-full lg:pl-10 px-10 lg:pr-0">
                     <div>
                         <button onClick={toggleSidebar}><img src="/images/Navbar/menu.png" alt="Menu" className="lg:w-[30px] w-[20px]" /></button>

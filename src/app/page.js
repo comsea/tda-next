@@ -44,7 +44,7 @@ export default function Home() {
             <div className="w-full flex lg:flex-row flex-col items-center py-12 lg:space-y-0 space-y-6">
                 <div className="lg:w-[50%] w-full flex flex-col justify-center items-center text-start">
                     <div className="lg:w-[80%] w-[90%]">
-                        <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                        <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                             <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
                             <p className="absolute text-[#494949] -z-40 left-12 top-8">L'AGENCE TDA</p>
                         </div>
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
             <div className="w-full flex lg:flex-row flex-col justify-center items-center py-12 relative mb-12">
                 <div className="w-[90%] flex flex-col justify-start items-start text-start">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">INNOVER AVEC TDA</h2>
                         <p className="absolute text-[#494949] -z-40 left-12 top-8">INNOVER AVEC TDA</p>
                     </div>
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-row items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-end">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS PRESTATIONS</h2>
                         <p className="absolute text-[#494949] -z-40 left-12 top-8">NOS PRESTATIONS</p>
                     </div>
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-center">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS RÉALISATIONS</h2>
                         <p className="absolute text-[#494949] -z-40 left-12 top-8">NOS RÉALISATIONS</p>
                     </div>
@@ -146,7 +146,7 @@ export default function Home() {
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex lg:flex-row flex-col justify-between items-start text-start">
                     <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6">
-                        <div className="lg:text-6xl text-4xl font-bold mb-4 relative">
+                        <div className="lg:text-6xl text-4xl font-bold mb-4 relative w-full">
                             <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">LES ACTUALITÉS</h2>
                             <p className="absolute text-[#494949] -z-40 left-12 top-8">LES ACTUALITÉS</p>
                         </div>
