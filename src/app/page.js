@@ -44,8 +44,9 @@ export default function Home() {
             <div className="w-full flex lg:flex-row flex-col items-center py-12 lg:space-y-0 space-y-6">
                 <div className="lg:w-[50%] w-full flex flex-col justify-center items-center text-start">
                     <div className="lg:w-[80%] w-[90%]">
-                        <div className="lg:text-6xl text-4xl font-bold mb-10">
-                            <h1 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)] underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
+                        <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                            <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
+                            <p className="absolute text-[#494949] right-10">L'AGENCE TDA</p>
                         </div>
                         <p>Chez TDA, nous ne nous contentons pas de concevoir des bâtiments, mais nous donnons vie à des rêves et des aspirations. Spécialisés dans une multitude de domaines, nous façonnons des environnements où les gens peuvent vivre, apprendre, se divertir et guérir.</p><br/>
                         <p>Notre trésor le plus précieux réside dans notre équipe dévouée de professionnels du bâtiment. C'est cette équipe qui fait de chaque projet une histoire de succès, veillant à ce que chaque étape, de la conception à la réalisation, soit imprégnée de passion et de dévouement.</p><br/>
