@@ -61,8 +61,8 @@ export default function Accordion() {
                         <div class="absolute duration-700 ease-in-out flex label transition-all z-30 sm:mb-3 sm:ml-2">
                             <div class="content flex flex-col justify-center leading-tight text-white whitespace-pre">
                                 <div class="ease-in-out font-bold duration-700 opacity-0 relative transform transition-all translate-x-8 rounded-full bg-[#717171]/50 py-6 px-6 hover:scale-150">
-                                    <div href={`/realisations/${realisation.name.toLowerCase().replace(/\s+/g, '-')}`} className="rounded-full bg-[#717171]/50 py-6 px-6 hover:scale-125 ease-in-out duration-500">
-                                        <Link href={`/realisations/${realisation.name.toLowerCase().replace(/\s+/g, '-')}`}><img src="images/Accueil/search.png" alt="Recherche" className="w-[30px]" /></Link>
+                                    <div href={`/realisations/${realisation.id}`} className="rounded-full bg-[#717171]/50 py-6 px-6 hover:scale-125 ease-in-out duration-500">
+                                        <Link href={`/realisations/${realisation.id}`}><img src="images/Accueil/search.png" alt="Recherche" className="w-[30px]" /></Link>
                                     </div>
                                 </div>
                             </div>
