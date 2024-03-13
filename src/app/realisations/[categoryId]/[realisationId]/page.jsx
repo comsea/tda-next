@@ -123,7 +123,7 @@ export default function Rea() {
                                 <div className="flex flex-col text-lg text-[#BBBBBB] space-y-1">
                                     <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                         <img src="/images/Réalisation/livraison.png" alt="Livraison" className="lg:w-[20px] w-[15px]" />
-                                        <p>Livrason :</p>
+                                        <p>Livraison :</p>
                                     </div>
                                     <p className="ml-4">{realisation.livraison}</p>
                                 </div>
