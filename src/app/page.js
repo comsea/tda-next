@@ -46,7 +46,7 @@ export default function Home() {
                     <div className="lg:w-[80%] w-[90%]">
                         <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
                             <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
-                            <p className="absolute text-[#494949] -z-40 left-10 top-10">L'AGENCE TDA</p>
+                            <p className="absolute text-[#494949] -z-40 left-12 top-8">L'AGENCE TDA</p>
                         </div>
                         <p>Chez TDA, nous ne nous contentons pas de concevoir des bâtiments, mais nous donnons vie à des rêves et des aspirations. Spécialisés dans une multitude de domaines, nous façonnons des environnements où les gens peuvent vivre, apprendre, se divertir et guérir.</p><br/>
                         <p>Notre trésor le plus précieux réside dans notre équipe dévouée de professionnels du bâtiment. C'est cette équipe qui fait de chaque projet une histoire de succès, veillant à ce que chaque étape, de la conception à la réalisation, soit imprégnée de passion et de dévouement.</p><br/>
@@ -76,9 +76,9 @@ export default function Home() {
             </div>
             <div className="w-full flex lg:flex-row flex-col justify-center items-center py-12 relative mb-12">
                 <div className="w-[90%] flex flex-col justify-start items-start text-start">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10">
-                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">INNOVER AVEC TDA</h2>
-                        <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                        <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">INNOVER AVEC TDA</h2>
+                        <p className="absolute text-[#494949] -z-40 left-12 top-8">INNOVER AVEC TDA</p>
                     </div>
                     <div className="lg:w-[60%] w-full">
                         <p>Comment pouvons-nous collaborer afin de concrétiser votre projet ensemble ?</p><br/>
@@ -91,9 +91,9 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-row items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-end">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10">
-                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS PRESTATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                        <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS PRESTATIONS</h2>
+                        <p className="absolute text-[#494949] -z-40 left-12 top-8">NOS PRESTATIONS</p>
                     </div>
                     <div className="flex lg:flex-row flex-col w-full items-start justify-center lg:space-x-20 lg:space-y-0 space-y-4 text-start">
                         <div className="lg:text-3xl text-2xl flex flex-col space-y-4 lg:w-[40%] w-full">
@@ -133,9 +133,9 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-center">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10">
-                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS RÉALISATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative">
+                        <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS RÉALISATIONS</h2>
+                        <p className="absolute text-[#494949] -z-40 left-12 top-8">NOS RÉALISATIONS</p>
                     </div>
                     <p>Découvrez en images nos réalisations, allant de la construction à la réhabilitation, en passant par l'extension ou l'aménagement de bâtiments résidentiels, industriels, médicaux, commerciaux, institutionnels, voire publics.</p>
                 </div>
@@ -146,9 +146,9 @@ export default function Home() {
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex lg:flex-row flex-col justify-between items-start text-start">
                     <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6">
-                        <div className="lg:text-6xl text-4xl font-bold mb-4">
-                            <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">LES ACTUALITÉS</h2>
-                            <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                        <div className="lg:text-6xl text-4xl font-bold mb-4 relative">
+                            <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">LES ACTUALITÉS</h2>
+                            <p className="absolute text-[#494949] -z-40 left-12 top-8">LES ACTUALITÉS</p>
                         </div>
                         {isLoading ? 'Chargement en cours' : actualites.slice(1,2).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
