@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -25,7 +26,7 @@ export default function Contact() {
         });
       };
 
-      const handleSubmit = async (e) => {
+      /*const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
         try {
@@ -44,7 +45,20 @@ export default function Contact() {
         } finally {
             setIsSubmitting(false);
         }
-    };
+    };*/
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true)
+        try {
+          await axios.post('https://apitda.comsea.fr/form', formData);
+          toast.success('Message envoyé avec succès!');
+        } catch (error) {
+          toast.error('Erreur lors de l\'envoi du message', error);
+        } finally {
+            setIsSubmitting(false)
+        }
+      };
 
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
