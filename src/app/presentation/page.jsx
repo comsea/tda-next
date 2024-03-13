@@ -116,9 +116,7 @@ export default function Presentation() {
                         </div>
                         <div className="lg:w-[65%] w-full lg:text-base text-sm flex flex-col space-y-6">
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="lg:text-2xl text-xl font-bold mb-2">Planification et coordination Date d'effet</h4>
                                     <p>0301 Ordonnancement-Planification-Coordination (OPC) d’exécution courant</p>
@@ -127,9 +125,7 @@ export default function Presentation() {
                                 </div>
                             </div>
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                            <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Maîtrise des coûts et coût global</h4>
                                     <p>2202 Maîtrise des coûts en phase de conception et de réalisation</p>
@@ -141,36 +137,28 @@ export default function Presentation() {
                     <div className="w-full flex lg:flex-row flex-col justify-between items-start space-y-6 lg:space-y-0">
                         <div className="lg:w-[48%] w-full text-base flex flex-col space-y-6">
                             <div className="flex flex-row items-center space-x-6 w-full">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-full" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Formation - SECILOG AIPR  Concepteur</h4>
                                     <p>Action de prévention (formation à la sécurité et à la prévention des risques)</p>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Formation - CREPA</h4>
                                     <p>Conception de bâtiment à basse consommation</p>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Certification Nationale Professionnelle</h4>
                                     <p>CCP1 - “ Relation avec le client/le donneur d’ordres ”</p>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Stage - IFPP</h4>
                                     <p>“ Qualité environnementale des projets architecturaux et urbains “</p>
@@ -179,27 +167,21 @@ export default function Presentation() {
                         </div>
                         <div className="lg:w-[48%] w-full text-base flex flex-col space-y-6">
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Formation - CFD</h4>
                                     <p>Action d’adaptation et de développement des compétences des salariés  </p>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Formation QUADRATUS</h4>
                                     <p>Standard - Comptailité</p>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center space-x-6">
-                                <div className="lg:w-[7%] w-[15%]">
-                                    <img src="images/Presentation/macaron.png" alt="Check Certification" />
-                                </div>
+                                <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Certification - TOSA</h4>
                                     <p>Photoshop</p>
