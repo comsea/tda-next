@@ -131,6 +131,10 @@ export default function Rea() {
                         </div>
                         <div className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
                             <p>Ce projet vous plait ? Partagez-le !</p>
+                            <div className="flex flex-row space-x-4">
+                                <a href="" className="bg-[#0E76A8] p-2"><img src="/images/Footer/linkedin.png" alt="Linkedin" className="w-[25px]" /></a>
+                                <a href="" className="bg-[#3B5998] p-2"><img src="/images/Footer/facebookb.png" alt="Facebook" className="w-[25px]" /></a>
+                            </div>
                         </div>
                     </div>
                     <div className="w-full flex justify-center items-center pb-6">
