@@ -23,7 +23,7 @@ export default function Contact() {
         });
       };
 
-    /*const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true)
         try {
@@ -34,7 +34,7 @@ export default function Contact() {
         } finally {
             setIsSubmitting(false)
         }
-      };*/
+      };
     
       console.log(formData)
 
@@ -75,7 +75,7 @@ export default function Contact() {
                     <div className="lg:w-[70%] w-full lg:p-16 p-8">
                         <div className="w-full flex flex-col justify-start items-start space-y-10">
                             <h4 className="lg:text-3xl text-2xl font-semibold">Notre formulaire de contact</h4>
-                            <form className="w-full text-base space-y-3">
+                            <form onSubmit={handleSubmit} className="w-full text-base space-y-3">
                                 <div className="w-full grid lg:grid-cols-2 col-span-1 gap-x-10 gap-y-4">
                                     <div className="flex flex-col w-full justify-start items-start space-y-2">
                                         <label htmlFor="person" for="person">Nom Prénom <span className="text-[#DF0624]">*</span></label>
