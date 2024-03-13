@@ -2,6 +2,8 @@
 
 import Footer from "@/components/Footer";
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -40,6 +42,7 @@ export default function Contact() {
 
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
+            <ToastContainer />
             <div className="w-full flex flex-col items-center justify-center lg:py-12 pt-24">
                 <div className="w-[90%] flex flex-col justify-start items-start text-start">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
