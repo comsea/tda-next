@@ -25,18 +25,25 @@ export default function Contact() {
         });
       };
 
-    const handleSubmit = async (e) => {
+      const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsSubmitting(true)
+        setIsSubmitting(true);
         try {
-          await fecth.post('https://apitda.comsea.fr/form', formData);
-          toast.success('Message envoyé avec succès!');
+            // Corrected 'fecth' to 'fetch'
+            await fetch('https://apitda.comsea.fr/form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            toast.success('Message envoyé avec succès!');
         } catch (error) {
-          toast.error('Erreur lors de l\'envoi du message', error);
+            toast.error('Erreur lors de l\'envoi du message', error);
         } finally {
-            setIsSubmitting(false)
+            setIsSubmitting(false);
         }
-      };
+    };
     
       console.log(formData)
 
