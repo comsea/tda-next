@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <div className="lg:w-[90%] w-full flex flex-col justify-start items-start">
-            <div className="w-full lg:h-screen h-[60vh] flex flex-col justify-start items-start">
+            <div className="w-full lg:h-screen h-[60vh] flex flex-col justify-start items-start lg:mt-0 mt-[4.5rem]">
                 <div className="w-full h-[85%] flex justify-center items-center relative">
                     <Header />
                 </div>
@@ -46,7 +46,7 @@ export default function Home() {
                     <div className="lg:w-[80%] w-[90%]">
                         <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                             <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
-                            <p className="absolute text-[#494949] -z-40 left-12 top-8">L'AGENCE TDA</p>
+                            <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">L'AGENCE TDA</p>
                         </div>
                         <p>Chez TDA, nous ne nous contentons pas de concevoir des bâtiments, mais nous donnons vie à des rêves et des aspirations. Spécialisés dans une multitude de domaines, nous façonnons des environnements où les gens peuvent vivre, apprendre, se divertir et guérir.</p><br/>
                         <p>Notre trésor le plus précieux réside dans notre équipe dévouée de professionnels du bâtiment. C'est cette équipe qui fait de chaque projet une histoire de succès, veillant à ce que chaque étape, de la conception à la réalisation, soit imprégnée de passion et de dévouement.</p><br/>
@@ -78,7 +78,7 @@ export default function Home() {
                 <div className="w-[90%] flex flex-col justify-start items-start text-start">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">INNOVER AVEC TDA</h2>
-                        <p className="absolute text-[#494949] -z-40 left-12 top-8">INNOVER AVEC TDA</p>
+                        <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">INNOVER AVEC TDA</p>
                     </div>
                     <div className="lg:w-[60%] w-full">
                         <p>Comment pouvons-nous collaborer afin de concrétiser votre projet ensemble ?</p><br/>
@@ -91,9 +91,9 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-row items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-end">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full flex justify-end items-end">
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full flex lg:justify-end justify-start lg:items-end items-start">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS PRESTATIONS</h2>
-                        <p className="absolute text-[#494949] -z-40 left-12 top-8">NOS PRESTATIONS</p>
+                        <p className="absolute text-[#494949] -z-40 lg:-mr-12 ml-4 lg:top-8 top-6">NOS PRESTATIONS</p>
                     </div>
                     <div className="flex lg:flex-row flex-col w-full items-start justify-center lg:space-x-20 lg:space-y-0 space-y-4 text-start">
                         <div className="lg:text-2xl text-xl flex flex-col space-y-4 lg:w-[40%] w-full">
@@ -133,9 +133,9 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-center">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full flex justify-center items-center">
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full flex lg:justify-center justify-start lg:items-center items-start">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS RÉALISATIONS</h2>
-                        <p className="absolute text-[#494949] -z-40 left-12 top-8">NOS RÉALISATIONS</p>
+                        <p className="absolute text-[#494949] -z-40 lg:ml-24 ml-4 lg:top-8 top-6">NOS RÉALISATIONS</p>
                     </div>
                     <p>Découvrez en images nos réalisations, allant de la construction à la réhabilitation, en passant par l'extension ou l'aménagement de bâtiments résidentiels, industriels, médicaux, commerciaux, institutionnels, voire publics.</p>
                 </div>
@@ -148,7 +148,7 @@ export default function Home() {
                     <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6">
                         <div className="lg:text-6xl text-4xl font-bold mb-4 relative w-full">
                             <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">LES ACTUALITÉS</h2>
-                            <p className="absolute text-[#494949] -z-40 left-12 top-8">LES ACTUALITÉS</p>
+                            <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">LES ACTUALITÉS</p>
                         </div>
                         {isLoading ? 'Chargement en cours' : actualites.slice(1,2).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">

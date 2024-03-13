@@ -76,15 +76,14 @@ export default function Header() {
     return (
         <div className="flex items-center justify-center h-full w-full bg-gray-200">
             <div className="relative w-full h-full">
-                <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className='absolute top-' />
                 <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="relative w-full h-full justify-center items-center">
-                        <div className="w-[90%] top-10">
-                            <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[150px]" />
-                        </div>
+                    <div className="relative w-full h-full flex justify-center items-center">
                         <img src={`https://apitda.comsea.fr/build/images/${slideImages[currentSlide]}`} alt="" className='w-full h-full object-cover' />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-[90%] top-10 z-50 absolute">
+                                <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[100px] w-[50px]" />
+                            </div>
                             <div className="w-[90%] h-full flex items-center justify-start">
                                 <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
                                     <h1 className="lg:text-6xl text-4xl font-medium uppercase">{slides[currentSlide]}</h1>
