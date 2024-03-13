@@ -29,7 +29,7 @@ export default function Contact() {
         e.preventDefault();
         setIsSubmitting(true)
         try {
-          await axios.post('https://apitda.comsea.fr/form', formData);
+          fetch.post('https://apitda.comsea.fr/form', formData);
           toast.success('Message envoyé avec succès!');
         } catch (error) {
           toast.error('Erreur lors de l\'envoi du message', error);
