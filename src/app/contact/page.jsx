@@ -1,6 +1,43 @@
+'use client'
+
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        person: '',
+        email: '',
+        subject: 'Message du formulaire de contact',
+        message: '',
+        validate: false,
+      });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        const fieldValue = type === 'checkbox' ? checked : value;
+    
+        setFormData({
+          ...formData,
+          [name]: fieldValue,
+        });
+      };
+
+    /*const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true)
+        try {
+          await axios.post('https://apitda.comsea.fr/form', formData);
+          toast.success('Message envoyé avec succès!');
+        } catch (error) {
+          toast.error('Erreur lors de l\'envoi du message', error);
+        } finally {
+            setIsSubmitting(false)
+        }
+      };*/
+    
+      console.log(formData)
+
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-col items-center justify-center lg:py-12 pt-24">
@@ -38,30 +75,30 @@ export default function Contact() {
                     <div className="lg:w-[70%] w-full lg:p-16 p-8">
                         <div className="w-full flex flex-col justify-start items-start space-y-10">
                             <h4 className="lg:text-3xl text-2xl font-semibold">Notre formulaire de contact</h4>
-                            <form action="" className="w-full text-base space-y-3">
+                            <form className="w-full text-base space-y-3">
                                 <div className="w-full grid lg:grid-cols-2 col-span-1 gap-x-10 gap-y-4">
                                     <div className="flex flex-col w-full justify-start items-start space-y-2">
-                                        <label htmlFor="name">Nom Prénom <span className="text-[#DF0624]">*</span></label>
-                                        <input type="text" name="name" id="name" placeholder="Votre nom et prénom" className="bg-[#242424] border-2 border-white w-full px-4 py-2" />
+                                        <label htmlFor="person" for="person">Nom Prénom <span className="text-[#DF0624]">*</span></label>
+                                        <input type="text" name="person" id="person" onChange={handleChange} value={formData.person} placeholder="Votre nom et prénom" className="bg-[#242424] border-2 border-white w-full px-4 py-2" />
                                     </div>
                                     <div className="flex flex-col w-full justify-start items-start space-y-2">
-                                        <label htmlFor="mail">Adresse Mail <span className="text-[#DF0624]">*</span></label>
-                                        <input type="text" name="mail" id="mail" placeholder="Votre adresse mail" className="bg-[#242424] border-2 border-white w-full px-4 py-2" />
+                                        <label htmlFor="email">Adresse Mail <span className="text-[#DF0624]">*</span></label>
+                                        <input type="text" name="email" id="email" onChange={handleChange} value={formData.email} placeholder="Votre adresse mail" className="bg-[#242424] border-2 border-white w-full px-4 py-2" />
                                     </div>
                                     <div className="flex flex-col w-full justify-start items-start space-y-2 lg:col-span-2">
-                                        <label htmlFor="name">Décrivez votre projet <span className="text-[#DF0624]">*</span></label>
-                                        <textarea name="message" id="message" placeholder="Votre message" className="bg-[#242424] border-2 border-white w-full px-4 py-2"></textarea>
+                                        <label htmlFor="message">Décrivez votre projet <span className="text-[#DF0624]">*</span></label>
+                                        <textarea name="message" id="message" onChange={handleChange} value={formData.message} placeholder="Votre message" className="bg-[#242424] border-2 border-white w-full px-4 py-2"></textarea>
                                     </div>
                                 </div>
                                 <div className="w-full text-xs flex lg:flex-row flex-col justify-between lg:items-center items-start lg:space-y-0 space-y-4">
                                     <div className="flex flex-row justify-center items-center space-x-2">
-                                        <input type="checkbox" name="validate" id="validate" />
+                                        <input type="checkbox" name="validate" id="validate" onChange={handleChange} value={formData.validate} />
                                         <label htmlFor="validate">j’accepte les conditions d’utilisations selon les conditions générales <span className="text-[#DF0624]">*</span></label>
                                     </div>
                                     <p><span className="text-[#DF0624]">*</span> Champs obligatoires</p>
                                 </div>
                                 <div className="w-full flex flex-row justify-end items-end">
-                                    <input type="submit" value="Envoyer" className="bg-white text-[#DF0624] py-2 px-12 text-lg font-semibold" />
+                                    <button type="submit" className="bg-white text-[#DF0624] py-2 px-12 text-lg font-semibold" >{isSubmitting ? "Envoi en cours..." : "Envoyer"}</button>
                                 </div>
                             </form>
                         </div>
