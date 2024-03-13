@@ -17,9 +17,9 @@ export default function Presentation() {
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-row items-center justify-center lg:py-12 py-24">
                 <div className="w-[90%] flex flex-col justify-center items-center text-start">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full">
-                        <h1 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">L'AGENCE TDA</h1>
-                        <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
+                        <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
+                        <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">L'AGENCE TDA</p>
                     </div>
                     <p>Implantée dans les villes de Charleville-Mézières, Reims et Épernay, TDA n'est pas simplement une agence de maîtrise d'œuvre.  C'est avant tout une histoire façonnée avec passion par Frédéric Bonnet en 2004.</p><br/>
                     <p>Depuis son lancement à Charleville en 2004, l'Agence TDA n'a cessé de croître et d'évoluer. Elle a étendu son influence avec l'inauguration de nouveaux locaux à Reims en 2016, puis à Épernay en 2021. Notre expansion témoigne de notre engagement constant envers l'excellence et notre volonté de répondre aux besoins croissants de nos clients dans toute la région.</p>
@@ -52,9 +52,9 @@ export default function Presentation() {
             </div>
             <div className="w-full py-8 bg-[#242424] flex flex-col justify-center items-center text-center">
                 <div className="w-[75%] flex flex-col justify-center items-center space-y-6">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 flex flex-col justify-center items-center">
-                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS PRESTATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full flex lg:justify-center justify-start lg:items-center items-start relative">
+                        <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 z-10">NOS PRESTATIONS</h2>
+                        <p className="absolute text-[#494949] lg:ml-24 ml-4 lg:top-8 top-6">NOS PRESTATIONS</p>
                     </div>
                     <div className="flex flex-col justify-center items-center w-full space-y-4 py-6">
                         <div className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
@@ -105,9 +105,9 @@ export default function Presentation() {
             </div>
             <div className="w-full flex flex-row items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-start items-start text-start space-y-8">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full">
-                        <h2 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS CERTIFICATIONS</h2>
-                        <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
+                        <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 z-10">NOS CERTIFICATIONS</h2>
+                        <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">NOS CERTIFICATIONS</p>
                     </div>
                     <p>Car nous cherchons à travailler avec l’excellence, découvrez toutes nos certifications.</p>
                     <div className="w-full flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-6">

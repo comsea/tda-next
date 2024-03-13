@@ -38,7 +38,7 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-            <div className={`bg-[#242424] top-0 left-0 h-screen lg:w-[15%] w-full flex flex-col text-xl font-semibold justify-center items-center z-[60] lg:py-10 py-6 ${isOpen ? 'fixed' : 'hidden'}`}>
+            <div className={`bg-[#242424] top-0 left-0 h-screen lg:w-[15%] w-full flex flex-col text-xl font-semibold justify-center items-center z-[60] lg:py-[3.5rem] py-4 ${isOpen ? 'fixed' : 'hidden'}`}>
                 <div className="w-full flex flex-col justify-between items-start h-full pl-10">
                     <div>
                     <button onClick={toggleSidebar}><img src="/images/Navbar/croix.png" alt="Croix" className="lg:w-[30px] w-[20px]" /></button>

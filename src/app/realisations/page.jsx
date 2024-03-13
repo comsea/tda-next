@@ -24,9 +24,9 @@ export default function Realisations() {
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-row items-center justify-center lg:py-12 py-24">
                 <div className="w-[90%] flex flex-col justify-center items-center text-start space-y-6">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full">
-                        <h1 className="drop-shadow-[30px_25px_0px_rgba(255,255,255,0.25)]">NOS RÉALISATIONS</h1>
-                        <div className="h-[2px] bg-[#DF0624] lg:w-[300px] w-[200px] z-10"></div>
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
+                        <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS RÉALISATIONS</h1>
+                        <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">NOS RÉALISATIONS</p>
                     </div>
                     <p>Découvrez en images nos réalisations, allant de la construction à la réhabilitation, en passant par l'extension ou l'aménagement de bâtiments résidentiels, industriels, médicaux, commerciaux, institutionnels, voire publics.</p>
                     <div className="w-[90%] grid lg:grid-cols-3 grid-cols-1 gap-10 py-10">
