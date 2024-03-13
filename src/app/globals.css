@@ -16,9 +16,25 @@
   }
 }
 
+@font-face {
+  font-family: 'tda';
+  src: url(/fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'test';
+  src: url(/fonts/NotoSansKhojki-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'testage';
+  src: url(/fonts/Whisper-Regular.ttf);
+}
+
 body {
   color: white;
   background-color: black;
+  font-family: 'tda'!important;
 }
 
 @layer utilities {
