@@ -11,6 +11,8 @@ export async function GET(req, res) {
             titleUrl: titleUrl,
             descUrl: descUrl
         }
+
+        console.log(data.imageUrl)
         return new Response(JSON.stringify(data), { 
             status: 200,
             headers: {
