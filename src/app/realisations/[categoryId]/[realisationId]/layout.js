@@ -8,7 +8,7 @@ export async function generateMetadata(req, res) {
         openGraph: {
             images : imageUrl,
             title: titleUrl,
-            description: 'Venez consulter notre article',
+            description: 'Venez consulter notre réalisation',
         },
     };
 }
