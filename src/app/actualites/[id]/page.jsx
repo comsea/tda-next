@@ -1,5 +1,6 @@
 'use client'
 
+import Facebook from "@/components/Facebook";
 import MiniaSlide from "@/components/MiniaSlide";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -68,6 +69,7 @@ export default function Actus() {
                             <div className="flex flex-row space-x-4">
                                 <a href="" className="bg-[#0E76A8] p-2"><img src="/images/Footer/linkedin.png" alt="Linkedin" className="w-[25px]" /></a>
                                 <a href="" className="bg-[#3B5998] p-2"><img src="/images/Footer/facebookb.png" alt="Facebook" className="w-[25px]" /></a>
+                                <Facebook shareUrl={`https://testtda.comsea.fr/actualites/${id}`} />
                             </div>
                         </div>
                     </div>
