@@ -5,9 +5,9 @@ export async function generatMetadata(req, res) {
     const imageUrl = await response.text();
     return {
         openGraph: {
-            images : imageUrl
-        }
-    }
+            images : imageUrl,
+        },
+    };
 }
 
 export default function Layout({ req, children }) {
