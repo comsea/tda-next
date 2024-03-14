@@ -1,15 +1,13 @@
 export async function generateMetadata(req, res) {
     //try {
         const id = req.params.id;
-        const response = await fetch(`https://testtda.comsea.fr/api/openGraph/${id}`);
+        const response = await fetch(`https://testtda.comsea.fr/api/openGraph/${id}`).then((res) => res.json())
         console.log(response)
-        const responseBody = await response.text();
-        const data = JSON.parse(responseBody)
         return {
             openGraph: {
                 images: 'image',
                 url: `https://testtda.comsea.fr/actualites/${id}`,
-                title: 'data', // Consider making this dynamic
+                title: response.titleUrl, // Consider making this dynamic
                 description: 'desc', // Consider making this dynamic
             },
         };
