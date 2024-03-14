@@ -6,7 +6,17 @@ export async function GET(req, res) {
         let imageUrl = `https://apitda.comsea.fr/build/images/${result.photo}`
         let titleUrl = result.title
         let descUrl = result.description
-        return new Response(imageUrl, { status: 200 })
+        let data = {
+            imageUrl: imageUrl,
+            titleUrl: titleUrl,
+            descUrl: descUrl
+        }
+        return new Response(JSON.stringify(data), { 
+            status: 200,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
     } catch (err) {
         console.log(err)
         return new Response("https://testtda.comsea.fr/images/Footer/Logo-TDA.png", { status: 200 })
