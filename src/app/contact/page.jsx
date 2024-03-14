@@ -1,6 +1,5 @@
 'use client'
 
-import Footer from "@/components/Footer";
 import { useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -121,7 +120,7 @@ export default function Contact() {
                                     <p><span className="text-[#DF0624]">*</span> Champs obligatoires</p>
                                 </div>
                                 <div className="w-full flex flex-row justify-end items-end">
-                                    <button type="submit" className="bg-white text-[#DF0624] py-2 px-12 text-lg font-semibold" >{isSubmitting ? "Envoi en cours..." : "Envoyer"}</button>
+                                    <button type="submit" className="bg-white text-[#DF0624] py-2 px-12 text-lg font-semibold" disabled={isSubmitting} >{isSubmitting ? "Envoi en cours..." : "Envoyer"}</button>
                                 </div>
                             </form>
                         </div>
