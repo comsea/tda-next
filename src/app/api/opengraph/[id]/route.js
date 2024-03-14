@@ -3,7 +3,7 @@ export async function GET(req, res) {
     try {
         const response = await fetch(`https://apitda.comsea.fr/api/actualites/${res.params.id}`)
         const result = await response.json()
-        imageUrl = `https://apitda.comsea.fr/build/images/${result.photo}`
+        let imageUrl = `https://apitda.comsea.fr/build/images/${result.photo}`
         return new Response(imageUrl, { status: 200 })
     } catch (err) {
         console.log(err)
