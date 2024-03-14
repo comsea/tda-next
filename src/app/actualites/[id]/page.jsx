@@ -4,18 +4,6 @@ import MiniaSlide from "@/components/MiniaSlide";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 
-export async function generatMetadata(req, res) {
-    const id = req.params.id
-    const response = await fetch(`https://testtda.comsea.fr/api/openGraph/${id}`)
-
-    const imageUrl = await response.text();
-    return {
-        openGraph: {
-            images : "https://testtda.comsea.fr/images/Presentation/technicite.png"
-        }
-    }
-}
-
 export default function Actus() {
     const {id} = useParams()
     let [isLoading, setIsLoading] = useState(false)

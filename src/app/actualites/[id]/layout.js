@@ -1,4 +1,4 @@
-export async function generatMetadata(req, res) {
+export async function generateMetadata(req, res) {
     const id = req.params.id
     const response = await fetch(`https://testtda.comsea.fr/api/openGraph/${id}`)
 
