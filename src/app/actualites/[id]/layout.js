@@ -6,6 +6,7 @@ export async function generateMetadata(req, res) {
     return {
         openGraph: {
             images : imageUrl,
+            title: "Actus"
         },
     };
 }
