@@ -1,5 +1,5 @@
 export async function generateMetadata(req, res) {
-    try {
+    //try {
         const id = req.params.id;
         const response = await fetch(`https://testtda.comsea.fr/api/openGraph/${id}`);
         console.log(response)
@@ -15,7 +15,7 @@ export async function generateMetadata(req, res) {
                 description: desc, // Consider making this dynamic
             },
         };
-    } catch (error) {
+    /*} catch (error) {
         console.error('Error generating Open Graph metadata:', error);
         // Handle the error appropriately, e.g., return a default metadata object
         return {
@@ -26,7 +26,7 @@ export async function generateMetadata(req, res) {
                 description: 'Default Description',
             },
         };
-    }
+    }*/
 }
 
 
