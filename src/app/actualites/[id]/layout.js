@@ -6,6 +6,9 @@ export async function generateMetadata(req, res) {
     return {
         openGraph: {
             images : imageUrl,
+            url: `https://testtda.comsea.fr/api/openGraph/${id}`,
+            title: 'Titre',
+            description: 'description',
         },
     };
 }
