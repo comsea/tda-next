@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="w-full flex flex-col justify-center items-center relative">
             <div className="w-full h-full relative py-10 flex flex-row justify-center items-center">
                 <img src="/images/Footer/footer.png" alt="Background Footer" className="lg:w-[50%] w-full h-full absolute top-0 left-0 object-cover -z-10" />
-                <div className="w-[90%] flex lg:flex-row flex-col lg:items-start items-center justify-center lg:space-x-24 space-y-8 lg:space-y-0">
+                <div className="w-[90%] flex lg:flex-row flex-col lg:items-start items-center justify-center lg:justify-between lg:space-x-24 space-y-8 lg:space-y-0">
                     <div className="flex flex-col justify-center items-center space-y-10 text-center">
                         <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[350px] w-[60%]" />
                         <p>CHARLEVILLE-MÉZIÈRES <span className="text-[#DF0624]">|</span> EPERNAY <span className="text-[#DF0624]">|</span> REIMS</p>
