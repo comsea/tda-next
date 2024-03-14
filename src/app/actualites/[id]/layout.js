@@ -5,7 +5,7 @@ export async function generateMetadata(req, res) {
     const imageUrl = await response.text();
     return {
         openGraph: {
-            images : "https://testtda.comsea.fr/images/Presentation/technicite.png",
+            images : imageUrl,
         },
     };
 }
