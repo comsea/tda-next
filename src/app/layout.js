@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
           sizes="any"
           href="/logo.png"
         ></link>
+        <meta property="og:image" key="ogType" content="jungko" />
       </head>
       <body className={inter.className}>
         <div className="App 2xl:text-2xl lg:text-xl text-lg lg:font-medium font-normal relative h-full w-full flex flex-col items-end">

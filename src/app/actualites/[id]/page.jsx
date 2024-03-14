@@ -1,6 +1,5 @@
 'use client'
 
-import Facebook from "@/components/Facebook";
 import MiniaSlide from "@/components/MiniaSlide";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
