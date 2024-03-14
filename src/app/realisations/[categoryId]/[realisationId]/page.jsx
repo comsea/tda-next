@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import MiniaSlideRea from "@/components/MiniaSlideRea";
 import Link from "next/link";
+import Linkedin from "@/components/Linkedin";
+import Facebook from "@/components/Facebook";
 
 export default function Rea() {
     const {realisationId} = useParams()
@@ -11,6 +13,7 @@ export default function Rea() {
     let [realisation, setRealisation] = useState([])
     let [images, setImages] = useState([])
     let [realisations, setRealisations] = useState([])
+    let [categorys, setCategorys] = useState([])
 
     useEffect(() => {
         setIsLoading(true); // Start loadinging
@@ -51,6 +54,22 @@ export default function Rea() {
             console.error(error);
         });
     }, []);
+
+    useEffect(() => {
+        fetch(`https://apitda.comsea.fr/api/categoriess`)
+        .then((response) => response.json())
+        .then((result) => {
+            const fetchedCategorys = result['hydra:member'];
+            setCategorys(fetchedCategorys);
+            setIsLoading(false);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+    }, []);
+
+    const cate = categorys.map(category => (realisation.category == '/api/categoriess/'+category.id ? category.id : null))
+    console.log(cate)
 
     const image = realisation.photo ? [
         `https://apitda.comsea.fr/build/images/${realisation.photo}`,
@@ -132,8 +151,8 @@ export default function Rea() {
                         <div className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
                             <p>Ce projet vous plait ? Partagez-le !</p>
                             <div className="flex flex-row space-x-4">
-                                <a href="" className="bg-[#0E76A8] p-2"><img src="/images/Footer/linkedin.png" alt="Linkedin" className="w-[25px]" /></a>
-                                <a href="" className="bg-[#3B5998] p-2"><img src="/images/Footer/facebookb.png" alt="Facebook" className="w-[25px]" /></a>
+                                <Linkedin shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
+                                <Facebook shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
                             </div>
                         </div>
                     </div>

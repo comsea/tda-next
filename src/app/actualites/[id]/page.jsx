@@ -68,10 +68,8 @@ export default function Actus() {
                         <div className="flex flex-col space-y-4">
                             <p>Notre actualité vous plait ? Partagez la !</p>
                             <div className="flex flex-row space-x-4">
-                                <a href="" className="bg-[#0E76A8] p-2"><img src="/images/Footer/linkedin.png" alt="Linkedin" className="w-[25px]" /></a>
-                                <a href="" className="bg-[#3B5998] p-2"><img src="/images/Footer/facebookb.png" alt="Facebook" className="w-[25px]" /></a>
-                                <Facebook shareUrl={`https://testtda.comsea.fr/actualites/${id}`} />
                                 <Linkedin shareUrl={`https://testtda.comsea.fr/actualites/${id}`} />
+                                <Facebook shareUrl={`https://testtda.comsea.fr/actualites/${id}`} />
                             </div>
                         </div>
                     </div>
