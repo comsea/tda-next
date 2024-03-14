@@ -5,14 +5,17 @@ export async function generateMetadata(req, res) {
         if (!response.ok) {
             throw new Error(`Failed to fetch image URL: ${response.statusText}`);
         }
+        console.log(response)
         const data = await response.json();
-        const { imageUrl, titleUrl, descUrl } = data
+        let image = data.imageUrl
+        let titre = data.titleUrl
+        let desc = data.descUrl
         return {
             openGraph: {
-                images: imageUrl,
+                images: image,
                 url: `https://testtda.comsea.fr/actualites/${id}`,
-                title: titleUrl, // Consider making this dynamic
-                description: descUrl, // Consider making this dynamic
+                title: titre, // Consider making this dynamic
+                description: desc, // Consider making this dynamic
             },
         };
     } catch (error) {
