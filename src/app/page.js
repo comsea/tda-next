@@ -192,7 +192,7 @@ export default function Home() {
                         </div>
                         ))}
                     </div>
-                    <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6 mt-3">
+                    <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6 mt-[8px]">
                         {isLoading ? 'Chargement en cours' : actualites.slice(0,1).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                                 <div className="absolute flex flex-row top-0 left-0 text-black text-xs  lg:w-1/2 w-[60%]">

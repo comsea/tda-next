@@ -36,7 +36,7 @@ export default function Footer() {
                         ))}
                     </div>
                     <div className="flex lg:flex-row items-start justify-start flex-col lg:space-x-6 lg:text-lg text-base w-full lg:w-auto lg:space-y-0 space-y-8 lg:px-0 px-10">
-                        <div className="lg:h-[200px] h-[1px] lg:w-[1px] w-[70%] bg-[#DF0624]"></div>
+                        <div className="lg:h-[200px] h-[2px] lg:w-[1px] w-[70%] bg-[#DF0624]"></div>
                         <div className="flex flex-col items-start space-y-1 w-full">
                             <Link href="/presentation" className="hover:underline">Présentation</Link>
                             <Link href="/actualites" className="hover:underline">Actualités</Link>
