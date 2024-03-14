@@ -61,7 +61,7 @@ export default function Header() {
     const slides = realisations.map(realisation => realisation.title);
     const slideImages = realisations.map(realisation => realisation.photo);
     const slideUrl = realisations.map(realisation => extractCategoryIdFromUrl(realisation.category));
-    const test = categories.map(cat => cat.id)
+    const test = realisations.map(realisation => realisation.id)
 
     console.log(categories)
 
@@ -87,7 +87,7 @@ export default function Header() {
                             <div className="w-[90%] h-full flex items-center justify-start">
                                 <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
                                     <h1 className="lg:text-6xl text-4xl font-medium uppercase">{slides[currentSlide]}</h1>
-                                    <Link href={`/realisations/${slideUrl[currentSlide]}`} className='bg-white text-[#DF0624] rounded-full lg:py-2 py-1 lg:px-6 px-4'>En savoir plus</Link>
+                                    <Link href={`/realisations/categories/${test[currentSlide]}`} className='bg-white text-[#DF0624] rounded-full lg:py-2 py-1 lg:px-6 px-4'>En savoir plus</Link>
                                 </div>
                             </div>
                         </div>

@@ -91,7 +91,7 @@ export default function Realisation() {
                                             </div>
                                             <div className="w-1/2 h-[30px] bg-black text-white rounded-t-xl flex flex-row justify-center items-center">
                                                 <div className="underline decoration-[#DF0624] underline-offset-4 decoration-2">
-                                                    <Link href={`/realisations/${categoryId}/${realisation.id}`}>Voir le projet</Link>
+                                                    <Link href={`/realisations/categories/${realisation.id}`}>Voir le projet</Link>
                                                 </div>
                                             </div>
                                             <div className="w-1/4 h-[30px] bg-black">

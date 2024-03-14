@@ -165,10 +165,10 @@ export default function Rea() {
                         <p>Explorez davantage de nos projets :</p>
                         <div className="w-full grid lg:grid-cols-5 grid-cols-2 gap-8">
                             {isLoading ? "Chargement en cours" : randomRealisations.map(rea => (
-                                <div className="w-full flex flex-col justify-start items-center text-center space-y-2">
+                                <Link href={`https://testtda.comsea.fr/realisations/categories/${rea.id}`} className="w-full flex flex-col justify-start items-center text-center space-y-2">
                                     <img src={`https://apitda.comsea.fr/build/images/${rea.photo}`} alt={rea.title} className="w-full object-cover lg:h-[150px] h-[100px]" />
                                     <p>{rea.title}</p>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                     </div>
