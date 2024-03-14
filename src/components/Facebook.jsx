@@ -7,10 +7,9 @@ export default function Facebook(shareProps) {
         <div>
             <FacebookShareButton 
                 url={shareProps.shareUrl}
-                quote={shareProps.shareQuote}>
-                <FacebookIcon size={40} round />
+            >
+                <FacebookIcon size={40} />
             </FacebookShareButton>
-            
         </div>
     )
 }
