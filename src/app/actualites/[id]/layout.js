@@ -1,30 +1,16 @@
 export async function generateMetadata(req, res) {
-    //try {
-        const id = req.params.id;
-        const response = await fetch(`https://testtda.comsea.fr/api/openGraph/${id}`).then((res) => res.json())
-        console.log(response)
-        return {
-            openGraph: {
-                images: 'image',
-                url: `https://testtda.comsea.fr/actualites/${id}`,
-                title: response.titleUrl, // Consider making this dynamic
-                description: 'desc', // Consider making this dynamic
-            },
-        };
-    /*} catch (error) {
-        console.error('Error generating Open Graph metadata:', error);
-        // Handle the error appropriately, e.g., return a default metadata object
-        return {
-            openGraph: {
-                images: '',
-                url: '',
-                title: 'Default Title',
-                description: 'Default Description',
-            },
-        };
-    }*/
+    const id = req.params.id
+    const response = await fetch(`https://testtda.comsea.fr/api/openGraph/${id}`)
+    const imageUrl = await response.text();
+    return {
+        openGraph: {
+            images : imageUrl,
+            url: `https://testtda.comsea.fr/actualites/${id}`,
+            title: 'Titre',
+            description: 'description',
+        },
+    };
 }
-
 
 export default function Layout({ req, children }) {
     return <>{children}</>;
