@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion"
+import { fadeIn } from "@/app/utils/motion";
 
 export default function Realisation() {
     const {categoryId} = useParams()
@@ -50,18 +52,18 @@ export default function Realisation() {
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-row items-center justify-center lg:py-12 pt-24">
                 <div className="w-[90%] flex flex-col justify-center items-start text-start space-y-4">
-                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
+                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
                         <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 uppercase">{cat.name}</h1>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6 uppercase">{cat.name}</p>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)}>
                         <p>Découvrez nos réalisations dans le secteurs de : {cat.name}.</p>
                         <p>Explorer d’avantages nos projets.</p>
-                    </div>
+                    </motion.div>
                     <div className="w-full flex flex-col justify-center items-center pt-6 space-y-8">
                         <div className="lg:w-[90%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8">
                             {isLoading ? 'Chargement en cours' : lastFourReas.map(realisation => (
-                                    <div className="bg-[#242424] lg:p-10 p-6 pb-8 flex flex-col items-end space-y-3 relative">
+                                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="bg-[#242424] lg:p-10 p-6 pb-8 flex flex-col items-end space-y-3 relative">
                                         <div className="w-full flex flex-col items-end space-y-1">
                                             <div className="w-full flex flex-row justify-between items-center">
                                                 <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
@@ -98,12 +100,12 @@ export default function Realisation() {
                                                 <div className="w-full h-full bg-[#242424] rounded-bl-3xl"></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                             ))}
                         </div>
                         <div className="lg:w-[90%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8 pb-8">
                             {isLoading ? 'Chargement en cours' : otherReas.map(realisation => (
-                                    <div className="bg-[#242424] lg:px-10 px-6 pt-5 lg:pb-10 pb-8 flex flex-col items-end space-y-3 relative">
+                                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="bg-[#242424] lg:px-10 px-6 pt-5 lg:pb-10 pb-8 flex flex-col items-end space-y-3 relative">
                                         <h3 className="w-full lg:text-4xl text-2xl font-semibold">{realisation.title}</h3>
                                         <div className="w-full flex flex-row justify-between items-center">
                                             <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
@@ -137,7 +139,7 @@ export default function Realisation() {
                                                 <div className="w-full h-full bg-[#242424] rounded-bl-3xl"></div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                             ))}
                         </div>
                     </div>

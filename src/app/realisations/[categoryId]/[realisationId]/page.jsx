@@ -6,6 +6,8 @@ import MiniaSlideRea from "@/components/MiniaSlideRea";
 import Link from "next/link";
 import Linkedin from "@/components/Linkedin";
 import Facebook from "@/components/Facebook";
+import { motion } from "framer-motion"
+import { fadeIn } from "@/app/utils/motion";
 
 export default function Rea() {
     const {realisationId} = useParams()
@@ -91,12 +93,12 @@ export default function Rea() {
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-col items-center justify-center lg:py-12 pt-24">
                 <div className="w-[90%] flex flex-col justify-center items-start text-start space-y-4">
-                    <div className="lg:text-6xl text-3xl font-bold mb-10 w-full relative">
+                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:text-6xl text-3xl font-bold mb-10 w-full relative">
                         <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 uppercase">{realisation.title}</h1>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6 uppercase">{realisation.title}</p>
-                    </div>
+                    </motion.div>
                     <div className="w-full flex lg:flex-row flex-col items-start justify-between pb-6 lg:space-y-0 space-y-4">
-                        <div className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-2">
+                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-2">
                             <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                 <img src="/images/Réalisation/utilisateur.png" alt="Utilisateur" className="lg:w-[15px] w-[10px]" />
                                 <p>{realisation.client}</p>
@@ -106,16 +108,16 @@ export default function Rea() {
                                 <p>{realisation.lieu}</p>
                             </div>
                             <div dangerouslySetInnerHTML={{ __html: realisation.description }} />
-                        </div>
-                        <div className="lg:w-[45%] w-full flex flex-col justify-end items-end space-y-2">
+                        </motion.div>
+                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="lg:w-[45%] w-full flex flex-col justify-end items-end space-y-2">
                             <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                 <p>{new Date(realisation.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                             </div>
                             {image.length > 0 && <MiniaSlideRea images={image} />}
-                        </div> 
+                        </motion.div> 
                     </div>
                     <div className="w-full flex lg:flex-row flex-col justify-between items-start pb-6 lg:space-y-0 space-y-4">
-                        <div className="lg:w-[65%] w-full flex flex-col space-y-3">
+                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:w-[65%] w-full flex flex-col space-y-3">
                             <p>Caractéristiques :</p>
                             <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-4">
                                 <div className="flex flex-col text-lg text-[#BBBBBB] space-y-1">
@@ -147,21 +149,21 @@ export default function Rea() {
                                     <p className="ml-4">{realisation.livraison}</p>
                                 </div>
                             </div>
-                        </div>
-                        <div className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
+                        </motion.div>
+                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
                             <p>Ce projet vous plait ? Partagez-le !</p>
                             <div className="flex flex-row space-x-4">
                                 <Linkedin shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
                                 <Facebook shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
-                    <div className="w-full flex justify-center items-center pb-6">
+                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="w-full flex justify-center items-center pb-6">
                         <p>Un projet, une envie ? <Link href="/contact" className="font-semibold hover:underline">Contactez-nous</Link> dès maintenant.</p>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="w-full bg-[#4C4A4A] py-10 flex justify-center items-center">
-                    <div className="flex flex-col justify-start items-start w-[90%] space-y-6">
+                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="flex flex-col justify-start items-start w-[90%] space-y-6">
                         <p>Explorez davantage de nos projets :</p>
                         <div className="w-full grid lg:grid-cols-5 grid-cols-2 gap-8">
                             {isLoading ? "Chargement en cours" : randomRealisations.map(rea => (
@@ -171,7 +173,7 @@ export default function Rea() {
                                 </Link>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

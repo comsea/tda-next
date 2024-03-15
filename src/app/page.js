@@ -4,6 +4,8 @@ import Accordion from "@/components/Accordion";
 import Header from "@/components/Header";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion"
+import { fadeIn } from "@/app/utils/motion";
 
 export default function Home() {
     const [isLoading, setIsLoading] = useState(true)
@@ -42,7 +44,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="w-full flex lg:flex-row flex-col items-center py-12 lg:space-y-0 space-y-6">
-                <div className="lg:w-[50%] w-full flex flex-col justify-center items-center text-start">
+                <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:w-[50%] w-full flex flex-col justify-center items-center text-start">
                     <div className="lg:w-[80%] w-[90%]">
                         <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                             <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
@@ -52,12 +54,12 @@ export default function Home() {
                         <p>Notre trésor le plus précieux réside dans notre équipe dévouée de professionnels du bâtiment. C'est cette équipe qui fait de chaque projet une histoire de succès, veillant à ce que chaque étape, de la conception à la réalisation, soit imprégnée de passion et de dévouement.</p><br/>
                         <p>Si vous cherchez une agence qui comprend la dimension humaine derrière chaque structure, une équipe engagée qui transforme des idées en expériences émotionnelles, TDA est là pour vous accompagner. Confiez-nous vos rêves architecturaux, et ensemble, nous créerons des espaces où les émotions s'épanouissent et où chaque détail compte.</p>
                     </div>
-                </div>
-                <div className="lg:w-[50%] w-full flex justify-center items-center">
+                </motion.div>
+                <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="lg:w-[50%] w-full flex justify-center items-center">
                     <img src="images/Accueil/france.png" alt="Carte France" className="lg:w-[60%] w-[80%]" />
-                </div>
+                </motion.div>
             </div>
-            <div className="w-full flex lg:flex-row flex-col py-6 px-6 justify-around lg:items-center items-start lg:text-4xl text-3xl lg:space-y-0 space-y-6">
+            <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="w-full flex lg:flex-row flex-col py-6 px-6 justify-around lg:items-center items-start lg:text-4xl text-3xl lg:space-y-0 space-y-6">
                 <div className="flex flex-row space-x-4 items-center">
                     <p className="lg:text-6xl text-5xl">25</p>
                     <p>ANNÉES D'EXPÉRIENCE</p>
@@ -73,9 +75,9 @@ export default function Home() {
                         <p className="text-xl">À VOTRE ÉCOUTE</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className="w-full flex lg:flex-row flex-col justify-center items-center py-12 relative mb-12">
-                <div className="w-[90%] flex flex-col justify-start items-start text-start">
+                <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-[90%] flex flex-col justify-start items-start text-start">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">INNOVER AVEC TDA</h2>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">INNOVER AVEC TDA</p>
@@ -86,10 +88,10 @@ export default function Home() {
                         <p>Chez nous, la créativité et l'innovation ne sont pas simplement des compétences, mais une façon de donner vie à vos aspirations. Que votre vision soit déjà clairement définie ou que vous souhaitiez explorer de nouvelles perspectives, nous sommes là pour donner forme à vos idées avec une précision sans pareille. Au-delà de l'aspect architectural et technique, nous comprenons l'importance de matérialiser votre projet de manière authentique.</p><br/>
                         <p>Ce nouveau concept nous permet de nous imprégner de votre histoire et de vos rêves. Nous croyons fermement en l'harmonie entre l'esthétique et la fonctionnalité, travaillant sans relâche pour concevoir des édifices qui captivent visuellement tout en demeurant économiquement viables. Votre projet est plus qu'une simple construction ; c'est une expression de votre identité, et nous nous engageons à le façonner avec le même soin et la même passion que si c'était le nôtre.</p>
                     </div>
-                </div>
+                </motion.div>
                 <img src="images/Accueil/structure.png" alt="Structures" className="absolute right-0 lg:top-10 -bottom-24 lg:w-[45%] w-[60%]" />
             </div>
-            <div className="w-full flex flex-row items-center justify-center py-12">
+            <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="w-full flex flex-row items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-end">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full flex lg:justify-end justify-start lg:items-end items-start">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS PRESTATIONS</h2>
@@ -130,8 +132,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="w-full flex flex-col items-center justify-center py-12">
+            </motion.div>
+            <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-center">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full flex lg:justify-center justify-start lg:items-center items-start">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS RÉALISATIONS</h2>
@@ -142,16 +144,16 @@ export default function Home() {
                 <div className="w-full lg:block hidden">
                     <Accordion />
                 </div>
-            </div>
+            </motion.div>
             <div className="w-full flex flex-col items-center justify-center py-12">
                 <div className="w-[90%] flex lg:flex-row flex-col justify-between items-start text-start">
                     <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6">
-                        <div className="lg:text-6xl text-4xl font-bold mb-4 relative w-full">
+                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)}  className="lg:text-6xl text-4xl font-bold mb-4 relative w-full">
                             <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">LES ACTUALITÉS</h2>
                             <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">LES ACTUALITÉS</p>
-                        </div>
+                        </motion.div>
                         {isLoading ? 'Chargement en cours' : actualites.slice(1,2).map(actualite => (
-                            <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                            <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                                 <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
@@ -169,10 +171,10 @@ export default function Home() {
                                         <div className="w-full h-full bg-[#242424] rounded-bl-3xl"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                         {isLoading ? 'Chargement en cours' : actualites.slice(3,4).map(actualite => (
-                        <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                             <div className="absolute flex flex-row top-0 right-0 text-black text-xs lg:w-1/2 w-[60%]">
                                 <div className="w-1/4 h-[30px] bg-black">
                                     <div className="w-full h-full bg-[#242424] rounded-tr-3xl"></div>
@@ -189,12 +191,12 @@ export default function Home() {
                             <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                             <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                             <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
-                        </div>
+                        </motion.div>
                         ))}
                     </div>
                     <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6 mt-[8px]">
                         {isLoading ? 'Chargement en cours' : actualites.slice(0,1).map(actualite => (
-                            <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                            <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                                 <div className="absolute flex flex-row top-0 left-0 text-black text-xs  lg:w-1/2 w-[60%]">
                                     <div className="w-1/4 h-[30px] bg-black">
                                         <div className="w-full h-full bg-[#242424] rounded-tr-3xl"></div>
@@ -212,10 +214,10 @@ export default function Home() {
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                                 <p className="line-clamp-2 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />
-                            </div>
+                            </motion.div>
                         ))}
                         {isLoading ? 'Chargement en cours' : actualites.slice(2,3).map(actualite => (
-                            <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
+                            <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                                 <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
@@ -233,7 +235,7 @@ export default function Home() {
                                         <div className="w-full h-full bg-[#242424] rounded-bl-3xl"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

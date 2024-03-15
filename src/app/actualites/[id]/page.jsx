@@ -5,6 +5,8 @@ import Linkedin from "@/components/Linkedin";
 import MiniaSlide from "@/components/MiniaSlide";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion"
+import { fadeIn } from "@/app/utils/motion";
 
 export default function Actus() {
     const {id} = useParams()
