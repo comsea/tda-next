@@ -83,7 +83,7 @@ export default function Header() {
                         <img src={`https://apitda.comsea.fr/build/images/${slideImages[currentSlide]}`} alt="" className='w-full h-full object-cover' />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-[90%] top-10 z-50 absolute">
+                            <div className="w-[90%] top-10 z-40 absolute">
                                 <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[100px] w-[50px]" />
                             </div>
                             <div className="w-[90%] h-full flex items-center justify-start">
