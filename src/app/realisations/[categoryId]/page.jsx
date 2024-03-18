@@ -57,8 +57,7 @@ export default function Realisation() {
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6 uppercase">{cat.name}</p>
                     </motion.div>
                     <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)}>
-                        <p>Découvrez nos réalisations dans le secteurs de : {cat.name}.</p>
-                        <p>Explorer d’avantages nos projets.</p>
+                        <p>Explorez davantage nos projets, découvrez nos réalisations dans le secteur : {cat.name}.</p>
                     </motion.div>
                     <div className="w-full flex flex-col justify-center items-center pt-6 space-y-8">
                         <div className="lg:w-[90%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8">

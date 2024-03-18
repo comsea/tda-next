@@ -24,7 +24,7 @@ export default function Presentation() {
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">L'AGENCE TDA</p>
                     </motion.div>
                     <motion.p initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} >Implantée dans les villes de Charleville-Mézières, Reims et Épernay, TDA n'est pas simplement une agence de maîtrise d'œuvre.  C'est avant tout une histoire façonnée avec passion par Frédéric Bonnet en 2004.</motion.p><br/>
-                    <motion.p initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} >Depuis son lancement à Charleville en 2004, l'Agence TDA n'a cessé de croître et d'évoluer. Elle a étendu son influence avec l'inauguration de nouveaux locaux à Reims en 2016, puis à Épernay en 2021. Notre expansion témoigne de notre engagement constant envers l'excellence et notre volonté de répondre aux besoins croissants de nos clients dans toute la région.</motion.p>
+                    <motion.p initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} >Depuis son lancement à Charleville-Mézières en 2004, l'Agence TDA n'a cessé de croître et d'évoluer. Elle a étendu son influence avec l'inauguration de nouveaux locaux à Reims en 2016, puis à Épernay en 2021. Notre expansion témoigne de notre engagement constant envers l'excellence et notre volonté de répondre aux besoins croissants de nos clients dans toute la région.</motion.p>
                     <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="lg:text-3xl text-2xl grid lg:grid-cols-2 grid-cols-1 gap-y-8 gap-x-44 lg:w-[60%] w-[90%] mt-12">
                         <div className="font-semibold flex flex-row items-center justify-between space-x-4 w-full">
                             <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px]" />
@@ -85,7 +85,7 @@ export default function Presentation() {
                             <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered5 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)}>
                                 {!isHovered5 && <img src="images/Presentation/ordonnancement.png" alt="Ordonnancement" />}
                                 <p>Ordonnancement Pilotage Coordination</p>
-                                {isHovered5 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Sous assurons une gestion efficace du chantier en planifiant les tâches, en supervisant les intervenants et en assurant la coordination afin de garantir un projet de construction fluide tout en respectant les délais et les contraintes budgétaires.</p>}
+                                {isHovered5 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Nous assurons une gestion efficace du chantier en planifiant les tâches, en supervisant les intervenants et en assurant la coordination afin de garantir un projet de construction fluide tout en respectant les délais et les contraintes budgétaires.</p>}
                             </div>
                         </motion.div>
                         <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
@@ -179,7 +179,7 @@ export default function Presentation() {
                                 <img src="images/Presentation/macaron.png" alt="Check Certification" className="w-[55px]" />
                                 <div className="lg:w-[90%] w-[80%]">
                                     <h4 className="text-2xl font-bold mb-2">Formation QUADRATUS</h4>
-                                    <p>Standard - Comptailité</p>
+                                    <p>Standard - Comptabilité</p>
                                 </div>
                             </div>
                             <div className="flex flex-row items-center space-x-6">

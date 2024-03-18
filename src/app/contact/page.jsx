@@ -111,7 +111,7 @@ export default function Contact() {
                             <div className="flex flex-col justify-start items-start">
                                 <p className="text-xs">Horraires</p>
                                 <p>Du lundi au vendredi</p>
-                                <p>de 8h30 à 12h et de 14h00 à 17h30</p>
+                                <p>de 8h30 à 12h et de 14h à 17h30</p>
                             </div>
                         </motion.div>
                         <img src="images/contact.png" alt="Contact" className="absolute top-0 left-0 w-full h-full object-cover -z-10" />

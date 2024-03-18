@@ -81,7 +81,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <p className="text-sm font-light">Tout droits réservés © 2024 Copyright : <a href="https://comsea.fr" target="_blank" rel="noreferrer" className="hover:underline">Comsea</a></p>
+                <p className="text-sm font-light">Tous droits réservés © 2024 Copyright : <a href="https://comsea.fr" target="_blank" rel="noreferrer" className="hover:underline">Comsea</a></p>
             </div>
         </div>
     )
