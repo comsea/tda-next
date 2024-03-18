@@ -61,6 +61,26 @@ export default function Contact() {
         }
       };
 
+      const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        // Fonction pour détecter si l'écran est en mode mobile
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 1024);
+        };
+
+        // Appel initial pour définir l'état initial
+        checkMobile();
+
+        // Ajoutez l'écouteur d'événement
+        window.addEventListener('resize', checkMobile);
+
+        // Supprimez l'écouteur d'événement lors du nettoyage
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
+
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <ToastContainer />
@@ -97,7 +117,7 @@ export default function Contact() {
                         <img src="images/contact.png" alt="Contact" className="absolute top-0 left-0 w-full h-full object-cover -z-10" />
                     </div>
                     <div className="lg:w-[70%] w-full lg:p-16 p-8">
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="w-full flex flex-col justify-start items-start space-y-10">
+                        <motion.div initial="hidden" whileInView="show" variants={variants} className="w-full flex flex-col justify-start items-start space-y-10">
                             <h4 className="lg:text-3xl text-2xl font-semibold">Notre formulaire de contact</h4>
                             <form onSubmit={handleSubmit} className="w-full text-base space-y-3">
                                 <div className="w-full grid lg:grid-cols-2 col-span-1 gap-x-10 gap-y-4">

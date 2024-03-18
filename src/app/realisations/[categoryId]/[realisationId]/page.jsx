@@ -89,6 +89,26 @@ export default function Rea() {
     // Sélectionnez un sous-ensemble aléatoire de 5 réalisations
     const randomRealisations = shuffledRealisations.slice(0, 5);
 
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        // Fonction pour détecter si l'écran est en mode mobile
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 1024);
+        };
+
+        // Appel initial pour définir l'état initial
+        checkMobile();
+
+        // Ajoutez l'écouteur d'événement
+        window.addEventListener('resize', checkMobile);
+
+        // Supprimez l'écouteur d'événement lors du nettoyage
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
+
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-col items-center justify-center lg:py-12 pt-24">
@@ -109,7 +129,7 @@ export default function Rea() {
                             </div>
                             <div dangerouslySetInnerHTML={{ __html: realisation.description }} />
                         </motion.div>
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="lg:w-[45%] w-full flex flex-col justify-end items-end space-y-2">
+                        <motion.div initial="hidden" whileInView="show" variants={variants} className="lg:w-[45%] w-full flex flex-col justify-end items-end space-y-2">
                             <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                 <p>{new Date(realisation.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                             </div>
@@ -150,7 +170,7 @@ export default function Rea() {
                                 </div>
                             </div>
                         </motion.div>
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
+                        <motion.div initial="hidden" whileInView="show" variants={variants} className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
                             <p>Ce projet vous plait ? Partagez-le !</p>
                             <div className="flex flex-row space-x-4">
                                 <Linkedin shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
