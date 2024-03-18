@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="w-full">
       <head>
         <link rel="icon" href="/logo.png" sizes="any" />
         <link
@@ -23,8 +23,8 @@ export default function RootLayout({ children }) {
           href="/logo.png"
         ></link>
       </head>
-      <body className={inter.className}>
-        <div className="App 2xl:text-2xl lg:text-xl text-lg lg:font-medium font-normal relative h-full w-full flex flex-col items-end">
+      <body className="">
+        <div className="App 2xl:text-2xl lg:text-xl text-lg lg:font-medium font-normal relative h-full max-w-[100vw] flex flex-col items-end">
           <Navbar />
           {children}
           <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">

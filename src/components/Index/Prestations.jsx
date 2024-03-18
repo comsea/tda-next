@@ -2,10 +2,31 @@
 
 import { motion } from "framer-motion"
 import { fadeIn } from "@/app/utils/motion";
+import { useState, useEffect } from "react";
 
 export default function Prestations() {
+    const [isMobile, setIsMobile] = useState(false)
+
+    useEffect(() => {
+        // Fonction pour détecter si l'écran est en mode mobile
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 1024);
+        };
+
+        // Appel initial pour définir l'état initial
+        checkMobile();
+
+        // Ajoutez l'écouteur d'événement
+        window.addEventListener('resize', checkMobile);
+
+        // Supprimez l'écouteur d'événement lors du nettoyage
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
+
     return (
-        <motion.div initial="hidden" whileInView="show" variants={fadeIn("left", "spring", 0.2, 0.8)} className="w-full flex flex-row items-center justify-center py-12">
+        <motion.div initial="hidden" whileInView="show" variants={variants} className="w-full flex flex-row items-center justify-center py-12">
                 <div className="w-[90%] flex flex-col justify-center items-end">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full flex lg:justify-end justify-start lg:items-end items-start">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">NOS PRESTATIONS</h2>

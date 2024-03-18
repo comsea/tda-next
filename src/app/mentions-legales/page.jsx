@@ -25,7 +25,7 @@ export default function Mentions() {
 
                         <h2 class="lg:text-3xl text-2xl font-bold mt-6 mb-2">Hébergeur</h2>
                         <p>
-                            Le site H10.fr est hébergé par la société :
+                            Le site tda-archi.com est hébergé par la société :
                             OVH, 2 RUE KELLERMANN 59100 ROUBAIX
                         </p>
 
