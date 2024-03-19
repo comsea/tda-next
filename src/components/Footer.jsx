@@ -8,7 +8,7 @@ export default function Footer() {
     const [realisations, setRealisations] = useState([])
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/categoriess`)
+        fetch(`https://api.tda-archi.com/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];

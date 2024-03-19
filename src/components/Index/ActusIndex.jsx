@@ -28,7 +28,7 @@ export default function ActusIndex() {
     }, []);
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/actualites`)
+        fetch(`https://api.tda-archi.com/api/actualites`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedActualites = result['hydra:member'];
@@ -54,7 +54,7 @@ export default function ActusIndex() {
                         </div>
                         {isLoading ? 'Chargement en cours' : actualites.slice(1,2).map(actualite => (
                             <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
-                                <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                                <img src={`https://api.tda-archi.com/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                                 <p className="line-clamp-3 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />
@@ -88,7 +88,7 @@ export default function ActusIndex() {
                                     <div className="w-full h-full bg-[#242424] rounded-tl-3xl"></div>
                                 </div>
                             </div>
-                            <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                            <img src={`https://api.tda-archi.com/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                             <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                             <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                         </motion.div>
@@ -110,7 +110,7 @@ export default function ActusIndex() {
                                         <div className="w-full h-full bg-[#242424] rounded-tl-3xl"></div>
                                     </div>
                                 </div>
-                                <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                                <img src={`https://api.tda-archi.com/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                                 <p className="line-clamp-2 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />
@@ -118,7 +118,7 @@ export default function ActusIndex() {
                         ))}
                         {isLoading ? 'Chargement en cours' : actualites.slice(2,3).map(actualite => (
                             <motion.div initial="hidden" whileInView="show" variants={variants} className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
-                                <img src={`https://apitda.comsea.fr/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
+                                <img src={`https://api.tda-archi.com/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                 <h4 className="lg:text-3xl text-2xl font-semibold uppercase">{actualite.title}</h4>
                                 <p className="line-clamp-4 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />

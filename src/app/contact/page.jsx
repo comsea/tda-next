@@ -33,7 +33,7 @@ export default function Contact() {
         try {
             // Corrected 'fecth' to 'fetch'
             console.log(formData)
-            await fetch('https://apitda.comsea.fr/form', {
+            await fetch('https://api.tda-archi.com/form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ export default function Contact() {
         e.preventDefault();
         setIsSubmitting(true)
         try {
-          await axios.post('https://apitda.comsea.fr/form', formData);
+          await axios.post('https://api.tda-archi.com/form', formData);
           toast.success('Message envoyé avec succès!');
         } catch (error) {
           toast.error('Erreur lors de l\'envoi du message', error);

@@ -1,7 +1,7 @@
 export async function GET(req, res) {
 
     try {
-        const response = await fetch(`https://apitda.comsea.fr/api/realisations/${res.params.id}`)
+        const response = await fetch(`https://api.tda-archi.com/api/realisations/${res.params.id}`)
         const result = await response.json()
         let titleUrl = result.title
         return new Response(titleUrl, { status: 200 })

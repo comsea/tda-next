@@ -13,7 +13,7 @@ export default function Accordion() {
     };
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/categoriess`)
+        fetch(`https://api.tda-archi.com/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -41,7 +41,7 @@ export default function Accordion() {
                                 backgroundRepeat: 'no-repeat',
                                 transition: 'all 700ms ease-in-out',
                                 zIndex: 10,
-                                backgroundImage: `url('https://apitda.comsea.fr/build/images/${realisation.photo}')`,
+                                backgroundImage: `url('https://api.tda-archi.com/build/images/${realisation.photo}')`,
                                 width: '100%',
                             }}
                         ></div>

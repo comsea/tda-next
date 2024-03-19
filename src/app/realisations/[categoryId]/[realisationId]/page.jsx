@@ -19,7 +19,7 @@ export default function Rea() {
 
     useEffect(() => {
         setIsLoading(true); // Start loadinging
-        fetch(`https://apitda.comsea.fr/api/realisations/${realisationId}`)
+        fetch(`https://api.tda-archi.com/api/realisations/${realisationId}`)
         .then((response) => response.json())
         .then((result) => {
             setRealisation(result);
@@ -32,7 +32,7 @@ export default function Rea() {
     }, [realisationId]);
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/galeries`)
+        fetch(`https://api.tda-archi.com/api/galeries`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -45,7 +45,7 @@ export default function Rea() {
     }, []);
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/realisations`)
+        fetch(`https://api.tda-archi.com/api/realisations`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -58,7 +58,7 @@ export default function Rea() {
     }, []);
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/categoriess`)
+        fetch(`https://api.tda-archi.com/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedCategorys = result['hydra:member'];
@@ -74,12 +74,12 @@ export default function Rea() {
     console.log(cate)
 
     const image = realisation.photo ? [
-        `https://apitda.comsea.fr/build/images/${realisation.photo}`,
+        `https://api.tda-archi.com/build/images/${realisation.photo}`,
         ...images.map(image => {
             // Trouver la galerie correspondante pour l'image actuelle
             const galerie = realisation.galery.find(galerie => galerie == '/api/galeries/' + image.id);
             // Si une galerie correspondante est trouvée, retourner l'URL de l'image
-            return galerie ? `https://apitda.comsea.fr/build/images/${image.link}` : null;
+            return galerie ? `https://api.tda-archi.com/build/images/${image.link}` : null;
         }).filter(url => url !== null) // Filtrer pour éliminer les valeurs null
     ] : [];
 
@@ -188,7 +188,7 @@ export default function Rea() {
                         <div className="w-full grid lg:grid-cols-5 grid-cols-2 gap-8">
                             {isLoading ? "Chargement en cours" : randomRealisations.map(rea => (
                                 <Link href={`https://testtda.comsea.fr/realisations/categories/${rea.id}`} className="w-full flex flex-col justify-start items-center text-center space-y-2">
-                                    <img src={`https://apitda.comsea.fr/build/images/${rea.photo}`} alt={rea.title} className="w-full object-cover lg:h-[150px] h-[100px]" />
+                                    <img src={`https://api.tda-archi.com/build/images/${rea.photo}`} alt={rea.title} className="w-full object-cover lg:h-[150px] h-[100px]" />
                                     <p>{rea.title}</p>
                                 </Link>
                             ))}

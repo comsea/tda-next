@@ -10,7 +10,7 @@ export default function Header() {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/categoriess`)
+        fetch(`https://api.tda-archi.com/api/categoriess`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedCategories = result['hydra:member'];
@@ -23,7 +23,7 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
-      fetch(`https://apitda.comsea.fr/api/realisations`)
+      fetch(`https://api.tda-archi.com/api/realisations`)
       .then((response) => response.json())
       .then((result) => {
           const fetchedRealisations = result['hydra:member'];
@@ -80,7 +80,7 @@ export default function Header() {
             <div className="relative w-full h-full">
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative w-full h-full flex justify-center items-center">
-                        <img src={`https://apitda.comsea.fr/build/images/${slideImages[currentSlide]}`} alt="" className='w-full h-full object-cover' />
+                        <img src={`https://api.tda-archi.com/build/images/${slideImages[currentSlide]}`} alt="" className='w-full h-full object-cover' />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-[90%] top-10 z-40 absolute">

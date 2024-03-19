@@ -14,7 +14,7 @@ export default function Realisation() {
 
     useEffect(() => {
         setIsLoading(true); // Start loading
-        fetch(`https://apitda.comsea.fr/api/categoriess/${categoryId}`)
+        fetch(`https://api.tda-archi.com/api/categoriess/${categoryId}`)
         .then((response) => response.json())
         .then((result) => {
             setCategory(result);
@@ -27,7 +27,7 @@ export default function Realisation() {
     }, [categoryId]);
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/realisations`)
+        fetch(`https://api.tda-archi.com/api/realisations`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -73,7 +73,7 @@ export default function Realisation() {
                                                     <p>{new Date(realisation.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                                                 </div>
                                             </div>
-                                            <img src={`https://apitda.comsea.fr/build/images/${realisation.photo}`} alt="Test" className="w-full lg:h-[300px] h-[200px] object-cover" />
+                                            <img src={`https://api.tda-archi.com/build/images/${realisation.photo}`} alt="Test" className="w-full lg:h-[300px] h-[200px] object-cover" />
                                         </div>
                                         <div className="w-full flex flex-row justify-between items-center">
                                             <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">

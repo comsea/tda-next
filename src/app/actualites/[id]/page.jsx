@@ -16,7 +16,7 @@ export default function Actus() {
 
     useEffect(() => {
         setIsLoading(true); // Start loading
-        fetch(`https://apitda.comsea.fr/api/actualites/${id}`)
+        fetch(`https://api.tda-archi.com/api/actualites/${id}`)
         .then((response) => response.json())
         .then((result) => {
             setPostState(result);
@@ -29,7 +29,7 @@ export default function Actus() {
     }, [id]);
 
     useEffect(() => {
-        fetch(`https://apitda.comsea.fr/api/galeries`)
+        fetch(`https://api.tda-archi.com/api/galeries`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -42,12 +42,12 @@ export default function Actus() {
     }, []);
 
     const image = postState.photo ? [
-        `https://apitda.comsea.fr/build/images/${postState.photo}`,
+        `https://api.tda-archi.com/build/images/${postState.photo}`,
         ...images.map(image => {
             // Trouver la galerie correspondante pour l'image actuelle
             const galerie = postState.gallery.find(galerie => galerie == '/api/galeries/' + image.id);
             // Si une galerie correspondante est trouvée, retourner l'URL de l'image
-            return galerie ? `https://apitda.comsea.fr/build/images/${image.link}` : null;
+            return galerie ? `https://api.tda-archi.com/build/images/${image.link}` : null;
         }).filter(url => url !== null) // Filtrer pour éliminer les valeurs null
     ] : [];
 
