@@ -10,7 +10,7 @@ export default function Mentions() {
                     <div class="w-full flex flex-col font-normal lg:py-12 py-4">
                         <h2 class="lg:text-3xl text-2xl font-bold mb-2">Propriétaire</h2>
                         <p>
-                            Techniques Design Architectures, Siège sociale situé au 9 Rue de l'Abattoir, 08000 Charleville-Mézières
+                        TDA - TECHNIQUES DESIGN ARCHITECTURES - n°Siren 452982010 - n°Siret 45298201000020 - n° TVA Intracommunautaire FR01452982010 - n°RCS Sedan D 452 982 010 - 9 Rue de l'Abattoir, 08000 Charleville-Mézières
                         </p>
 
                         <h2 class="lg:text-3xl text-2xl font-bold mt-6 mb-2">Conception et réalisation</h2>
@@ -26,7 +26,7 @@ export default function Mentions() {
                         <h2 class="lg:text-3xl text-2xl font-bold mt-6 mb-2">Hébergeur</h2>
                         <p>
                             Le site tda-archi.com est hébergé par la société :
-                            OVH, 2 RUE KELLERMANN 59100 ROUBAIX
+                            Vercel Inc., 340 S Lemon Ave #4133, Walnut CA, 91789
                         </p>
 
                         <h2 class="lg:text-3xl text-2xl font-bold mt-6 mb-2">Propriété Intellectuelle</h2>
