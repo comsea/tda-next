@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="w-full">
       <head>
-        <link rel="icon" href="/logo.png" sizes="any" />
+        <link rel="icon" href="./favicon.ico" sizes="any" />
         <link
           rel="icon"
           type="image/png"
