@@ -23,7 +23,7 @@ export default function Presentation() {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
+    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("right", "spring", 0.2, 0.8);
 
     return (
         <div className="w-full flex lg:flex-row flex-col items-center py-12 lg:space-y-0 space-y-6">

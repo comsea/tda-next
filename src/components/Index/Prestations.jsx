@@ -23,7 +23,7 @@ export default function Prestations() {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
+    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("right", "spring", 0.2, 0.8);
 
     return (
         <motion.div initial="hidden" whileInView="show" variants={variants} className="w-full flex flex-row items-center justify-center py-12">

@@ -43,6 +43,7 @@ export default function Accordion() {
                                 zIndex: 10,
                                 backgroundImage: `url('https://api.tda-archi.com/build/images/${realisation.photo}')`,
                                 width: '100%',
+                                filter: activePaneIndex === realisation.id ? 'grayscale(0)' : 'grayscale(1)',
                             }}
                         ></div>
                         {activePaneIndex !== realisation.id && (
@@ -54,9 +55,11 @@ export default function Accordion() {
                             :
                                 <div class="flex h-10 icon items-center justify-center mr-3 rounded-full text-[#BBBBBB] w-10"><p>{realisation.id}</p></div>
                             }
+                            {activePaneIndex == realisation.id && (
                             <div class="content flex flex-col justify-center leading-tight text-white whitespace-pre">
                                 <div class="ease-in-out font-bold duration-700 opacity-0 relative transform transition-all translate-x-8 uppercase">{realisation.name}</div>
                             </div>
+                            )}
                         </div>
                         <div class="absolute duration-700 ease-in-out flex label transition-all z-30 sm:mb-3 sm:ml-2">
                             <div class="content flex flex-col justify-center leading-tight text-white whitespace-pre">
@@ -67,6 +70,11 @@ export default function Accordion() {
                                 </div>
                             </div>
                         </div>
+                        {activePaneIndex !== realisation.id && (
+                            <div class="absolute bottom-[45%] left-0 w-full flex items-center justify-center -rotate-90 text-white z-50">
+                                <p className="whitespace-nowrap">{realisation.name}</p>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>

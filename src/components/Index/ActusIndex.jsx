@@ -42,7 +42,7 @@ export default function ActusIndex() {
         });
     }, []);
 
-    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
+    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("right", "spring", 0.2, 0.8);
 
     return (
             <div className="w-full flex flex-col items-center justify-center py-12">
