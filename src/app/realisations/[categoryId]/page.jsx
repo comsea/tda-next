@@ -43,11 +43,6 @@ export default function Realisation() {
     // Filtrer les réalisations pour la catégorie spécifiée
     const filteredReas = reas.filter(realisation => realisation.category === "/api/categoriess/"+cat.id);
 
-    // Filtrer les 4 dernières réalisations pour le premier map
-    const lastFourReas = filteredReas.slice(-4);
-    // Filtrer le reste des réalisations pour le deuxième map
-    const otherReas = filteredReas.slice(0, -4);
-
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-row items-center justify-center lg:py-12 pt-24">
@@ -61,7 +56,8 @@ export default function Realisation() {
                     </motion.div>
                     <div className="w-full flex flex-col justify-center items-center pt-6 space-y-8">
                         <div className="lg:w-[90%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8">
-                            {isLoading ? 'Chargement en cours' : lastFourReas.map(realisation => (
+                            {isLoading ? 'Chargement en cours' : filteredReas.map(realisation => (
+                                    realisation.favori ?
                                     <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="bg-[#242424] lg:p-10 p-6 pb-8 flex flex-col items-end space-y-3 relative">
                                         <div className="w-full flex flex-col items-end space-y-1">
                                             <div className="w-full flex flex-row justify-between items-center">
@@ -99,11 +95,12 @@ export default function Realisation() {
                                                 <div className="w-full h-full bg-[#242424] rounded-bl-3xl"></div>
                                             </div>
                                         </div>
-                                    </motion.div>
+                                    </motion.div> : "Pas de favori"
                             ))}
                         </div>
                         <div className="lg:w-[90%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8 pb-8">
-                            {isLoading ? 'Chargement en cours' : otherReas.map(realisation => (
+                            {isLoading ? 'Chargement en cours' : filteredReas.map(realisation => (
+                                    realisation.favori ? "Pas de non favori" :
                                     <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="bg-[#242424] lg:px-10 px-6 pt-5 lg:pb-10 pb-8 flex flex-col items-end space-y-3 relative">
                                         <h3 className="w-full lg:text-4xl text-2xl font-semibold">{realisation.title}</h3>
                                         <div className="w-full flex flex-row justify-between items-center">

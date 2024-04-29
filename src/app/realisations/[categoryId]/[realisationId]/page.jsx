@@ -107,7 +107,7 @@ export default function Rea() {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
+    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("right", "spring", 0.2, 0.8);
 
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
@@ -117,54 +117,64 @@ export default function Rea() {
                         <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 uppercase">{realisation.title}</h1>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6 uppercase">{realisation.title}</p>
                     </motion.div>
-                    <div className="w-full flex lg:flex-row flex-col items-start justify-between pb-6 lg:space-y-0 space-y-4">
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:w-[50%] w-full flex flex-col justify-start items-start space-y-2">
-                            <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
-                                <img src="/images/Réalisation/utilisateur.png" alt="Utilisateur" className="lg:w-[15px] w-[10px]" />
-                                <p>{realisation.client}</p>
+                    <div className="w-full flex flex-col items-start justify-between pb-6 lg:space-y-2 space-y-4">
+                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-full flex flex-row justify-between items-start">
+                            <div className="w-full flex flex-col justify-start items-start">
+                                <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
+                                    <img src="/images/Réalisation/utilisateur.png" alt="Utilisateur" className="lg:w-[15px] w-[10px]" />
+                                    <p>{realisation.client}</p>
+                                </div>
+                                <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
+                                    <img src="/images/Réalisation/localisation.png" alt="Localisation" className="lg:w-[15px] w-[10px]" />
+                                    <p>{realisation.lieu}</p>
+                                </div>
                             </div>
-                            <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
-                                <img src="/images/Réalisation/localisation.png" alt="Localisation" className="lg:w-[15px] w-[10px]" />
-                                <p>{realisation.lieu}</p>
-                            </div>
-                            <div dangerouslySetInnerHTML={{ __html: realisation.description }} />
-                        </motion.div>
-                        <motion.div initial="hidden" whileInView="show" variants={variants} className="lg:w-[45%] w-full flex flex-col justify-end items-end space-y-2">
                             <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                 <p>{new Date(realisation.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
                             </div>
-                            {image.length > 0 && <MiniaSlideRea images={image} />}
+                        </motion.div>
+                        <motion.div initial="hidden" whileInView="show" variants={variants} className="w-full">
+                            <div className="w-full">
+                                {image.length > 0 && <MiniaSlideRea images={image} />}
+                            </div>
                         </motion.div> 
                     </div>
                     <div className="w-full flex lg:flex-row flex-col justify-between items-start pb-6 lg:space-y-0 space-y-4">
                         <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:w-[65%] w-full flex flex-col space-y-3">
                             <p>Caractéristiques :</p>
-                            <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-4">
-                                <div className="flex flex-col text-lg text-[#BBBBBB] space-y-1">
-                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
-                                        <img src="/images/Réalisation/objectifs.png" alt="Objectifs" className="lg:w-[20px] w-[15px]" />
-                                        <p>Objectifs :</p>
-                                    </div>
-                                    <p className="ml-4">{realisation.objectifs}</p>
-                                </div>
-                                <div className="flex flex-col text-lg text-[#BBBBBB] space-y-1">
-                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
-                                        <img src="/images/Réalisation/surface.png" alt="Surface" className="lg:w-[20px] w-[15px]" />
-                                        <p>Surface :</p>
-                                    </div>
-                                    <p className="ml-4">{realisation.surface} m2</p>
-                                </div>
-                                <div className="flex flex-col text-lg text-[#BBBBBB] space-y-1">
-                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
+                            <div className="w-full flex flex-col space-y-2">
+                                <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
+                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] space-x-2">
                                         <img src="/images/Réalisation/maitre.png" alt="Maitre" className="lg:w-[20px] w-[15px]" />
-                                        <p>Maitre d'ouvrage :</p>
+                                        <p className="underline">Maitre d'ouvrage :</p>
                                     </div>
                                     <p className="ml-4">{realisation.maitre}</p>
                                 </div>
-                                <div className="flex flex-col text-lg text-[#BBBBBB] space-y-1">
+                                <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
+                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] space-x-2">
+                                        <img src="/images/Réalisation/objectifs.png" alt="Objectifs" className="lg:w-[20px] w-[15px]" />
+                                        <p className="underline">Objectifs :</p>
+                                    </div>
+                                    <p className="ml-4">{realisation.objectifs}</p>
+                                </div>
+                                <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
+                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
+                                        <img src="/images/Réalisation/prestations.png" alt="Surface" className="lg:w-[20px] w-[15px]" />
+                                        <p className="underline">Prestation :</p>
+                                    </div>
+                                    <p className="ml-4">{realisation.surface} m2</p>
+                                </div>
+                                <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
+                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
+                                        <img src="/images/Réalisation/surface.png" alt="Surface" className="lg:w-[20px] w-[15px]" />
+                                        <p className="underline">Surface :</p>
+                                    </div>
+                                    <p className="ml-4">{realisation.surface} m2</p>
+                                </div>
+                                <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
                                     <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                         <img src="/images/Réalisation/livraison.png" alt="Livraison" className="lg:w-[20px] w-[15px]" />
-                                        <p>Livraison :</p>
+                                        <p className="underline">Livraison :</p>
                                     </div>
                                     <p className="ml-4">{realisation.livraison}</p>
                                 </div>
