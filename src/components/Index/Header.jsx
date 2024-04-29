@@ -59,7 +59,6 @@ export default function Header() {
       return parts[parts.length - 1]; // This should be the ID
   }
 
-
     const slides = realisations.map(realisation => realisation.title);
     const slideImages = realisations.map(realisation => realisation.photo);
     const slideUrl = realisations.map(realisation => extractCategoryIdFromUrl(realisation.category));
