@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
@@ -60,10 +60,32 @@ export default function Header() {
   }
 
 
-    const slides = realisations.map(realisation => realisation.title);
-    const slideImages = realisations.map(realisation => realisation.photo);
-    const slideUrl = realisations.map(realisation => extractCategoryIdFromUrl(realisation.category));
-    const test = realisations.map(realisation => realisation.id)
+  const processedRealisations = useMemo(() => {
+    if (!isLoading) {
+        // Grouper les réalisations par catégorie
+        const groupedRealisations = realisations.reduce((acc, realisation) => {
+            const categoryId = extractCategoryIdFromUrl(realisation.category);
+            if (!acc[categoryId]) {
+                acc[categoryId] = [];
+            }
+            acc[categoryId].push(realisation);
+            return acc;
+        }, {});
+
+        // Sélectionner la dernière réalisation de chaque groupe
+        const lastRealisations = Object.values(groupedRealisations).map(realisations => realisations[realisations.length - 1]);
+
+        return lastRealisations;
+    }
+    return []; // Retourner un tableau vide si les données ne sont pas encore chargées
+}, [isLoading, realisations]); // Dépendances
+
+// Utilisez processedRealisations au lieu de realisations pour les opérations suivantes
+// Par exemple, pour générer les slides :
+const slides = processedRealisations.map(realisation => realisation.title);
+const slideImages = processedRealisations.map(realisation => realisation.photo);
+const slideUrl = processedRealisations.map(realisation => extractCategoryIdFromUrl(realisation.category));
+const test = processedRealisations.map(realisation => realisation.id);
 
     console.log(categories)
 
