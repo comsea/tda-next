@@ -53,7 +53,7 @@ export default function Realisation() {
                         <p>Explorez davantage nos projets, découvrez nos réalisations dans le secteur : {cat.name}.</p>
                     </div>
                     <div className="w-full flex flex-col justify-center items-center pt-6 space-y-8">
-                        <div className="lg:w-[90%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8">
+                        <div className="lg:w-[95%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8">
                             {isLoading ? 'Chargement en cours' : filteredReas.map(realisation => (
                                     realisation.favori &&
                                     <div className="bg-[#242424] lg:p-10 p-6 pb-8 flex flex-col items-end space-y-3 relative">
@@ -93,7 +93,7 @@ export default function Realisation() {
                                     </div>
                             ))}
                         </div>
-                        <div className="lg:w-[90%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8 pb-8">
+                        <div className="lg:w-[95%] w-full grid lg:grid-cols-2 grid-cols-1 gap-8 pb-8">
                             {isLoading ? '' : filteredReas.map(realisation => (
                                     !realisation.favori &&
                                     <div className="bg-[#242424] lg:px-10 px-6 pt-5 lg:pb-10 pb-8 flex flex-col items-end space-y-3 relative">
@@ -128,6 +128,23 @@ export default function Realisation() {
                                             </div>
                                         </div>
                                     </div>
+                            ))}
+                        </div>
+                        <div className="lg:w-[95%] w-full pb-8 flex flex-col">
+                            <div className="w-full py-2 px-4 bg-[#7a7a7a] border-collapse flex flex-row justify-between items-center font-bold text-xl border-b-[1px] border-[#DFDFDF] space-x-1">
+                                <div className="w-[39%] border-r-[1px] border-[#DFDFDF]">Titre</div>
+                                <div className="w-[14%] border-r-[1px] border-[#DFDFDF]">Lieu</div>
+                                <div className="w-[29%] border-r-[1px] border-[#DFDFDF]">Maître d'ouvrage</div>
+                                <div className="w-[14%]">Surface</div>
+                            </div>
+                            {isLoading ? '' : filteredReas.map(realisation => (
+                                !realisation.favori &&
+                                <div className="w-full py-2 px-4 bg-[#242424] border-collapse flex flex-row justify-between items-center font-normal text-sm border-b-[1px] border-[#868686] space-x-1">
+                                    <Link href={`/realisations/categories/${realisation.id}`} className="w-[39%] border-r-[1px] border-[#DFDFDF] hover:underline">{realisation.title}</Link>
+                                    <div className="w-[14%] border-r-[1px] border-[#DFDFDF]">{realisation.lieu}</div>
+                                    <div className="w-[29%] border-r-[1px] border-[#DFDFDF]">{realisation.client}</div>
+                                    <div className="w-[14%]">{realisation.surface} m2</div>
+                                </div>
                             ))}
                         </div>
                     </div>
