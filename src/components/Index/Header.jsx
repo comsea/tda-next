@@ -69,7 +69,7 @@ export default function Header() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((currentSlide + 1) % categories.length);
-        }, 5000);
+        }, 8000);
 
         return () => clearInterval(interval);
     }, [currentSlide, categories.length]);

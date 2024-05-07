@@ -17,7 +17,7 @@ export default function Home() {
                 <Header />
             </div>
             <div className="w-full h-[15%] bg-[#242424] flex flex-row justify-between items-center px-6 lg:text-xl text-base">
-                <p className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">TECHNIQUES DESIGN ARCHITECTURES | ARDENNES & MARNE</p>
+                <p className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">TECHNIQUES DESIGN ARCHITECTURES</p>
             </div>
         </div>
         <div className="w-full">

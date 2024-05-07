@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
-import { motion } from "framer-motion"
-import { fadeIn } from "@/app/utils/motion";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -61,42 +59,22 @@ export default function Contact() {
         }
       };
 
-      const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        // Fonction pour détecter si l'écran est en mode mobile
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth <= 1024);
-        };
-
-        // Appel initial pour définir l'état initial
-        checkMobile();
-
-        // Ajoutez l'écouteur d'événement
-        window.addEventListener('resize', checkMobile);
-
-        // Supprimez l'écouteur d'événement lors du nettoyage
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
-    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("left", "spring", 0.2, 0.8);
-
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <ToastContainer />
             <div className="w-full flex flex-col items-center justify-center lg:py-12 pt-24">
-                <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-[90%] flex flex-col justify-start items-start text-start">
+                <div className="w-[90%] flex flex-col justify-start items-start text-start">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
                         <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">CONTACTEZ-NOUS</h1>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">CONTACTEZ-NOUS</p>
                     </div>
                     <p>Découvrez avec nous l'art de concevoir des espaces uniques et fonctionnels. </p>
                     <p>Contactez-nous aujourd'hui pour transformer vos concepts en réalité.</p>
-                </motion.div>
+                </div>
                 <div className="w-full flex lg:flex-row flex-col justify-start items-start mt-12 relative">
                     <div className="absolute w-full h-full bg-[#242424] -z-20"></div>
                     <div className="lg:w-[30%] w-full lg:p-16 p-8 relative">
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-full flex flex-col justify-start items-start space-y-10 text-xl">
+                        <div className="w-full flex flex-col justify-start items-start space-y-10 text-xl">
                             <h4 className="lg:text-3xl text-2xl font-semibold">Nos informations</h4>
                             <div className="flex flex-col justify-start items-start">
                                 <p className="text-xs">Adresse mail</p>
@@ -113,11 +91,11 @@ export default function Contact() {
                                 <p>Du lundi au vendredi</p>
                                 <p>de 8h30 à 12h et de 14h à 17h30</p>
                             </div>
-                        </motion.div>
+                        </div>
                         <img src="images/contact.png" alt="Contact" className="absolute top-0 left-0 w-full h-full object-cover -z-10" />
                     </div>
                     <div className="lg:w-[70%] w-full lg:p-16 p-8">
-                        <motion.div initial="hidden" whileInView="show" variants={variants} className="w-full flex flex-col justify-start items-start space-y-10">
+                        <div className="w-full flex flex-col justify-start items-start space-y-10">
                             <h4 className="lg:text-3xl text-2xl font-semibold">Notre formulaire de contact</h4>
                             <form onSubmit={handleSubmit} className="w-full text-base space-y-3">
                                 <div className="w-full grid lg:grid-cols-2 col-span-1 gap-x-10 gap-y-4">
@@ -145,11 +123,11 @@ export default function Contact() {
                                     <button type="submit" className="bg-white text-[#DF0624] py-2 px-12 text-lg font-semibold" disabled={isSubmitting} >{isSubmitting ? "Envoi en cours..." : "Envoyer"}</button>
                                 </div>
                             </form>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
                 <div className="w-full py-8 flex justify-center items-center">
-                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="w-[90%] flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-8">
+                    <div className="w-[90%] flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-8">
                         <div className="lg:w-[30%] w-full flex flex-col lg:justify-center justify-start lg:items-center items-start space-y-4">
                             <h3 className="lg:text-3xl text-2xl font-medium">TDA <span className="text-[#DF0624]">-</span> Charleville-Mézières</h3>
                             <div className="lg:text-lg text-base text-center">
@@ -174,7 +152,7 @@ export default function Contact() {
                             </div>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1542.937867548606!2d3.9517859340667485!3d49.045214078966026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e96b521a7b6af3%3A0xd53c1f4de1d439f4!2s2%20Pl.%20Victor%20Hugo%2C%2051200%20%C3%89pernay!5e0!3m2!1sfr!2sfr!4v1709134611943!5m2!1sfr!2sfr" title="Map" className="w-full min-h-[250px]"></iframe>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </div>

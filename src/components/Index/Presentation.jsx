@@ -1,33 +1,7 @@
-'use client'
-
-import { motion } from "framer-motion"
-import { fadeIn } from "@/app/utils/motion";
-import { useState, useEffect } from "react";
-
 export default function Presentation() {
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        // Fonction pour détecter si l'écran est en mode mobile
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth <= 1024);
-        };
-
-        // Appel initial pour définir l'état initial
-        checkMobile();
-
-        // Ajoutez l'écouteur d'événement
-        window.addEventListener('resize', checkMobile);
-
-        // Supprimez l'écouteur d'événement lors du nettoyage
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
-    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("right", "spring", 0.2, 0.8);
-
     return (
         <div className="w-full flex lg:flex-row flex-col items-center py-12 lg:space-y-0 space-y-6">
-                <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:w-[50%] w-full flex flex-col justify-center items-center text-start">
+                <div className="lg:w-[50%] w-full flex flex-col justify-center items-center text-start">
                     <div className="lg:w-[80%] w-[90%]">
                         <div className="lg:text-6xl text-4xl font-bold mb-10 relative w-full">
                             <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
@@ -37,10 +11,10 @@ export default function Presentation() {
                         <p>Notre trésor le plus précieux réside dans notre équipe dévouée de professionnels du bâtiment. C'est cette équipe qui fait de chaque projet une histoire de succès, veillant à ce que chaque étape, de la conception à la réalisation, soit imprégnée de passion et de dévouement.</p><br/>
                         <p>Si vous cherchez une agence qui comprend la dimension humaine derrière chaque structure, une équipe engagée qui transforme des idées en expériences émotionnelles, TDA est là pour vous accompagner. Confiez-nous vos rêves architecturaux, et ensemble, nous créerons des espaces où les émotions s'épanouissent et où chaque détail compte.</p>
                     </div>
-                </motion.div>
-                <motion.div initial="hidden" whileInView="show" variants={variants} className="lg:w-[50%] w-full flex justify-center items-center">
+                </div>
+                <div className="lg:w-[50%] w-full flex justify-center items-center">
                     <img src="images/Accueil/france.png" alt="Carte France" className="lg:w-[60%] w-[80%]" />
-                </motion.div>
+                </div>
             </div>
     )
 }
