@@ -4,23 +4,8 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
-    const [currentSlide, setCurrentSlide] = useState(0);
     const [isLoading, setIsLoading] = useState(true);
     const [realisations, setRealisations] = useState([]);
-    const [categories, setCategories] = useState([]);
-
-    useEffect(() => {
-        fetch(`https://api.tda-archi.com/api/categoriess`)
-        .then((response) => response.json())
-        .then((result) => {
-            const fetchedCategories = result['hydra:member'];
-            setCategories(fetchedCategories);
-            setIsLoading(false);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
-    }, []);
 
     useEffect(() => {
       fetch(`https://api.tda-archi.com/api/realisations`)
@@ -35,51 +20,12 @@ export default function Header() {
       });
   }, []);
 
-  useEffect(() => {
-    if (!isLoading) {
-        // Grouper les réalisations par catégorie
-        const groupedRealisations = realisations.reduce((acc, realisation) => {
-            const categoryId = extractCategoryIdFromUrl(realisation.category);
-            if (!acc[categoryId]) {
-                acc[categoryId] = [];
-            }
-            acc[categoryId].push(realisation);
-            return acc;
-        }, {});
-
-        // Sélectionner la dernière réalisation de chaque groupe
-        const lastRealisations = Object.values(groupedRealisations).map(realisations => realisations[realisations.length - 1]);
-
-        setRealisations(lastRealisations);
-    }
- }, [isLoading, categories]);
-
-  function extractCategoryIdFromUrl(url) {
-      const parts = url.split('/');
-      return parts[parts.length - 1]; // This should be the ID
-  }
-
-    const slides = realisations.map(realisation => realisation.title);
-    const slideImages = realisations.map(realisation => realisation.photo);
-    const slideUrl = realisations.map(realisation => extractCategoryIdFromUrl(realisation.category));
-    const test = realisations.map(realisation => realisation.id)
-
-    console.log(categories)
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentSlide((currentSlide + 1) % categories.length);
-        }, 8000);
-
-        return () => clearInterval(interval);
-    }, [currentSlide, categories.length]);
-
     return (
         <div className="flex items-center justify-center h-full w-full bg-gray-200">
             <div className="relative w-full h-full">
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative w-full h-full flex justify-center items-center">
-                        <img src={`https://api.tda-archi.com/build/images/${slideImages[currentSlide]}`} alt="" className='w-full h-full object-cover' />
+                        <img src="images/Accueil/bg.png" alt="" className='w-full h-full object-cover' />
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-[90%] top-10 z-40 absolute">
@@ -87,14 +33,14 @@ export default function Header() {
                             </div>
                             <div className="w-[90%] h-full flex items-center justify-start">
                                 <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
-                                    <h2 className="lg:text-6xl text-4xl font-medium uppercase">{slides[currentSlide]}</h2>
-                                    <Link href={`/realisations/categories/${test[currentSlide]}`} className='bg-white text-[#DF0624] rounded-full lg:py-2 py-1 lg:px-6 px-4'>En savoir plus</Link>
+                                    <h2 className="lg:text-6xl text-4xl font-medium uppercase">Bienvenue sur l'Agence TDA !!</h2>
+                                    <Link href={`/presentation`} className='bg-white text-[#DF0624] rounded-full lg:py-2 py-1 lg:px-6 px-4'>En savoir plus</Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="absolute lg:right-[50px] right-[10px] lg:-bottom-[90px] bottom-[10px] flex items-center justify-center w-auto h-auto">
+                {/*<div className="absolute lg:right-[50px] right-[10px] lg:-bottom-[90px] bottom-[10px] flex items-center justify-center w-auto h-auto">
                     <button
                         className="bg-white rounded-full p-2 mx-2"
                         onClick={() => setCurrentSlide((currentSlide - 1 + categories.length) % categories.length)}
@@ -133,7 +79,7 @@ export default function Header() {
                             />
                         </svg>
                     </button>
-                </div>
+    </div>*/}
             </div>
         </div>
     );
