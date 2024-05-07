@@ -152,7 +152,7 @@ export default function Contact() {
                     <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="w-[90%] flex lg:flex-row flex-col justify-between items-center lg:space-y-0 space-y-8">
                         <div className="lg:w-[30%] w-full flex flex-col lg:justify-center justify-start lg:items-center items-start space-y-4">
                             <h3 className="lg:text-3xl text-2xl font-medium">TDA <span className="text-[#DF0624]">-</span> Charleville-Mézières</h3>
-                            <div className="lg:text-lg text-base">
+                            <div className="lg:text-lg text-base text-center">
                                 <p>9 Rue de l'Abattoir,</p>
                                 <p>08000 Charleville-Mézières</p>
                             </div>
@@ -160,7 +160,7 @@ export default function Contact() {
                         </div>
                         <div className="lg:w-[30%] w-full flex flex-col lg:justify-center justify-start lg:items-center items-start space-y-4">
                             <h3 className="lg:text-3xl text-2xl font-medium">TDA <span className="text-[#DF0624]">-</span> Reims</h3>
-                            <div className="lg:text-lg text-base">
+                            <div className="lg:text-lg text-base text-center">
                                 <p>29 Rue Chanzy,</p>
                                 <p>51100 Reims</p>
                             </div>
@@ -168,7 +168,7 @@ export default function Contact() {
                         </div>
                         <div className="lg:w-[30%] w-full flex flex-col lg:justify-center justify-start lg:items-center items-start space-y-4">
                             <h3 className="lg:text-3xl text-2xl font-medium">TDA <span className="text-[#DF0624]">-</span> Épernay</h3>
-                            <div className="lg:text-lg text-base">
+                            <div className="lg:text-lg text-base text-center">
                                 <p>2 Place Victor Hugo,</p>
                                 <p>51200 Épernay</p>
                             </div>

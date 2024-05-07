@@ -32,7 +32,7 @@ export default function Footer() {
                     <div className="flex flex-col items-start space-y-1 lg:text-lg text-base w-full lg:w-auto lg:px-0 px-10">
                         <Link href="/realisations" className="hover:underline">Réalisations</Link>
                         {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
-                            <Link href={`/realisations/${realisation.name.toLowerCase().replace(/\s+/g, '-')}`} className="text-[#BBBBBB] hover:underline lg:text-sm text-xs">{realisation.name}</Link>
+                            <Link href={`/realisations/${realisation.id}`} className="text-[#BBBBBB] hover:underline lg:text-sm text-xs">{realisation.name}</Link>
                         ))}
                     </div>
                     <div className="flex lg:flex-row items-start justify-start flex-col lg:space-x-6 lg:text-lg text-base w-full lg:w-auto lg:space-y-0 space-y-8 lg:px-0 px-10">

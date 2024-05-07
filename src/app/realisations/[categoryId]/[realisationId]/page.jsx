@@ -6,8 +6,6 @@ import MiniaSlideRea from "@/components/MiniaSlideRea";
 import Link from "next/link";
 import Linkedin from "@/components/Linkedin";
 import Facebook from "@/components/Facebook";
-import { motion } from "framer-motion"
-import { fadeIn } from "@/app/utils/motion";
 
 export default function Rea() {
     const {realisationId} = useParams()
@@ -49,7 +47,8 @@ export default function Rea() {
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
-            setRealisations(fetchedRealisations);
+            const sortedRealisation = fetchedRealisations.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+            setRealisations(sortedRealisation);
             setIsLoading(false);
         })
         .catch((error) => {
@@ -83,42 +82,19 @@ export default function Rea() {
         }).filter(url => url !== null) // Filtrer pour éliminer les valeurs null
     ] : [];
 
-    // Avant de retourner le JSX, mélangez le tableau des réalisations
-    const shuffledRealisations = realisations.sort(() => 0.5 - Math.random());
-
     // Sélectionnez un sous-ensemble aléatoire de 5 réalisations
-    const randomRealisations = shuffledRealisations.slice(0, 5);
-
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        // Fonction pour détecter si l'écran est en mode mobile
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth <= 1024);
-        };
-
-        // Appel initial pour définir l'état initial
-        checkMobile();
-
-        // Ajoutez l'écouteur d'événement
-        window.addEventListener('resize', checkMobile);
-
-        // Supprimez l'écouteur d'événement lors du nettoyage
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
-    const variants = isMobile ? fadeIn("right", "spring", 0.2, 0.8) : fadeIn("right", "spring", 0.2, 0.8);
+    const randomRealisations = realisations.slice(0, 5);
 
     return(
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-col items-center justify-center lg:py-12 pt-24">
                 <div className="w-[90%] flex flex-col justify-center items-start text-start space-y-4">
-                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:text-6xl text-3xl font-bold mb-10 w-full relative">
+                    <div className="lg:text-6xl text-3xl font-bold mb-10 w-full relative">
                         <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 uppercase">{realisation.title}</h1>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6 uppercase">{realisation.title}</p>
-                    </motion.div>
+                    </div>
                     <div className="w-full flex flex-col items-start justify-between pb-6 lg:space-y-2 space-y-4">
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="w-full flex flex-row justify-between items-start">
+                        <div className="w-full flex flex-row justify-between items-start">
                             <div className="w-full flex flex-col justify-start items-start">
                                 <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                     <img src="/images/Réalisation/utilisateur.png" alt="Utilisateur" className="lg:w-[15px] w-[10px]" />
@@ -129,72 +105,69 @@ export default function Rea() {
                                     <p>{realisation.lieu}</p>
                                 </div>
                             </div>
-                            <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
-                                <p>{new Date(realisation.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
-                            </div>
-                        </motion.div>
-                        <motion.div initial="hidden" whileInView="show" variants={variants} className="w-full">
+                        </div>
+                        <div className="w-full">
                             <div className="w-full">
                                 {image.length > 0 && <MiniaSlideRea images={image} />}
                             </div>
-                        </motion.div> 
+                        </div> 
                     </div>
                     <div className="w-full flex lg:flex-row flex-col justify-between items-start pb-6 lg:space-y-0 space-y-4">
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} className="lg:w-[65%] w-full flex flex-col space-y-3">
+                        <div className="lg:w-[65%] w-full flex flex-col space-y-3">
                             <p>Caractéristiques :</p>
                             <div className="w-full flex flex-col space-y-2">
                                 <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
                                     <div className="flex flex-row justify-start items-center text-[#BBBBBB] space-x-2">
                                         <img src="/images/Réalisation/maitre.png" alt="Maitre" className="lg:w-[20px] w-[15px]" />
-                                        <p className="underline">Maitre d'ouvrage :</p>
+                                        <p><span className="underline">Maitre d'ouvrage</span> :</p>
                                     </div>
                                     <p className="ml-4">{realisation.maitre}</p>
                                 </div>
                                 <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
                                     <div className="flex flex-row justify-start items-center text-[#BBBBBB] space-x-2">
                                         <img src="/images/Réalisation/objectifs.png" alt="Objectifs" className="lg:w-[20px] w-[15px]" />
-                                        <p className="underline">Objectifs :</p>
+                                        <p><span className="underline">Objectifs</span> :</p>
                                     </div>
                                     <p className="ml-4">{realisation.objectifs}</p>
                                 </div>
                                 <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
                                     <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                         <img src="/images/Réalisation/prestations.png" alt="Surface" className="lg:w-[20px] w-[15px]" />
-                                        <p className="underline">Prestation :</p>
+                                        <p><span className="underline">Prestation</span> :</p>
                                     </div>
-                                    <p className="ml-4">{realisation.surface} m2</p>
+                                    <p className="ml-4">{realisation.prestation}</p>
                                 </div>
                                 <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
                                     <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                         <img src="/images/Réalisation/surface.png" alt="Surface" className="lg:w-[20px] w-[15px]" />
-                                        <p className="underline">Surface :</p>
+                                        <p><span className="underline">Surface</span> :</p>
                                     </div>
                                     <p className="ml-4">{realisation.surface} m2</p>
                                 </div>
                                 <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
                                     <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                         <img src="/images/Réalisation/livraison.png" alt="Livraison" className="lg:w-[20px] w-[15px]" />
-                                        <p className="underline">Livraison :</p>
+                                        <p><span className="underline">Livraison</span> :</p>
                                     </div>
                                     <p className="ml-4">{realisation.livraison}</p>
                                 </div>
                             </div>
-                        </motion.div>
-                        <motion.div initial="hidden" whileInView="show" variants={variants} className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
+                        </div>
+                        <div className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
                             <p>Ce projet vous plait ? Partagez-le !</p>
                             <div className="flex flex-row space-x-4">
                                 <Linkedin shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
                                 <Facebook shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
-                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="w-full flex justify-center items-center pb-6">
+                    <div className="w-full flex justify-center items-center pb-6">
                         <p>Un projet, une envie ? <Link href="/contact" className="font-semibold hover:underline">Contactez-nous</Link> dès maintenant.</p>
-                    </motion.div>
+                    </div>
                 </div>
                 <div className="w-full bg-[#4C4A4A] py-10 flex justify-center items-center">
-                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)} className="flex flex-col justify-start items-start w-[90%] space-y-6">
-                        <p>Explorez davantage de nos projets :</p>
+                    <div className="flex flex-col justify-start items-start w-[90%] space-y-6">
+                        <p>Découvrez nos derniers projets :</p>
                         <div className="w-full grid lg:grid-cols-5 grid-cols-2 gap-8">
                             {isLoading ? "Chargement en cours" : randomRealisations.map(rea => (
                                 <Link href={`https://testtda.comsea.fr/realisations/categories/${rea.id}`} className="w-full flex flex-col justify-start items-center text-center space-y-2">
@@ -203,7 +176,7 @@ export default function Rea() {
                                 </Link>
                             ))}
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </div>
