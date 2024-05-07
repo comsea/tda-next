@@ -3,8 +3,6 @@
 import Slider from "@/components/Slider"
 import { useState } from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { fadeIn } from "@/app/utils/motion";
 
 export default function Presentation() {
     const [isHovered1, setIsHovered1] = useState(false)
@@ -19,94 +17,74 @@ export default function Presentation() {
         <div className="lg:w-[90%] w-full flex flex-col justify-center items-center">
             <div className="w-full flex flex-row items-center justify-center lg:py-12 py-24">
                 <div className="w-[90%] flex flex-col justify-center items-center text-start">
-                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)}  className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
                         <h1 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">L'AGENCE TDA</h1>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">L'AGENCE TDA</p>
-                    </motion.div>
-                    <motion.p initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} >Implantée dans les villes de Charleville-Mézières, Reims et Épernay, TDA n'est pas simplement une agence de maîtrise d'œuvre.  C'est avant tout une histoire façonnée avec passion par Frédéric Bonnet en 2004.</motion.p><br/>
-                    <motion.p initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)} >Depuis son lancement à Charleville-Mézières en 2004, l'Agence TDA n'a cessé de croître et d'évoluer. Elle a étendu son influence avec l'inauguration de nouveaux locaux à Reims en 2016, puis à Épernay en 2021. Notre expansion témoigne de notre engagement constant envers l'excellence et notre volonté de répondre aux besoins croissants de nos clients dans toute la région.</motion.p>
-                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="lg:text-3xl text-2xl grid lg:grid-cols-2 grid-cols-1 gap-y-8 gap-x-44 lg:w-[60%] w-[90%] mt-12">
-                        <div className="font-semibold flex flex-row items-center justify-between space-x-4 w-full">
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px]" />
-                            <p>CONSTRUCTION</p>
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px] origin-center -rotate-90" />
-                        </div>
-                        <div className="font-semibold flex flex-row items-center justify-between space-x-4 w-full">
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px]" />
-                            <p>RÉHABILITATION</p>
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px] origin-center -rotate-90" />
-                        </div>
-                        <div className="font-semibold flex flex-row items-center justify-between space-x-4 w-full">
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px]" />
-                            <p>EXTENSION</p>
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px] origin-center -rotate-90" />
-                        </div>
-                        <div className="font-semibold flex flex-row items-center justify-between space-x-4 w-full">
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px]" />
-                            <p>RÉNOVATION</p>
-                            <img src="images/Presentation/regle.png" alt="Check" className="w-[20px] h-[20px] origin-center -rotate-90" />
-                        </div>
-                    </motion.div>
+                    </div>
+                    <p>Implantée dans les villes de Charleville-Mézières, Reims et Épernay, TDA n'est pas simplement une agence de maîtrise d'œuvre.  C'est avant tout une histoire façonnée avec passion par Frédéric Bonnet en 2004.</p><br/>
+                    <p>Depuis son lancement à Charleville-Mézières en 2004, l'Agence TDA n'a cessé de croître et d'évoluer. Elle a étendu son influence avec l'inauguration de nouveaux locaux à Reims en 2016, puis à Épernay en 2021. Notre expansion témoigne de notre engagement constant envers l'excellence et notre volonté de répondre aux besoins croissants de nos clients dans toute la région.</p>
+                    <div className="lg:text-3xl text-2xl grid lg:grid-cols-2 grid-cols-1 gap-y-8 gap-x-44 lg:w-[60%] w-[90%] mt-12">
+                    </div>
                 </div>
             </div>
-            <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="w-[95%] py-8">
+            <div className="w-[95%] py-8">
                 <Slider />
-            </motion.div>
+            </div>
             <div className="w-full py-8 bg-[#242424] flex flex-col justify-center items-center text-center">
                 <div className="w-[75%] flex flex-col justify-center items-center space-y-6">
-                    <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="lg:text-6xl text-4xl font-bold mb-10 w-full flex lg:justify-center justify-start lg:items-center items-start relative">
+                    <div className="lg:text-6xl text-4xl font-bold mb-10 w-full flex lg:justify-center justify-start lg:items-center items-start relative">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 z-10">NOS PRESTATIONS</h2>
                         <p className="absolute text-[#494949] lg:ml-24 ml-4 lg:top-8 top-6">NOS PRESTATIONS</p>
-                    </motion.div>
+                    </div>
                     <div className="flex flex-col justify-center items-center w-full space-y-4 py-6">
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
-                            <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered1 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)}>
+                        <div className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
+                            <div className={`bg-[#383838] px-4 py-10 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-between items-center space-y-2 ${isHovered1 ? 'hover:bg-[#DF0624] hover:justify-center' : ''}`} onMouseEnter={() => setIsHovered1(true)} onMouseLeave={() => setIsHovered1(false)}>
                                 {!isHovered1 && <img src="images/Presentation/conception.png" alt="Conception" />}
                                 <p className="font-bold">Conception architecturale</p>
                                 {isHovered1 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Nous élaborons les plans en tenant compte des besoins du client, des contraintes techniques et réglementaires, ainsi que des considérations esthétiques et fonctionnelles.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-4 ${isHovered2 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)}>
+                            <div className={`bg-[#383838] px-4 py-10 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-between items-center space-y-4 ${isHovered2 ? 'hover:bg-[#DF0624] hover:justify-center' : ''}`} onMouseEnter={() => setIsHovered2(true)} onMouseLeave={() => setIsHovered2(false)}>
                                 {!isHovered2 && <img src="images/Presentation/étude.png" alt="Étude" />}
-                                <p>Études de faisabilité</p>
+                                <p className="font-bold">Études de faisabilité</p>
                                 {isHovered2 && <p className="text-base transition ease-in-out duration-500">Nous évaluons la viabilité des projets sur les plans technique, financier et organisationnel, ce qui nous permet de prendre des décisions éclairées quant à leur faisabilité.</p>}
                             </div>
-                        </motion.div>
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
-                            <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered3 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)}>
+                        </div>
+                        <div className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
+                            <div className={`bg-[#383838] px-4 py-10 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-between items-center space-y-2 ${isHovered3 ? 'hover:bg-[#DF0624] hover:justify-center' : ''}`} onMouseEnter={() => setIsHovered3(true)} onMouseLeave={() => setIsHovered3(false)}>
                                 {!isHovered3 && <img src="images/Presentation/casque.png" alt="Casque" />}
-                                <p>Mission Permis de construire</p>
+                                <p className="font-bold">Mission Permis de construire</p>
                                 {isHovered3 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Nous préparons et soumettons les documents nécessaires aux autorités compétentes afin d'obtenir l'autorisation légale de construire un bâtiment ou d'effectuer des modifications sur une structure existante, conformément aux règlements d'urbanisme et de construction.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered4 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)}>
+                            <div className={`bg-[#383838] px-4 py-10 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-between items-center space-y-2 ${isHovered4 ? 'hover:bg-[#DF0624] hover:justify-center' : ''}`} onMouseEnter={() => setIsHovered4(true)} onMouseLeave={() => setIsHovered4(false)}>
                                 {!isHovered4 && <img src="images/Presentation/maitre-doeuvre.png" alt="Maitre d'Oeuvre" />}
-                                <p>Maîtrise d'oeuvre d'exécution</p>
+                                <p className="font-bold">Maîtrise d'oeuvre d'exécution</p>
                                 {isHovered4 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Nous supervisons la réalisation concrète d'un projet de construction, en veillant à la conformité des travaux par rapport aux plans, à la qualité des matériaux utilisés et au respect du budget alloué.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered5 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)}>
+                            <div className={`bg-[#383838] px-4 py-10 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-between items-center space-y-2 ${isHovered5 ? 'hover:bg-[#DF0624] hover:justify-center' : ''}`} onMouseEnter={() => setIsHovered5(true)} onMouseLeave={() => setIsHovered5(false)}>
                                 {!isHovered5 && <img src="images/Presentation/ordonnancement.png" alt="Ordonnancement" />}
-                                <p>Ordonnancement Pilotage Coordination</p>
+                                <p className="font-bold">Ordonnancement Pilotage Coordination</p>
                                 {isHovered5 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Nous assurons une gestion efficace du chantier en planifiant les tâches, en supervisant les intervenants et en assurant la coordination afin de garantir un projet de construction fluide tout en respectant les délais et les contraintes budgétaires.</p>}
                             </div>
-                        </motion.div>
-                        <motion.div initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
-                            <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered6 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)}>
+                        </div>
+                        <div className="flex lg:flex-row flex-col justify-center items-center w-full lg:space-x-4 lg:space-y-0 space-y-4">
+                            <div className={`bg-[#383838] px-4 py-10 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-between items-center space-y-2 ${isHovered6 ? 'hover:bg-[#DF0624] hover:justify-center' : ''}`} onMouseEnter={() => setIsHovered6(true)} onMouseLeave={() => setIsHovered6(false)}>
                                 {!isHovered6 && <img src="images/Presentation/expertise.png" alt="Expertise" />}
-                                <p>Expertise</p>
+                                <p className="font-bold">Expertise</p>
                                 {isHovered6 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Nous recherchons les pathologies sur un bâtiment afin d'évaluer les réparations et d'aider nos clients dans le cadre d'une expertise judiciaire, d'une contre expertise d'assuré ou d'une expertise amiable.</p>}
                             </div>
-                            <div className={`bg-[#383838] p-4 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-center items-center space-y-2 ${isHovered7 ? 'hover:bg-[#DF0624]' : ''}`} onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)}>
+                            <div className={`bg-[#383838] px-4 py-10 rounded-xl lg:w-[28%] w-[90%] lg:h-[300px] h-[250px] flex flex-col justify-between items-center space-y-2 ${isHovered7 ? 'hover:bg-[#DF0624] hover:justify-center' : ''}`} onMouseEnter={() => setIsHovered7(true)} onMouseLeave={() => setIsHovered7(false)}>
                                 {!isHovered7 && <img src="images/Presentation/diagnostics.png" alt="Diagnostics" />}
-                                <p>Diagnostics</p>
+                                <p className="font-bold">Diagnostics</p>
                                 {isHovered7 && <p className="lg:text-base text-sm transition ease-in-out duration-500">Nous évaluons l'état global d'un bâtiment afin de permettre aux maîtres d'ouvrages de prendre des décisions éclairées concernant les rénovations nécessaires, tout en assurant la valeur et la sécurité de leur investissement.</p>}
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
-                    <motion.p initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="text-center">Vous envisagez de construire un nouvel édifice ? de rénover un bâtiment existant ? ou de développer un projet complexe ? <Link href="/contact" className="underline cursor-pointer">Cliquez ici dès maintenant !</Link></motion.p>
-                    <motion.p initial="hidden" whileInView="show" variants={fadeIn("center", "spring", 0.2, 0.8)}  className="text-center">Avec une approche centrée sur la polyvalence et la qualité, TDA vous accompagne à chaque étape, vous offrant une solution complète et sur mesure pour concrétiser vos projets.</motion.p>
+                    <p className="text-center">Vous envisagez de construire un nouvel édifice, de rénover un bâtiment existant, ou de développer un projet complexe ? <Link href="/contact" className="underline cursor-pointer">Cliquez ici dès maintenant !</Link></p>
+                    <p className="text-center">Avec une approche centrée sur la polyvalence et la qualité, TDA vous accompagne à chaque étape, vous offrant une solution complète et sur mesure pour concrétiser vos projets.</p>
                 </div>
             </div>
             <div className="w-full flex flex-row items-center justify-center py-12">
-                <motion.div initial="hidden" whileInView="show" variants={fadeIn("right", "spring", 0.2, 0.8)}  className="w-[90%] flex flex-col justify-start items-start text-start space-y-8">
+                <div className="w-[90%] flex flex-col justify-start items-start text-start space-y-8">
                     <div className="lg:text-6xl text-4xl font-bold mb-10 w-full relative">
                         <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1 z-10">NOS CERTIFICATIONS</h2>
                         <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">NOS CERTIFICATIONS</p>
@@ -191,7 +169,7 @@ export default function Presentation() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
     )
