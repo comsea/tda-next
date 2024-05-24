@@ -10,28 +10,28 @@ export default function Header() {
 
     useEffect(() => {
       fetch(`https://api.tda-archi.com/api/realisations`)
-      .then((response) => response.json())
-      .then((result) => {
-          const fetchedRealisations = result['hydra:member'];
+     .then((response) => response.json())
+     .then((result) => {
+          const fetchedRealisations = result['hydra:member'].filter(realisation => realisation.header); // Filtrer les réalisations avec un header
           const firstSlide = {
             title: "Bienvenue sur le site de l'Agence TDA",
             photo: "/images/Accueil/bg.png",
             id: "id"
           }
-          setRealisations([firstSlide,...fetchedRealisations]);
+          setRealisations([firstSlide,...fetchedRealisations.slice(0, 4)]); // Limiter à 4 réalisations
           setIsLoading(false);
       })
-      .catch((error) => {
+     .catch((error) => {
           console.error(error);
       });
   }, []);
 
     const nextSlide = () => {
-        setActiveIndex((prevIndex) => (prevIndex + 1) % 5); // +1 pour inclure le nouvel élément
+        setActiveIndex((prevIndex) => (prevIndex + 1) % 4); // Ajuster pour ne pas dépasser 4 slides
     };
 
     const prevSlide = () => {
-        setActiveIndex((prevIndex) => (prevIndex - 1 + 5) % 5); // +1 pour inclure le nouvel élément
+        setActiveIndex((prevIndex) => (prevIndex - 1 + 4) % 4); // Ajuster pour ne pas dépasser 4 slides
     };
 
     useEffect(() => {
@@ -65,7 +65,7 @@ export default function Header() {
                         </div>
                     : (
                         <div className="relative w-full h-full overflow-hidden">
-                            {realisations.slice(0,5).map((realisation, index) => (
+                            {realisations.map((realisation, index) => (
                             <div key={index} className={`absolute w-full h-full z-0 transition-opacity ${index === activeIndex? '!z-10' : ''}`}>
                                 <img src={`${realisation.id === "id"? realisation.photo : "https://api.tda-archi.com/build/images/"+realisation.photo}`} alt="" className='w-full h-full object-cover' />
                                 <div className="absolute inset-0 bg-black opacity-50"></div>
