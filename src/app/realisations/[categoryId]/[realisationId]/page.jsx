@@ -113,14 +113,14 @@ export default function Rea() {
                             <p>Caractéristiques :</p>
                             <div className="w-full flex flex-col space-y-2">
                                 <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
-                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] space-x-2">
+                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                         <img src="/images/Réalisation/maitre.png" alt="Maitre" className="lg:w-[20px] w-[15px]" />
                                         <p><span className="underline">Maitre d'ouvrage</span> :</p>
                                     </div>
                                     <p className="ml-4">{realisation.maitre}</p>
                                 </div>
                                 <div className="flex flex-row text-lg text-[#BBBBBB] space-x-2">
-                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] space-x-2">
+                                    <div className="flex flex-row justify-start items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                         <img src="/images/Réalisation/objectifs.png" alt="Objectifs" className="lg:w-[20px] w-[15px]" />
                                         <p><span className="underline">Objectifs</span> :</p>
                                     </div>

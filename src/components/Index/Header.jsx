@@ -85,7 +85,7 @@ export default function Header() {
                         </div>
                     )}
                 </div>
-                <div className="absolute lg:right-[50px] right-[10px] lg:-bottom-[90px] bottom-[10px] flex items-center justify-center w-auto h-auto">
+                <div className="absolute lg:right-[50px] right-[10px] lg:-bottom-[90px] bottom-[10px] flex items-center justify-center w-auto h-auto z-50">
                     <button className="bg-white rounded-full p-2 mx-2" onClick={prevSlide}>
                         <svg className="lg:w-6 w-3 lg:h-6 h-3 text-[#DF0624]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>

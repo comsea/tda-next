@@ -1,4 +1,7 @@
+'use client'
+
 import Accordion from "./Accordion";
+import Link from 'next/link';
 
 export default function DivAccordeon() {
     return (
@@ -12,6 +15,9 @@ export default function DivAccordeon() {
             </div>
             <div className="w-full lg:block hidden">
                <Accordion />
+            </div>
+            <div className="w-full lg:hidden flex justify-center items-center mt-8">
+               <Link href={'/realisations'} className="bg-white text-black py-2 px-6 rounded-lg hover:bg-[#DF0624]">Voir les réalisations</Link>
             </div>
         </div>
     )

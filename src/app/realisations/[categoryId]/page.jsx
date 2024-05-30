@@ -97,20 +97,20 @@ export default function Realisation() {
                         
                         <div className="lg:w-[95%] w-full pb-8 flex flex-col">
                             {hasNonFavoriRealisations && (
-                            <div className="w-full py-2 px-4 bg-[#7a7a7a] border-collapse flex flex-row justify-between items-center font-bold text-xl border-b-[1px] border-[#DFDFDF] space-x-1">
-                                <div className="w-[40%] border-r-[1px] border-[#DFDFDF]">Titre</div>
-                                <div className="w-[18%] border-r-[1px] border-[#DFDFDF]">Lieu</div>
-                                <div className="w-[32%] border-r-[1px] border-[#DFDFDF]">Maître d'ouvrage</div>
-                                <div className="w-[6%]">Surface</div>
+                            <div className="w-full py-2 lg:px-4 px-2 bg-[#7a7a7a] border-collapse flex flex-row justify-start items-center font-bold lg:text-xl text-sm border-b-[1px] border-[#DFDFDF] space-x-1">
+                                <div className="lg:w-[40%] w-[35%] border-r-[1px] border-[#DFDFDF]">Titre</div>
+                                <div className="lg:w-[18%] w-[21%] border-r-[1px] border-[#DFDFDF]">Lieu</div>
+                                <div className="lg:w-[32%] w-[27%] border-r-[1px] border-[#DFDFDF]">Maître d'ouvrage</div>
+                                <div className="lg:w-[6%] w-[15%]">Surface</div>
                             </div>
                             )}
                             {isLoading ? '' : filteredReas.map(realisation => (
                                 !realisation.favori &&
-                                <div className="w-full py-2 px-4 bg-[#242424] border-collapse flex flex-row justify-between items-center font-normal text-sm border-b-[1px] border-[#868686] space-x-1">
-                                    <Link href={`/realisations/categories/${realisation.id}`} className="w-[40%] border-r-[1px] border-[#DFDFDF] hover:underline">{realisation.title}</Link>
-                                    <div className="w-[18%] border-r-[1px] border-[#DFDFDF]">{realisation.lieu}</div>
-                                    <div className="w-[32%] border-r-[1px] border-[#DFDFDF]">{realisation.client}</div>
-                                    <div className="w-[6%]">{realisation.surface} m2</div>
+                                <div className="w-full py-2 lg:px-4 px-2 bg-[#242424] border-collapse flex flex-row justify-start items-center font-normal lg:text-sm text-xs border-b-[1px] border-[#868686] space-x-1">
+                                    <Link href={`/realisations/categories/${realisation.id}`} className="lg:w-[40%] w-[35%] border-r-[1px] border-[#DFDFDF] hover:underline">{realisation.title}</Link>
+                                    <div className="lg:w-[18%] w-[21%] border-r-[1px] border-[#DFDFDF]">{realisation.lieu}</div>
+                                    <div className="lg:w-[32%] w-[27%] border-r-[1px] border-[#DFDFDF]">{realisation.client}</div>
+                                    <div className="lg:w-[6%] w-[15%]">{realisation.surface} m2</div>
                                 </div>
                             ))}
                         </div>
