@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="w-full flex flex-col justify-center items-center relative">
             <div className="w-full h-full relative py-10 flex flex-row justify-center items-center">
                 <img src="/images/Footer/footer.png" alt="Background Footer" className="lg:w-[50%] w-full h-full absolute top-0 left-0 object-cover -z-10" />
-                <div className="w-[90%] flex lg:flex-row flex-col lg:items-start items-center justify-center lg:justify-between lg:space-x-24 space-y-8 lg:space-y-0">
+                <div className="w-[90%] h-full flex lg:flex-row flex-col lg:items-start items-center justify-center lg:justify-between lg:space-x-24 space-y-8 lg:space-y-0">
                     <div className="flex flex-col justify-center items-center space-y-10 text-center">
                         <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[350px] w-[60%]" />
                         <p>CHARLEVILLE-MÉZIÈRES <span className="text-[#DF0624]">|</span> EPERNAY <span className="text-[#DF0624]">|</span> REIMS</p>
@@ -35,8 +35,8 @@ export default function Footer() {
                             <Link href={`/realisations/${realisation.id}`} className="text-[#BBBBBB] hover:underline lg:text-sm text-xs">{realisation.name}</Link>
                         ))}
                     </div>
-                    <div className="flex lg:flex-row items-start justify-start flex-col lg:space-x-6 lg:text-lg text-base w-full lg:w-auto lg:space-y-0 space-y-8 lg:px-0 px-10">
-                        <div className="lg:h-[200px] h-[2px] lg:w-[1px] w-[70%] bg-[#DF0624]"></div>
+                    <div className="flex lg:flex-row items-start justify-start flex-col lg:space-x-6 relative lg:text-lg text-base w-full h-full lg:w-auto lg:space-y-0 space-y-8 lg:px-0 px-10">
+                        <div className="lg:h-[200px] h-[4px] lg:w-[2px] w-[70%] bg-[#DF0624]"></div>
                         <div className="flex flex-col items-start space-y-1 w-full">
                             <Link href="/presentation" className="hover:underline">Présentation</Link>
                             <Link href="/actualites" className="hover:underline">Actualités</Link>

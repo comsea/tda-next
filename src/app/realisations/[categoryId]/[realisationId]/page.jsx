@@ -97,10 +97,6 @@ export default function Rea() {
                         <div className="w-full flex flex-row justify-between items-start">
                             <div className="w-full flex flex-col justify-start items-start">
                                 <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
-                                    <img src="/images/Réalisation/utilisateur.png" alt="Utilisateur" className="lg:w-[15px] w-[10px]" />
-                                    <p>{realisation.client}</p>
-                                </div>
-                                <div className="flex flex-row justify-center items-center text-[#BBBBBB] lg:text-base text-sm space-x-2">
                                     <img src="/images/Réalisation/localisation.png" alt="Localisation" className="lg:w-[15px] w-[10px]" />
                                     <p>{realisation.lieu}</p>
                                 </div>

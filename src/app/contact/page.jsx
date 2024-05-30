@@ -76,18 +76,18 @@ export default function Contact() {
                     <div className="lg:w-[30%] w-full lg:p-16 p-8 relative">
                         <div className="w-full flex flex-col justify-start items-start space-y-10 text-xl">
                             <h4 className="lg:text-3xl text-2xl font-semibold">Nos informations</h4>
-                            <div className="flex flex-col justify-start items-start">
-                                <p className="text-xs">Adresse mail</p>
+                            <div className="flex flex-col justify-start items-start text-base">
+                                <p>Adresse mail :</p>
                                 <p>info@tda-archi.com</p>
                             </div>
-                            <div className="flex flex-col justify-start items-start">
-                                <p className="text-xs">Téléphone</p>
+                            <div className="flex flex-col justify-start items-start text-base">
+                                <p>Téléphone :</p>
                                 <p>Charleville-Mézières : 03 24 57 42 19</p>
                                 <p>Épernay : 03 51 25 50 03</p>
                                 <p>Reims : 03 26 05 28 80</p>
                             </div>
-                            <div className="flex flex-col justify-start items-start">
-                                <p className="text-xs">Horraires</p>
+                            <div className="flex flex-col justify-start items-start text-base">
+                                <p>Horraires :</p>
                                 <p>Du lundi au vendredi</p>
                                 <p>de 8h30 à 12h et de 14h à 17h30</p>
                             </div>

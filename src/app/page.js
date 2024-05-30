@@ -24,7 +24,9 @@ export default function Home() {
             <Presentation className="w-full" />
         </div>
         <div className="w-full">
+            {/*
             <Chiffres />
+             */}
         </div>
         <div className="w-full">
             <Innovation />
