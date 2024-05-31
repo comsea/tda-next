@@ -14,7 +14,7 @@ const MiniaSlide = ({ images }) => {
   return (
     <div className="flex flex-col items-center w-full">
       <div className="lg:w-[80%] w-full lg:h-[700px] h-auto">
-        <img src={mainImage} alt="Main Image" className="w-full h-full object-cover" />
+        <img src={mainImage} alt="Main Image" className="w-full h-full object-contain" />
       </div>
       <div className="w-full flex justify-center mt-4">
         {images.map((image, index) => (
@@ -22,7 +22,7 @@ const MiniaSlide = ({ images }) => {
             key={index}
             src={image}
             alt={`Thumbnail ${index + 1}`}
-            className={`lg:w-32 w-16 object-cover h-auto mr-2 cursor-pointer ${selectedThumbnail === image ? 'outline outline-[#DF0624] outline-offset-2 outline-1' : ''}`}
+            className={`lg:w-32 w-16 object-contain h-auto mr-2 cursor-pointer ${selectedThumbnail === image ? 'outline outline-[#DF0624] outline-offset-2 outline-1' : ''}`}
             onClick={() => handleThumbnailClick(image)}
           />
         ))}
