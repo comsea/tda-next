@@ -1,31 +1,31 @@
 export default function sitemap() {
     return [
         {
-            url: "https://testtda.comsea.fr/",
+            url: "https://www.tda-archi.com/",
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 1,
         },
         {
-            url: "https://testtda.comsea.fr/presentation",
+            url: "https://www.tda-archi.com/presentation",
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 0.8,
         },
         {
-            url: "https://testtda.comsea.fr/realisations",
+            url: "https://www.tda-archi.com/realisations",
             lastModified: new Date(),
             changeFrequency: "weekly",
             priority: 0.5,
         },
         {
-            url: "https://testtda.comsea.fr/actualites",
+            url: "https://www.tda-archi.com/actualites",
             lastModified: new Date(),
             changeFrequency: "weekly",
             priority: 0.5,
         },
         {
-            url: "https://testtda.comsea.fr/contact",
+            url: "https://www.tda-archi.com/contact",
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 0.5,
