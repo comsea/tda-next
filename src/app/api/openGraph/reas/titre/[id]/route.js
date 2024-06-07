@@ -7,6 +7,6 @@ export async function GET(req, res) {
         return new Response(titleUrl, { status: 200 })
     } catch (err) {
         console.log(err)
-        return new Response("https://testtda.comsea.fr/images/Footer/Logo-TDA.png", { status: 200 })
+        return new Response("https://www.tda-archi.com/images/Footer/Logo-TDA.png", { status: 200 })
     }
 }

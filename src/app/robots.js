@@ -4,6 +4,6 @@ export default function robots() {
             userAgent: "*",
             allow: "/",
         },
-        sitemap: "https://testtda.comsea.fr/sitemap.xml",
+        sitemap: "https://www.tda-archi.com/sitemap.xml",
     }
 }

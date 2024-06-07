@@ -70,8 +70,8 @@ export default function Actus() {
                         <div className="flex flex-col space-y-4">
                             <p>Notre actualité vous plait ? Partagez la !</p>
                             <div className="flex flex-row space-x-4">
-                                <Linkedin shareUrl={`https://testtda.comsea.fr/actualites/${id}`} />
-                                <Facebook shareUrl={`https://testtda.comsea.fr/actualites/${id}`} />
+                                <Linkedin shareUrl={`https://www.tda-archi.com/actualites/${id}`} />
+                                <Facebook shareUrl={`https://www.tda-archi.com/actualites/${id}`} />
                             </div>
                         </div>
                     </div>

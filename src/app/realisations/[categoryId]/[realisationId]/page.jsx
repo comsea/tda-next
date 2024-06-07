@@ -152,8 +152,8 @@ export default function Rea() {
                         <div className="lg:w-[30%] w-full flex flex-col lg:justify-end justify-start lg:items-end items-start space-y-2">
                             <p>Ce projet vous plait ? Partagez-le !</p>
                             <div className="flex flex-row space-x-4">
-                                <Linkedin shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
-                                <Facebook shareUrl={`https://testtda.comsea.fr/realisations/${cate}/${realisationId}`} />
+                                <Linkedin shareUrl={`https://www.tda-archi.com/realisations/${cate}/${realisationId}`} />
+                                <Facebook shareUrl={`https://www.tda-archi.com/realisations/${cate}/${realisationId}`} />
                             </div>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ export default function Rea() {
                         <p>Découvrez nos derniers projets :</p>
                         <div className="w-full grid lg:grid-cols-5 grid-cols-2 gap-8">
                             {isLoading ? "Chargement en cours" : randomRealisations.map(rea => (
-                                <Link href={`https://testtda.comsea.fr/realisations/categories/${rea.id}`} className="w-full flex flex-col justify-start items-center text-center space-y-2">
+                                <Link href={`https://www.tda-archi.com/realisations/categories/${rea.id}`} className="w-full flex flex-col justify-start items-center text-center space-y-2">
                                     <img src={`https://api.tda-archi.com/build/images/${rea.photo}`} alt={rea.title} className="w-full object-cover lg:h-[150px] h-[100px]" />
                                     <p>{rea.title}</p>
                                 </Link>
