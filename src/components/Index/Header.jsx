@@ -15,7 +15,7 @@ export default function Header() {
           const fetchedRealisations = result['hydra:member'].filter(realisation => realisation.header); // Filtrer les réalisations avec un header
           const firstSlide = {
             title: "Bienvenue sur le site de l'Agence TDA",
-            photo: "/images/Accueil/bg.png",
+            photo: "/images/Accueil/bg.jpg",
             id: "id"
           }
           setRealisations([firstSlide,...fetchedRealisations.slice(0, 4)]); // Limiter à 4 réalisations
@@ -49,7 +49,7 @@ export default function Header() {
                 <div className="absolute inset-0 flex items-center justify-center">
                     {isLoading ?
                         <div className='w-full h-full overflow-hidden'>
-                            <img src="/images/Accueil/bg.png" alt="" className='w-full h-full object-cover' />
+                            <img src="/images/Accueil/bg.jpg" alt="" className='w-full h-full object-cover' />
                                 <div className="absolute inset-0 bg-black opacity-50"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="w-[90%] top-10 z-40 absolute">
