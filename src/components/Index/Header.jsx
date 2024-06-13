@@ -57,7 +57,7 @@ export default function Header() {
                                     </div>
                                     <div className="w-[90%] h-full flex items-center justify-start">
                                         <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
-                                            <h2 className="lg:text-6xl text-2xl font-medium uppercase">Bienvenue sur le site de l'Agence TDA</h2>
+                                            <h2 className="lg:text-6xl text-xl font-medium uppercase">Bienvenue sur le site de l'Agence TDA</h2>
                                             <Link href={`/presentation`} className='bg-white text-[#DF0624] rounded-full lg:py-2 py-1 lg:px-6 px-4'>En savoir plus</Link>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ export default function Header() {
                                     </div>
                                     <div className="w-[90%] h-full flex items-center justify-start">
                                         <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
-                                            <h2 className="lg:text-6xl text-2xl font-medium uppercase">{realisation.title}</h2>
+                                            <h2 className="lg:text-6xl text-xl font-medium uppercase">{realisation.title}</h2>
                                             <Link href={`${realisation.id === "id"? "/presentation" : "/realisations/categories/"+realisation.id}`} className='bg-white text-[#DF0624] rounded-full lg:py-2 py-1 lg:px-6 px-4'>En savoir plus</Link>
                                         </div>
                                     </div>
