@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function ActusIndex() {
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoadinga, setIsLoadinga] = useState(true)
     const [actualites, setActualites] = useState([])
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function ActusIndex() {
             const sortedActualites = fetchedActualites.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
             // Suppression du tri par date
             setActualites(sortedActualites);
-            setIsLoading(false);
+            setIsLoadinga(false);
         })
         .catch((error) => {
             console.error(error);
@@ -30,7 +30,7 @@ export default function ActusIndex() {
                             <h2 className="underline decoration-[#DF0624] lg:underline-offset-8 underline-offset-4 lg:decoration-2 decoration-1">LES ACTUALITÉS</h2>
                             <p className="absolute text-[#494949] -z-40 lg:ml-12 ml-4 lg:top-8 top-6">LES ACTUALITÉS</p>
                         </div>
-                        {isLoading ? 'Chargement en cours' : actualites.slice(1,2).map(actualite => (
+                        {isLoadinga ? 'Chargement en cours' : actualites.slice(1,2).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                                 <img src={`https://api.tda-archi.com/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>
@@ -51,7 +51,7 @@ export default function ActusIndex() {
                                 </div>
                             </div>
                         ))}
-                        {isLoading ? 'Chargement en cours' : actualites.slice(3,4).map(actualite => (
+                        {isLoadinga ? 'Chargement en cours' : actualites.slice(3,4).map(actualite => (
                         <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                             <div className="absolute flex flex-row top-0 right-0 text-black text-xs lg:w-1/2 w-[60%]">
                                 <div className="w-1/4 h-[30px] bg-black">
@@ -73,7 +73,7 @@ export default function ActusIndex() {
                         ))}
                     </div>
                     <div className="lg:w-[48%] w-full flex flex-col justify-start items-start space-y-6 mt-[8px]">
-                        {isLoading ? 'Chargement en cours' : actualites.slice(0,1).map(actualite => (
+                        {isLoadinga ? 'Chargement en cours' : actualites.slice(0,1).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                                 <div className="absolute flex flex-row top-0 left-0 text-black text-xs  lg:w-1/2 w-[60%]">
                                     <div className="w-1/4 h-[30px] bg-black">
@@ -94,7 +94,7 @@ export default function ActusIndex() {
                                 <p className="line-clamp-2 lg:text-xl text-lg" dangerouslySetInnerHTML={{ __html: actualite.description }} />
                             </div>
                         ))}
-                        {isLoading ? 'Chargement en cours' : actualites.slice(2,3).map(actualite => (
+                        {isLoadinga ? 'Chargement en cours' : actualites.slice(2,3).map(actualite => (
                             <div className="w-full lg:p-12 px-4 py-8 bg-[#242424] flex flex-col justify-start items-start space-y-2 relative">
                                 <img src={`https://api.tda-archi.com/build/images/${actualite.photo}`} alt="Article" className="w-full h-[250px] object-cover" />
                                 <p className="lg:text-base text-sm text-[#BBBBBB]">{new Date(actualite.createdAt).toLocaleString('fr-FR', { year: 'numeric', month: '2-digit', day: '2-digit' })}</p>

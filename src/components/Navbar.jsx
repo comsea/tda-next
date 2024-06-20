@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoadingn, setIsLoadingn] = useState(true)
     const [realisations, setRealisations] = useState([])
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export default function Navbar() {
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
             setRealisations(fetchedRealisations);
-            setIsLoading(false);
+            setIsLoadingn(false);
         })
         .catch((error) => {
             console.error(error);
@@ -50,7 +50,7 @@ export default function Navbar() {
                             <div className="w-full flex flex-col justify-start items-start space-y-1">
                                 <Link href="/realisations" onClick={toggleSidebar}>Nos réalisations</Link>
                                 <div className="w-full flex flex-col ml-6 justify-start items-start text-sm font-normal text-[#BBBBBB] space-y-2 pr-4">
-                                    {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
+                                    {isLoadingn ? 'Chargement en cours' : realisations.map(realisation => (
                                         <Link href={`/realisations/${realisation.id}`} onClick={toggleSidebar}>{realisation.name}</Link>
                                     ))}
                                 </div>

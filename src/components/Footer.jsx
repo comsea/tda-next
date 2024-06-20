@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 
 export default function Footer() {
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoadingf, setIsLoadingf] = useState(true)
     const [realisations, setRealisations] = useState([])
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function Footer() {
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
             setRealisations(fetchedRealisations);
-            setIsLoading(false);
+            setIsLoadingf(false);
         })
         .catch((error) => {
             console.error(error);
@@ -31,7 +31,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col items-start space-y-1 lg:text-lg text-base w-full lg:w-auto lg:px-0 px-10">
                         <Link href="/realisations" className="hover:underline">Réalisations</Link>
-                        {isLoading ? 'Chargement en cours' : realisations.map(realisation => (
+                        {isLoadingf ? 'Chargement en cours' : realisations.map(realisation => (
                             <Link href={`/realisations/${realisation.id}`} className="text-[#BBBBBB] hover:underline lg:text-sm text-xs">{realisation.name}</Link>
                         ))}
                     </div>

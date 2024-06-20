@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 export default function Header() {
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoadingh, setIsLoadingh] = useState(true);
     const [realisations, setRealisations] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -19,7 +19,7 @@ export default function Header() {
             id: "id"
           }
           setRealisations([firstSlide,...fetchedRealisations.slice(0, 4)]); // Limiter à 4 réalisations
-          setIsLoading(false);
+          setIsLoadingh(false);
       })
      .catch((error) => {
           console.error(error);
@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex items-center justify-center h-full w-full bg-gray-200">
             <div className="relative w-full h-full">
                 <div className="absolute inset-0 flex items-center justify-center">
-                    {isLoading ?
+                    {isLoadingh ?
                         <div className='w-full h-full overflow-hidden'>
                             <img src="/images/Accueil/bg.jpg" alt="" className='w-full h-full object-cover' />
                                 <div className="absolute inset-0 bg-black opacity-50"></div>
