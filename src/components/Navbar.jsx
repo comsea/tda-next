@@ -30,11 +30,11 @@ export default function Navbar() {
             <div className="bg-[#242424] top-0 left-0 fixed lg:h-screen h-[8vh] lg:w-[10%] w-full flex lg:flex-col flex-row text-xl font-semibold justify-center items-center lg:py-[3.5rem] py-4 z-50">
                 <div className="w-full flex lg:flex-col flex-row justify-between lg:items-start items-center h-full lg:pl-10 px-10 lg:pr-0">
                     <div>
-                        <button onClick={toggleSidebar}><img src="/images/Navbar/menu.png" alt="Menu" className="lg:w-[30px] w-[20px]" /></button>
+                        <button onClick={toggleSidebar}><img src="/images/Navbar/menu.webp" alt="Menu" className="lg:w-[30px] w-[20px]" /></button>
                     </div>
                     <div className="flex flex-row justify-center items-center space-x-2">
-                        <Link href="https://www.facebook.com/techniques.design.architectures?locale=fr_FR" target="_blank"><img src="/images/Navbar/facebookb.png" alt="Facebook" className="lg:w-[30px] w-[20px]" /></Link>
-                        <Link href="https://www.linkedin.com/company/techniques-design-architectures/" target="_blank"><img src="/images/Navbar/linkedin.png" alt="Linkedin" className="lg:w-[30px] w-[20px]" /></Link>
+                        <Link href="https://www.facebook.com/techniques.design.architectures?locale=fr_FR" target="_blank"><img src="/images/Navbar/facebookb.webp" alt="Facebook" className="lg:w-[30px] w-[20px]" /></Link>
+                        <Link href="https://www.linkedin.com/company/techniques-design-architectures/" target="_blank"><img src="/images/Navbar/linkedin.webp" alt="Linkedin" className="lg:w-[30px] w-[20px]" /></Link>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@ export default function Navbar() {
                 <div className="bg-[#242424] top-0 left-0 h-screen lg:w-[18%] w-full flex flex-col text-xl font-semibold justify-center items-center z-[60] lg:py-[3.5rem] py-4">
                     <div className="w-full flex flex-col justify-between items-start h-full pl-10">
                         <div>
-                        <button onClick={toggleSidebar}><img src="/images/Navbar/croix.png" alt="Croix" className="lg:w-[30px] w-[20px]" /></button>
+                        <button onClick={toggleSidebar}><img src="/images/Navbar/croix.webp" alt="Croix" className="lg:w-[30px] w-[20px]" /></button>
                         </div>
                         <div className="w-full flex flex-col items-start justify-start space-y-4">
                             <Link href="/" onClick={toggleSidebar}>Accueil</Link>
@@ -59,8 +59,8 @@ export default function Navbar() {
                             <Link href="/contact" onClick={toggleSidebar}>Contactez-nous</Link>
                         </div>
                         <div className="flex flex-row justify-center items-center space-x-2">
-                            <Link href="https://www.facebook.com/techniques.design.architectures?locale=fr_FR" target="_blank"><img src="/images/Navbar/facebookb.png" alt="Facebook" className="lg:w-[30px] w-[20px]" /></Link>
-                            <Link href="https://www.linkedin.com/company/techniques-design-architectures/" target="_blank"><img src="/images/Navbar/linkedin.png" alt="Linkedin" className="lg:w-[30px] w-[20px]" /></Link>
+                            <Link href="https://www.facebook.com/techniques.design.architectures?locale=fr_FR" target="_blank"><img src="/images/Navbar/facebookb.webp" alt="Facebook" className="lg:w-[30px] w-[20px]" /></Link>
+                            <Link href="https://www.linkedin.com/company/techniques-design-architectures/" target="_blank"><img src="/images/Navbar/linkedin.webp" alt="Linkedin" className="lg:w-[30px] w-[20px]" /></Link>
                         </div>
                     </div>
                 </div>
