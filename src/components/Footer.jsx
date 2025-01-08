@@ -23,7 +23,7 @@ export default function Footer() {
     return(
         <div className="w-full flex flex-col justify-center items-center relative">
             <div className="w-full h-full relative py-10 flex flex-row justify-center items-center">
-                <img src="/images/Footer/footer.png" alt="Background Footer" className="lg:w-[50%] w-full h-full absolute top-0 left-0 object-cover -z-10" />
+                <img src="/images/Footer/footer.webp" alt="Background Footer" className="lg:w-[50%] w-full h-full absolute top-0 left-0 object-cover -z-10" />
                 <div className="w-[90%] h-full flex lg:flex-row flex-col lg:items-start items-center justify-center lg:justify-between lg:space-x-24 space-y-8 lg:space-y-0">
                     <div className="flex flex-col justify-center items-center space-y-10 text-center">
                         <img src="/images/Footer/Logo-TDA.webp" alt="Logo TDA blanc" className="lg:w-[350px] w-[60%]" />
@@ -48,8 +48,8 @@ export default function Footer() {
                     <div className="flex flex-col space-y-1 lg:text-lg text-base lg:pb-0 pb-4 items-center">
                         <p>SUIVEZ-NOUS</p>
                         <div className="flex flex-row space-x-2">
-                            <a href="https://www.facebook.com/techniques.design.architectures?locale=fr_FR" target="_blank" rel="noreferrer"><img src="/images/Footer/facebookb.png" alt="Facebook" className="lg:w-auto w-[30px]" /></a>
-                            <a href="https://www.linkedin.com/company/techniques-design-architectures/" target="_blank" rel="noreferrer"><img src="/images/Footer/linkedin.png" alt="Linkedin" className="lg:w-auto w-[30px]" /></a>
+                            <a href="https://www.facebook.com/techniques.design.architectures?locale=fr_FR" target="_blank" rel="noreferrer"><img src="/images/Footer/facebookb.webp" alt="Facebook" className="lg:w-auto w-[30px]" /></a>
+                            <a href="https://www.linkedin.com/company/techniques-design-architectures/" target="_blank" rel="noreferrer"><img src="/images/Footer/linkedin.webp" alt="Linkedin" className="lg:w-auto w-[30px]" /></a>
                         </div>
                     </div>
                 </div>
@@ -72,11 +72,11 @@ export default function Footer() {
                     <p>Techniques Design Architectures</p>
                     <div className="flex lg:flex-row flex-col justify-center items-center lg:space-x-6 lg:space-y-0 px-4">
                         <div className="flex flex-row items-center lg:space-x-2">
-                            <img src="/images/Footer/localisation.png" alt="Localisation" className="w-[15px]" />
+                            <img src="/images/Footer/localisation.webp" alt="Localisation" className="w-[15px]" />
                             <p>Siège social : 9 Rue de l'Abattoir, 08000 Charleville-Mézières</p>
                         </div>
                         <div className="flex flex-row items-center space-x-2">
-                            <img src="/images/Footer/tel.png" alt="Localisation" className="w-[15px]" />
+                            <img src="/images/Footer/tel.webp" alt="Localisation" className="w-[15px]" />
                             <p>03 24 57 42 19</p>
                         </div>
                     </div>
