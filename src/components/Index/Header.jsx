@@ -15,7 +15,7 @@ export default function Header() {
           const fetchedRealisations = result['hydra:member'].filter(realisation => realisation.header); // Filtrer les réalisations avec un header
           const firstSlide = {
             title: "Bienvenue sur le site de l'Agence TDA",
-            photo: "/images/Accueil/bg.jpg",
+            photo: "/images/Accueil/bg.webp",
             id: "id"
           }
           setRealisations([firstSlide,...fetchedRealisations.slice(0, 4)]); // Limiter à 4 réalisations
@@ -49,11 +49,11 @@ export default function Header() {
                 <div className="absolute inset-0 flex items-center justify-center">
                     {isLoadingh ?
                         <div className='w-full h-full overflow-hidden'>
-                            <img src="/images/Accueil/bg.jpg" alt="" className='w-full h-full object-cover' />
+                            <img src="/images/Accueil/bg.webp" alt="" className='w-full h-full object-cover' />
                                 <div className="absolute inset-0 bg-black opacity-50"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="w-[90%] top-10 z-40 absolute">
-                                        <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[100px] w-[50px]" />
+                                        <img src="/images/Footer/Logo-TDA.webp" alt="Logo TDA blanc" className="lg:w-[100px] w-[50px]" />
                                     </div>
                                     <div className="w-[90%] h-full flex items-center justify-start">
                                         <div className="text-white text-start flex flex-col justify-start items-start space-y-3">
@@ -71,7 +71,7 @@ export default function Header() {
                                 <div className="absolute inset-0 bg-black opacity-50"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="w-[90%] top-10 z-40 absolute">
-                                        <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[100px] w-[50px]" />
+                                        <img src="/images/Footer/Logo-TDA.webp" alt="Logo TDA blanc" className="lg:w-[100px] w-[50px]" />
                                     </div>
                                     <div className="w-[90%] h-full flex items-center justify-start">
                                         <div className="text-white text-start flex flex-col justify-start items-start space-y-3">

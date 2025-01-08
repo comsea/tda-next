@@ -65,7 +65,7 @@ export default function Accordion() {
                             <div class="content flex flex-col justify-center leading-tight text-white whitespace-pre">
                                 <div class="ease-in-out font-bold duration-700 opacity-0 relative transform transition-all translate-x-8 rounded-full bg-[#717171]/50 py-6 px-6 hover:scale-150">
                                     <div href={`/realisations/${realisation.id}`} className="rounded-full bg-[#717171]/50 py-6 px-6 hover:scale-125 ease-in-out duration-500">
-                                        <Link href={`/realisations/${realisation.id}`}><img src="images/Accueil/search.png" alt="Recherche" className="w-[30px]" /></Link>
+                                        <Link href={`/realisations/${realisation.id}`}><img src="images/Accueil/search.webp" alt="Recherche" className="w-[30px]" /></Link>
                                     </div>
                                 </div>
                             </div>

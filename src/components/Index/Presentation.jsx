@@ -13,7 +13,7 @@ export default function Presentation() {
                     </div>
                 </div>
                 <div className="lg:w-[50%] w-full flex justify-center items-center">
-                    <img src="images/Accueil/france.png" alt="Carte France" className="lg:w-[60%] w-[80%]" />
+                    <img src="images/Accueil/france.webp" alt="Carte France" className="lg:w-[60%] w-[80%]" />
                 </div>
             </div>
     )

@@ -26,7 +26,7 @@ export default function Footer() {
                 <img src="/images/Footer/footer.png" alt="Background Footer" className="lg:w-[50%] w-full h-full absolute top-0 left-0 object-cover -z-10" />
                 <div className="w-[90%] h-full flex lg:flex-row flex-col lg:items-start items-center justify-center lg:justify-between lg:space-x-24 space-y-8 lg:space-y-0">
                     <div className="flex flex-col justify-center items-center space-y-10 text-center">
-                        <img src="/images/Footer/Logo-TDA.png" alt="Logo TDA blanc" className="lg:w-[350px] w-[60%]" />
+                        <img src="/images/Footer/Logo-TDA.webp" alt="Logo TDA blanc" className="lg:w-[350px] w-[60%]" />
                         <p>CHARLEVILLE-MÉZIÈRES <span className="text-[#DF0624]">|</span> EPERNAY <span className="text-[#DF0624]">|</span> REIMS</p>
                     </div>
                     <div className="flex flex-col items-start space-y-1 lg:text-lg text-base w-full lg:w-auto lg:px-0 px-10">

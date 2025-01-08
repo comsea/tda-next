@@ -13,7 +13,7 @@ export default function Innovation() {
                         <p>Ce nouveau concept nous permet de nous imprégner de votre histoire et de vos rêves. Nous croyons fermement en l'harmonie entre l'esthétique et la fonctionnalité, travaillant sans relâche pour concevoir des édifices qui captivent visuellement tout en demeurant économiquement viables. Votre projet est plus qu'une simple construction ; c'est une expression de votre identité, et nous nous engageons à le façonner avec le même soin et la même passion que si c'était le nôtre.</p>
                     </div>
                 </div>
-                <img src="images/Accueil/structure.png" alt="Structures" className="absolute right-0 lg:top-10 -bottom-24 lg:w-[45%] w-[60%]" />
+                <img src="images/Accueil/structure.webp" alt="Structures" className="absolute right-0 lg:top-10 -bottom-24 lg:w-[45%] w-[60%]" />
             </div>
     )
 }
