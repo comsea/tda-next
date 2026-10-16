@@ -13,7 +13,7 @@ export default function Accordion() {
     };
 
     useEffect(() => {
-        fetch(`https://api.tda-archi.com/api/categoriess`)
+        fetch(`https://api.tda-archi.com/api/categories`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedRealisations = result['hydra:member'];
@@ -50,7 +50,7 @@ export default function Accordion() {
                             <div class="absolute inset-0 bg-black opacity-50 w-full h-full z-20"></div>
                         )}
                         <div class="absolute top-0 duration-700 ease-in-out flex label left-0 mt-2 ml-3 transition-all z-30 sm:mb-3 sm:ml-2">
-                            {activePaneIndex == realisation.id ? 
+                            {activePaneIndex == realisation.id ?
                                 <div class="flex h-10 icon items-center justify-center mr-3 rounded-full text-[#DF0624] w-10"><p>{realisation.id}</p></div>
                             :
                                 <div class="flex h-10 icon items-center justify-center mr-3 rounded-full text-[#BBBBBB] w-10"><p>{realisation.id}</p></div>

@@ -12,7 +12,7 @@ export default function Realisation() {
 
     useEffect(() => {
         setIsLoading(true); // Start loading
-        fetch(`https://api.tda-archi.com/api/categoriess/${categoryId}`)
+        fetch(`https://api.tda-archi.com/api/categories/${categoryId}`)
         .then((response) => response.json())
         .then((result) => {
             setCategory(result);
@@ -39,7 +39,7 @@ export default function Realisation() {
     }, []);
 
     // Filtrer les réalisations pour la catégorie spécifiée
-    const filteredReas = reas.filter(realisation => realisation.category === "/api/categoriess/"+cat.id);
+    const filteredReas = reas.filter(realisation => realisation.category === "/api/categories/"+cat.id);
     const hasNonFavoriRealisations = filteredReas.some(realisation => !realisation.favori);
 
     return(
@@ -94,7 +94,7 @@ export default function Realisation() {
                                     </div>
                             ))}
                         </div>
-                        
+
                         <div className="lg:w-[95%] w-full pb-8 flex flex-col">
                             {hasNonFavoriRealisations && (
                             <div className="w-full py-2 lg:px-4 px-2 bg-[#7a7a7a] border-collapse flex flex-row justify-start items-center font-bold lg:text-xl text-sm border-b-[1px] border-[#DFDFDF] space-x-1">

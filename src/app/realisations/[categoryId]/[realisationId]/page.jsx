@@ -57,7 +57,7 @@ export default function Rea() {
     }, []);
 
     useEffect(() => {
-        fetch(`https://api.tda-archi.com/api/categoriess`)
+        fetch(`https://api.tda-archi.com/api/categories`)
         .then((response) => response.json())
         .then((result) => {
             const fetchedCategorys = result['hydra:member'];
@@ -69,7 +69,7 @@ export default function Rea() {
         });
     }, []);
 
-    const cate = categorys.map(category => (realisation.category == '/api/categoriess/'+category.id ? category.id : null))
+    const cate = categorys.map(category => (realisation.category == '/api/categories/'+category.id ? category.id : null))
     console.log(cate)
 
     const image = realisation.photo ? [
@@ -106,7 +106,7 @@ export default function Rea() {
                             <div className="w-full">
                                 {image.length > 0 && <MiniaSlideRea images={image} />}
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <div className="w-full flex lg:flex-row flex-col justify-between items-start pb-6 lg:space-y-0 space-y-4">
                         <div className="lg:w-[65%] w-full flex flex-col space-y-3">
