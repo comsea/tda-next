@@ -1,5 +1,5 @@
 export async function generateMetadata(req, res) {
-    const id = req.params.id
+    const { id } = await req.params
     const responseIMG = await fetch(`https://www.tda-archi.com/api/openGraph/actus/image/${id}`)
     const responseTitle = await fetch(`https://www.tda-archi.com/api/openGraph/actus/titre/${id}`)
     const imageUrl = await responseIMG.text();
